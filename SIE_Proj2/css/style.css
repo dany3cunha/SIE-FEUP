@@ -1,64 +1,123 @@
-
-/*   */
+/* Body Common Properties  */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-  }
-  
-  .navbar {
-    overflow: hidden;
-    background-color: #333; 
-  }
-  
-  .navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  .subnav {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .subnav .subnavbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  
-  .navbar a:hover, .subnav:hover .subnavbtn {
-    background-color: red;
-  }
-  
-  .subnav-content {
-    display: none;
-    position: absolute;
-    left: 0;
-    background-color: red;
-    width: 100%;
-    z-index: 1;
-  }
-  
-  .subnav-content a {
-    float: left;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .subnav-content a:hover {
-    background-color: #eee;
-    color: black;
-  }
-  
-  .subnav:hover .subnav-content {
-    display: block;
-  }
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px;
+}
+/*  Menu properties */
+
+.menu {
+  background-color: #DBDBDB;
+}
+
+/* Login and Register buttons*/
+
+.box {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: inherit;
+}
+
+.push-to-right {
+  margin-left: auto;
+}
+
+.btn {
+  margin: 5px;
+  height: 40px;
+  width: 100px;
+  background-color: inherit;
+  border-color: #C55A11;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.btn a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #C55A11;
+}
+
+.btn:hover,
+.btn a:hover,
+.btn:hover a {
+  background-color: #C55A11;
+  color: white;
+}
+
+.btn-info {
+  border: 0px;
+  background-color: inherit;
+  padding-right: 10px;
+}
+
+.btn-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation bar  */
+.navbar {
+  /*margin-top: 40px;*/
+  overflow: hidden;
+  background-color: #C55A11;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  background-color: #F4B183;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #F4B183;
+  width: 100%;
+  padding-left: 10px;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.subnav-content a:hover {
+  background-color: #C55A11;
+  color: black;
+  border-radius: 5px;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
