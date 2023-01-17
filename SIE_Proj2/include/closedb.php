@@ -1,5 +1,3 @@
-<?PHP
-	
-	pg_close($conn);
-
+<?php
+pg_close($conn);
 ?>
