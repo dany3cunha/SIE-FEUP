@@ -46,9 +46,13 @@
         echo "<div class = \"menu\">
                 <div class = \"box\">
                     <div class = \"push-to-right\"></div>
-                    <button class = \"btn-info\"> <a href=\"#info\"><i class = \"fa-solid fa-circle-info fa-2xl\"></i></a> </button>
-                    <button class = \"btn\"> <a href=\"#login\">Login</a> </button>
-                    <button class = \"btn\"> <a href=\"#register\">Register</a> </button>
+                    <button class = \"btn-info\"> 
+                        <a href=\"#info\">
+                            <i class = \"fa-solid fa-circle-info fa-2xl\"></i>
+                        </a> 
+                    </button>
+                    <button class = \"btn\"> <a href=\"../../pages/Non_Auth_user/login.php\">Login</a> </button>
+                    <button class = \"btn\"> <a href=\"../../pages/Non_Auth_user/register.php\">Register</a> </button>
                     <div style = \"padding-right: 20px; \"> </div>
                 </div>";
 
@@ -57,7 +61,7 @@
         echo "  <div class=\"navbar\">";
         echo "     <div class=\"subnav\">
                        <button class = \"subnavbtn \">
-                       <i class=\"fa-solid fa-house\"></i>
+                       <a href=\"../../index.php\"> <i class=\"fa-solid fa-house\"></i></a>
                        </button>
                    </div>";
 
