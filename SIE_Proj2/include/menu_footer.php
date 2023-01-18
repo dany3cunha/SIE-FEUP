@@ -1,6 +1,6 @@
 <?php
     
-    include_once("../database/homepage.php");
+    include_once("../../database/homepage_queries.php");
 
     function menu(){
             

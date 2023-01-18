@@ -18,9 +18,15 @@
 
         $highlights = get3Highlights();
 
+        echo "<div class = \"content-layout\">
+                <div class = \"content-product \"> 
+                </div>
+                <div class = \"content-product \"> 
+                </div>
+                <div class = \"content-product \"> 
+                </div>
+              </div>";
         
-
-
         footer();
 
     ?>

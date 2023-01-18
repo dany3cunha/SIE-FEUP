@@ -7,7 +7,7 @@
 
 <?php
 // PHP include menu
-include_once("../../database/menu.php");
+include_once("../../include/menu_footer.php");
 menu();
 
 session_start();
