@@ -2,8 +2,8 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
-  margin-bottom: 100px;
-  /* Footer height*/
+  margin-bottom: 100px; /* Footer height*/
+  overflow: hidden;
 
 }
 
@@ -105,8 +105,8 @@ body {
 }
 
 .navbar a:hover,
-.subnav:hover .subnavbtn ,
-.subnav:hover .subnavbtn-home{
+.subnav:hover .subnavbtn,
+.subnav:hover .subnavbtn-home {
   background-color: #F4B183;
 }
 
@@ -180,21 +180,71 @@ body {
 
 /* HomePage Content -> Destaques */
 
+.content-title {
+  background-color: #DBDBDB;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  padding-top: 20px;
+  padding-left: 40px;
+  color: #C55A11;
+}
+
 .content-layout {
+  margin: 0 30px;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 20px;
   padding: 20px;
+  background-color: #DBDBDB;
 }
 
-.content-product{
+.content-product {
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 10px;
   padding: 5px;
-  background-color: #DBDBDB;
+  background-color: white;
+  border-radius: 20px;
+
 }
 
+.content-product img {
+  width: 50%;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.content-product-name {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
+.content-product-name {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
+.content-product-price {
+  float: left;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.content-product-price-discount {
+  float: right;
+  padding-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: red;
+}
+
+.body-remaining{
+  background-color: #DBDBDB;
+  height: 250px;
+}

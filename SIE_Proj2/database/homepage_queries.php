@@ -50,7 +50,7 @@
                          produto.nome            AS product_name,
                          produto.preco           AS product_price,
                          produto.fk_subcategoria AS product_subcategory,
-                         produto.desconto        AS product_discont
+                         produto.desconto        AS product_discount
                   from produto
                   where produto.destaque = TRUE
                   ORDER BY random()
@@ -67,6 +67,27 @@
         }
         
 		return $result;
+               
+    }
+
+    function getCatBySubcat($subcategory){
+        global $conn;
+
+        $query = "select  subcategoria.fk_categoria AS category 
+				  from 	  subcategoria 
+                  where nome = '".$subcategory."'";
+
+		//echo "DEBUG query: " . $query;
+	
+		$result = pg_exec($conn, $query);
+		//echo "DEBUG num_rows: " . pg_num_rows($result);
+        if (!$result) {
+            echo "An error occurred in getCatBySubcat().";
+            exit();
+        }
+        $result = pg_fetch_assoc($result);
+		return $result['category'];
+		//exit();		  
         
         
     }
