@@ -15,6 +15,8 @@
         include_once("../../database/menu.php");
         menu();
 
+        footer();
+
     ?>
 
 </body>

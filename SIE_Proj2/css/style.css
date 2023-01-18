@@ -2,7 +2,11 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
+  margin-bottom: 100px;
+  /* Footer height*/
+
 }
+
 /*  Menu properties */
 
 .menu {
@@ -13,7 +17,6 @@ body {
 
 .box {
   display: flex;
-  width: 100%;
   padding: 10px;
   background-color: inherit;
 }
@@ -90,8 +93,20 @@ body {
   border-radius: 5px;
 }
 
+.subnav .subnavbtn-home {
+  border: none;
+  outline: none;
+  color: black;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
 .navbar a:hover,
-.subnav:hover .subnavbtn {
+.subnav:hover .subnavbtn ,
+.subnav:hover .subnavbtn-home{
   background-color: #F4B183;
 }
 
@@ -120,4 +135,45 @@ body {
 
 .subnav:hover .subnav-content {
   display: block;
+}
+
+/* Footer properties */
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 100px;
+  background-color: #C55A11;
+}
+
+.footer hr {
+  margin-top: 20px;
+  height: 10px;
+  background-color: #DBDBDB;
+}
+
+.footer-flex-container {
+  display: flex;
+  /*justify-content: space-between;*/
+}
+
+/*
+.footer-flex-container > div{
+  background-color: inherit;
+}
+*/
+
+.footer-text {
+  float: left;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: white;
+}
+
+.footer-logo img {
+  float: right;
+  margin-right: 50px;
+  width: 8%;
 }

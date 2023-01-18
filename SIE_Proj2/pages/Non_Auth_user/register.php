@@ -6,9 +6,10 @@
 </header>
 
 <?php
-// PHP include
+// PHP include menu
 include_once("../../database/menu.php");
 menu();
+
 session_start();
 
 if (!empty($_SESSION['sErrorMsg'])) {
@@ -89,6 +90,10 @@ if (!empty($_SESSION['sErrorMsg'])) {
 		</table>
 
 	</form>
+
+	<?php
+		footer();
+	?>
 
 </body>
 
