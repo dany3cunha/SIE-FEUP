@@ -1,48 +1,9 @@
 <?php
     
-    include_once("../../include/opendb.php");
+    include_once("../database/homepage.php");
 
-    function getAllCategories(){
-        global $conn;
-
-        $query = "select  nome 
-				  from 	  categoria 
-                  order by nome desc";
-		//echo "DEBUG query: " . $query;
-	
-		$result = pg_exec($conn, $query);
-		//echo "DEBUG num_rows: " . pg_num_rows($result);
-        if (!$result) {
-            echo "An error occurred in getAlllCategories().";
-            exit();
-        }
-        
-		return $result;
-		//exit();		  
-    }
-
-    function getAllSubCategories($category){
-        global $conn;
-
-        $query = "select  nome 
-				  from 	  subcategoria
-                  where  fk_categoria = '".$category."'
-                  order by nome asc";
-		//echo "DEBUG query: " .$query. "</br>";
-	
-		$result = pg_exec($conn, $query);
-		//echo "DEBUG num_rows: " . pg_num_rows($result);
-        if (!$result) {
-            echo "An error occurred in getAlllSubCategories().";
-            exit();
-        }
-        
-		return $result;
-		//exit();		  
-    }
-    
     function menu(){
-        
+            
         echo "<div class = \"menu\">
                 <div class = \"box\">
                     <div class = \"push-to-right\"></div>
@@ -60,10 +21,10 @@
 
         echo "  <div class=\"navbar\">";
         echo "     <div class=\"subnav\">
-                       <button class = \"subnavbtn-home \">
-                       <a href=\"../../index.php\"> <i class=\"fa-solid fa-house\"></i></a>
-                       </button>
-                   </div>";
+                    <button class = \"subnavbtn-home \">
+                    <a href=\"../../index.php\"> <i class=\"fa-solid fa-house\"></i></a>
+                    </button>
+                </div>";
 
         $category = pg_fetch_assoc($category_result);
         while (isset($category["nome"])) {
@@ -97,9 +58,7 @@
                 <div class = \"footer-logo\">
                     <img src = \"../../resources/logos/feup_logo.png\">
                 </div>               
-              </div>";
+            </div>";
 
     }
-
-
 ?>

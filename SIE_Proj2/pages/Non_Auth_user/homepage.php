@@ -12,8 +12,14 @@
 
     <?php
     
-        include_once("../../database/menu.php");
+        include_once("../../include/menu_footer.php");
+        include_once("../../database/homepage_queries.php");
         menu();
+
+        $highlights = get3Highlights();
+
+        
+
 
         footer();
 
