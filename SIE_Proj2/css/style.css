@@ -220,7 +220,7 @@ body {
   border-radius: 20px;
 }
 
-.homepage-grid-product img {
+.homepage-grid-product-img input {
   width: 50%;
   border-radius: 10px;
   display: block;
@@ -228,10 +228,15 @@ body {
   margin-right: auto;
 }
 
-.homepage-grid-product-name {
+.homepage-grid-product-name input {
+  border-style: none;
+  background-color: inherit;
   padding-left: 10px;
   font-size: 14px;
   font-weight: bold;
+  white-space: normal;
+  text-align: left;
+  cursor: pointer ;
 }
 
 .homepage-grid-product-price {
