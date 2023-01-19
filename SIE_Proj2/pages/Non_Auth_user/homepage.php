@@ -49,11 +49,11 @@
             
             if ($prod_discount <= 0){
             echo "      <div class = \"homepage-grid-product-price\">
-                            ".$prod_price."€
+                            ".$prod_price." €
                         </div>";
             }else{
             echo "      <div class = \"homepage-grid-product-price\">
-                            <strike>".round($prod_price,2,PHP_ROUND_HALF_UP)."€ </strike>
+                            <strike>".round($prod_price,2,PHP_ROUND_HALF_UP)." € </strike>
                             <div class = \"homepage-grid-product-price-discount\">
                                 ".round($prod_price - ($prod_discount/100)*$prod_price,2,PHP_ROUND_HALF_UP)."€                      
                             </div>

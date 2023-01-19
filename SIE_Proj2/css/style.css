@@ -159,12 +159,6 @@ body {
   /*justify-content: space-between;*/
 }
 
-/*
-.footer-flex-container > div{
-  background-color: inherit;
-}
-*/
-
 .footer-text {
   float: left;
   margin-left: 20px;
@@ -236,7 +230,7 @@ body {
   font-weight: bold;
   white-space: normal;
   text-align: left;
-  cursor: pointer ;
+  cursor: pointer;
 }
 
 .homepage-grid-product-price {
@@ -252,5 +246,88 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: red;
+}
+
+/* Product Page*/
+
+.product-page-go-back a{
+  display: inline-block;
+  font-size: 14px;
+  color: black;
+  padding-left: 10px;
+}
+
+.product-page-grid {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.product-page-product {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.product-page-product img {
+  width: 60%;
+  border-radius: 20px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.product-page-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-page-product-price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.product-page-product-price-discount {
+  display: inline;
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+  margin-left: 10px;
+}
+.product-page-product-availability{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.product-in-stock{
+  color: green;
+}
+
+.product-few-stock{
+  color:yellow
+}
+
+.product-out-stock{
+  color: red;
+}
+
+.btn-buy-options button {
+  display: inline;
+  border: none;
+  outline: none;
+  color:#DBDBDB;
+  background-color:inherit;
+  margin: 5px;
+  border-radius: 5px;
+  width: 60px;
+}
+
+.btn-buy-options:hover{
+  background-color:#C55A11;
+  color: #DBDBDB;
 }
 
