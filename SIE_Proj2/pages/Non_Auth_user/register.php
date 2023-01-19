@@ -12,24 +12,26 @@ menu();
 
 session_start();
 
-if (!empty($_SESSION['sErrorMsg'])) {
+$errorMsg = "";
+$email = "";
+$name = "";
+$address = "";
+$cp = "";
+$phone = "";
+$nif = "";
 
-	echo "<p class='error'>" . $_SESSION['errorMsg'] . "<p>";
+if (!empty($_SESSION['sErrorMsg'])) {
+	//echo "<p class='error'>" . $_SESSION['sErrorMsg'] . "<p>";
+	$errorMsg = $_SESSION['sErrorMsg'];
 	$_SESSION['sErrorMsg'] = NULL;
 
-	//Get the form data stored in the session var's, then clean them
-	if (!empty($_SESSION['sEmail'])) 	$email = $_SESSION['email'];
-	else $email = "";
+	//Get the form data stored in the session vars, then clean them
+	if (!empty($_SESSION['sEmail'])) 	$email = $_SESSION['sEmail'];
 	if (!empty($_SESSION['sName'])) 	$name = $_SESSION['sName'];
-	else $name = "";
 	if (!empty($_SESSION['sAddress'])) 	$address = $_SESSION['sAddress'];
-	else $address = "";
 	if (!empty($_SESSION['sCP'])) 	    $cp = $_SESSION['sCP'];
-	else $cp = "";
 	if (!empty($_SESSION['sPhone'])) 	$phone = $_SESSION['sPhone'];
-	else $phone = "";
 	if (!empty($_SESSION['sNIF'])) 	    $nif = $_SESSION['sNIF'];
-	else $nif = "";
 
 	$_SESSION['sEmail']     = NULL;
 	$_SESSION['sName'] 		= NULL;
@@ -40,57 +42,59 @@ if (!empty($_SESSION['sErrorMsg'])) {
 }
 ?>
 
-<body>
 
+
+<body>
 	<div class="content-title">Registo </div>
 	<div class="content-body">
 		<form method="POST" action="../../action/Non_Auth_user/actionRegister.php">
 			<table>
-				<tr>
-					<td>Email*</td>
-					<td><input type="text" value="teste" name="newuserEmail"></td>
-				</tr>
-				<tr>
-					<td>Password*</td>
-					<td><input type="text" name="newuserPassword"></td>
-				</tr>
-				<tr>
-					<td>Nome*</td>
-					<td><input type="text" name="newuserName"></td>
-				</tr>
-				<tr>
-					<td>Morada*</td>
-					<td><input type="text" name="newuserAddress"></td>
-				</tr>
-				<tr>
-					<td>Código Postal*</td>
-					<td><input type="text" name="newuserCP"></td>
-				</tr>
-				<tr>
-					<td>Contacto Telefónico</td>
-					<td><input type="text" name="newuserPhone"></td>
-				</tr>
-				<tr>
-					<td>NIF</td>
-					<td><input type="text" name="newuserNIF"></td>
-				</tr>
-				<tr>
-					<td class="auth-mandatory-text">*campos obrigatórios</td>
-					<td class="auth-error-text"> Mensagem de erro aqui </td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" class="btn-form" value="Registar"></td>
-				</tr>
+				<?php
+				echo "
+					<tr>
+						<td>Email*</td>
+						<td><input type=\"text\" value=\"".$email."\" name=\"newuserEmail\"></td>
+					</tr>
+					<tr>
+						<td>Password*</td>
+						<td><input type=\"text\" name=\"newuserPassword\"></td>
+					</tr>
+					<tr>
+						<td>Nome*</td>
+						<td><input type=\"text\" value=\"".$name."\" name=\"newuserName\"></td>
+					</tr>
+					<tr>
+						<td>Morada*</td>
+						<td><input type=\"text\" value=\"".$address."\" name=\"newuserAddress\"></td>
+					</tr>
+					<tr>
+						<td>Código Postal*</td>
+						<td><input type=\"text\" value=\"".$cp."\" name=\"newuserCP\"></td>
+					</tr>
+					<tr>
+						<td>Contacto Telefónico</td>
+						<td><input type=\"text\" value=\"".$phone."\" name=\"newuserPhone\"></td>
+					</tr>
+					<tr>
+						<td>NIF</td>
+						<td><input type=\"text\" value=\"".$nif."\" name=\"newuserNIF\"></td>
+					</tr>
+					<tr>
+						<td class=\"auth-mandatory-text\">*campos obrigatórios</td>
+						<td class=\"auth-error-text\"> ".$errorMsg." </td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type=\"submit\" class=\"btn-form\" value=\"Registar\"></td>
+					</tr>"
+				?>
 			</table>
 		</form>
-
 	</div>
-	
-	<?php
-		footer();
-	?>
-
 </body>
+
+<?php
+	footer();
+?>
 
 </html>

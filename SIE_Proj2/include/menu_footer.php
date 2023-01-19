@@ -4,8 +4,7 @@
 
     function menu(){
             
-        echo "<div class = \"menu\">
-                <div class = \"box\">
+        echo "  <div class = \"box\">
                     <div class = \"push-to-right\"></div>
                     <button class = \"btn-info\"> 
                         <a href=\"#info\">
@@ -43,8 +42,6 @@
 
             $category = pg_fetch_assoc($category_result);
         }
-        echo "</div>";
-        
     }
 
     function footer(){
