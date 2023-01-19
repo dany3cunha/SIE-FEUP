@@ -42,6 +42,8 @@
 
             $category = pg_fetch_assoc($category_result);
         }
+        echo "</div>";
+        
     }
 
     function footer(){
