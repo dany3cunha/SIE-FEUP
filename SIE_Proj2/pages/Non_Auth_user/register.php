@@ -57,7 +57,7 @@ if (!empty($_SESSION['sErrorMsg'])) {
 					</tr>
 					<tr>
 						<td>Password*</td>
-						<td><input type=\"text\" name=\"newuserPassword\"></td>
+						<td><input type=\"password\" name=\"newuserPassword\"></td>
 					</tr>
 					<tr>
 						<td>Nome*</td>

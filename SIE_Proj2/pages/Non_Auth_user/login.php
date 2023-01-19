@@ -42,18 +42,23 @@ if (!empty($_SESSION['sErrorMsg'])) {
 					</tr>
 					<tr>
 						<td>Password</td>
-						<td><input type=\"text\" name=\"userPassword\"></td>
+						<td><input type=\"password\" name=\"userPassword\"></td>
 					</tr>
 
 					<tr>
 						<td></td>
 						<td class=\"auth-error-text\"> ".$errorMsg." </td>
-					</tr>
+					</tr>"
+                ?>   
 					<tr>
 						<td></td>
-						<td><input type=\"submit\" class=\"btn-form\" value=\"Login\"></td>
-					</tr>"
-				?>
+						<td style="text-align: right"   >    
+                                <button type="submit" class="button">
+                                        <i class="fa-solid fa-right-to-bracket fa-2xl"></i> 
+                                </button> 
+                        </td>
+					</tr>
+				
 			</table>
 		</form>
 	</div>
