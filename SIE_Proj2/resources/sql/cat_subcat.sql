@@ -29,8 +29,9 @@ INSERT into subcategoria (nome, fk_categoria) VALUES ('Pen Drives', 'Armazenamen
 INSERT into subcategoria (nome, fk_categoria) VALUES ('Cartões de Memória', 'Armazenamento');
 
 /* Products */
-insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
-        values ('Processador Intel Core i5-12400F 6-Core 2.5GHz c/ Turbo 4.4GHz 18MB Skt1700',
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
+        values (1,
+                'Processador Intel Core i5-12400F 6-Core 2.5GHz c/ Turbo 4.4GHz 18MB Skt1700',
                 200,
                 'Os processadores para desktop Intel® Core™ da 12ª Geração oferecem uma nova arquitetura híbrida de desempenho,
                 combinando núcleos de desempenho com núcleos eficientes para aprimorar jogos, produtividade e criação. 
@@ -42,8 +43,9 @@ insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcat
                 'Processadores');
 
 
-insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
-        values ('Processador Intel Core i5-13400F 10-Core c/ Turbo 4.6GHz 20MB Skt1700',
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria)
+        values (2,
+                'Processador Intel Core i5-13400F 10-Core c/ Turbo 4.6GHz 20MB Skt1700',
                 150,
                 'Diga olá aos novos processadores Raptor Lake. Os incríveis processadores da 
                 13ª Geração Intel estão aqui para quebrar os limites do poder de processamento 
@@ -54,8 +56,9 @@ insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcat
                 TRUE,
                 'Processadores');
 
-insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
-        values ('Processador Intel Core i7-13700KF 16-Core 2.5GHz c/ Turbo 5.4GHz 30MB Skt1700',
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria)
+        values (3,
+                'Processador Intel Core i7-13700KF 16-Core 2.5GHz c/ Turbo 5.4GHz 30MB Skt1700',
                 100,
                 'Os processadores para desktop Intel® Core™ da 13ª Geração oferecem a próxima geração 
                 de desempenho de núcleo inovador. A tecnologia Intel® Turbo Boost Max 3.0 fortalece 
@@ -65,8 +68,9 @@ insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcat
                 0,
                 TRUE,
                 'Processadores');
-insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
-        values ('Processador AMD Ryzen 7 5700X 8-Core 3.4GHz c/ Turbo 4.6GHz 36MB SktAM4',
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria)
+        values (4,
+                'Processador AMD Ryzen 7 5700X 8-Core 3.4GHz c/ Turbo 4.6GHz 36MB SktAM4',
                 50,
                 'Os processadores AMD Ryzen™ série 5000 são construídos 
                 com arquitetura de 7 nm, que oferece taxas de frames extremamente altas 
@@ -79,8 +83,9 @@ insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcat
                 TRUE,
                 'Processadores');
 
-insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
-        values ('Processador AMD Ryzen 5 5600X 6-Core 3.7GHz c/ Turbo 4.6GHz 35MB SktAM4',
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
+        values (5,
+                'Processador AMD Ryzen 5 5600X 6-Core 3.7GHz c/ Turbo 4.6GHz 35MB SktAM4',
                 85,
                 'Os processadores AMD Ryzen™ série 5000 são construídos 
                 com arquitetura de 7 nm, que oferece taxas de frames extremamente altas 
@@ -92,8 +97,9 @@ insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcat
                 0,
                 TRUE,
                 'Processadores');
-insert into produto (nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
-        values ('Processador AMD Ryzen 9 7950X 16-Core 4.5GHz c/ Turbo 5.7GHz 81MB SktAM5',
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
+        values (6,
+                'Processador AMD Ryzen 9 7950X 16-Core 4.5GHz c/ Turbo 5.7GHz 81MB SktAM5',
                 85,
                 'Os processadores AMD Ryzen Série 7000 estão equipados com tecnologias de ponta 
                 para um PC moderno descomplicado. Os destaques incluem memória DDR5 de alta velocidade, 

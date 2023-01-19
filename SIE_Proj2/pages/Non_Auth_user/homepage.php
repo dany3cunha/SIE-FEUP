@@ -20,7 +20,8 @@
         echo "<div class =\" content-title \">
                 Produtos em Destaque
               </div>";
-        echo "<div class = \"content-layout\">";
+        echo "<div class =\"content-body\">";
+        echo "  <div class = \"homepage-grid\">";
         
         while ($row = pg_fetch_row($highlights)) {
             $prod_ref = $row[0];
@@ -30,30 +31,31 @@
             $prod_discount =$row[4];
             $prod_cat = getCatBySubcat($prod_subcat);
         
-            echo "<div class = \"content-product \">                
-                    <div>
-                        <img src=\"../../resources/images/products/".$prod_cat."/".$prod_ref.".jpg\">
-                    </div>";
+            echo "  <div class = \"homepage-grid-product \">                
+                        <div>
+                            <img src=\"../../resources/images/products/".$prod_cat."/".$prod_ref.".jpg\">
+                        </div>";
                         
-            echo    "<div class = \"content-product-name\">
-                        ".$prod_name."
-                     </div>";
+            echo "      <div class = \"homepage-grid-product-name\">
+                            ".$prod_name."
+                        </div>";
             
             if ($prod_discount <= 0){
-            echo    "<div class = \"content-product-price\">
-                        ".$prod_price."€
-                     </div>";
+            echo "      <div class = \"homepage-grid-product-price\">
+                            ".$prod_price."€
+                        </div>";
             }else{
-            echo    "<div class = \"content-product-price\">
-                        <strike>".round($prod_price,2,PHP_ROUND_HALF_UP)."€ </strike>
-                        <div class = \"content-product-price-discount\">
-                            ".round($prod_price - ($prod_discount/100)*$prod_price,2,PHP_ROUND_HALF_UP)."€                      
-                        </div>
-                    </div>";   
+            echo "      <div class = \"homepage-grid-product-price\">
+                            <strike>".round($prod_price,2,PHP_ROUND_HALF_UP)."€ </strike>
+                            <div class = \"homepage-grid-product-price-discount\">
+                                ".round($prod_price - ($prod_discount/100)*$prod_price,2,PHP_ROUND_HALF_UP)."€                      
+                            </div>
+                        </div>";   
             }
-            echo "</div>";
+            echo "  </div>";
         }
-        echo "</div>";
+        echo "   </div>";
+        echo " </div>";
         echo "<div class=\"body-remaining\"> </div>";
         footer();
     ?>

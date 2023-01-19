@@ -37,7 +37,7 @@ CREATE TABLE enc_prod (
 
 
 CREATE TABLE produto (
-    ref SERIAL NOT NULL,
+    ref INT NOT NULL,
     nome VARCHAR(500) NOT NULL,
     quantidade INT NOT NULL,
     descricao VARCHAR(500) NOT NULL,

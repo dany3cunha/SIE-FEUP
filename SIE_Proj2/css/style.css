@@ -2,7 +2,8 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
-  margin-bottom: 100px; /* Footer height*/
+  margin-bottom: 100px;
+  /* Footer height*/
   overflow: hidden;
 
 }
@@ -178,7 +179,7 @@ body {
   width: 8%;
 }
 
-/* HomePage Content -> Destaques */
+/* Common Body Content */
 
 .content-title {
   background-color: #DBDBDB;
@@ -190,26 +191,36 @@ body {
   color: #C55A11;
 }
 
-.content-layout {
+.content-body {
   margin: 0 30px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px;
   padding: 20px;
   background-color: #DBDBDB;
 }
 
-.content-product {
+.body-remaining {
+  background-color: #DBDBDB;
+  height: 250px;
+}
+
+/* Homepage properties */
+
+.homepage-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+
+}
+
+.homepage-grid-product {
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 10px;
   padding: 5px;
   background-color: white;
   border-radius: 20px;
-
 }
 
-.content-product img {
+.homepage-grid-product img {
   width: 50%;
   border-radius: 10px;
   display: block;
@@ -217,26 +228,20 @@ body {
   margin-right: auto;
 }
 
-.content-product-name {
+.homepage-grid-product-name {
   padding-left: 10px;
   font-size: 14px;
   font-weight: bold;
 }
 
-.content-product-name {
-  padding-left: 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.content-product-price {
+.homepage-grid-product-price {
   float: left;
   padding-left: 10px;
   font-size: 16px;
   font-weight: bold;
 }
 
-.content-product-price-discount {
+.homepage-grid-product-price-discount {
   float: right;
   padding-right: 10px;
   font-size: 16px;
@@ -244,7 +249,3 @@ body {
   color: red;
 }
 
-.body-remaining{
-  background-color: #DBDBDB;
-  height: 250px;
-}
