@@ -30,7 +30,7 @@
                         </a>             
                     </button>  
                     <div style = \"padding-right: 20px; \"> </div>
-                </div>";
+                </div>"; 
         }
         else{
             //If not authenticated, enable login and register buttons
@@ -44,8 +44,8 @@
 
         $category_result = getAllCategories();
 
-        echo "  <div class=\"navbar\">";
-        echo "     <div class=\"subnav\">
+        echo "<div class=\"navbar\">";
+        echo "  <div class=\"subnav\">
                     <button class = \"subnavbtn-home \">
                     <a href=\"../../index.php\"> <i class=\"fa-solid fa-house\"></i></a>
                     </button>
@@ -54,22 +54,37 @@
         $category = pg_fetch_assoc($category_result);
         while (isset($category["nome"])) {
 
-            echo "<div class = \"subnav\" >";
-            echo "  <button class= \"subnavbtn\" >" . $category["nome"] . "</button>";
-            echo "  <div class= \"subnav-content\" >";
+            echo "  <div class = \"subnav\">
+                        <form method = \"GET\" action=\"../Non_Auth_user/listProducts.php\">
+                            <div class= \"subnavbtn\" >
+                                <input type=\"text\" name=\"filter\" value=\"category\" hidden>
+                                <input type=\"submit\" name=\"product_category\" value=\"".$category["nome"]."\">
+                            </div>
+                        </form>
+                        
+                        <div class= \"subnav-content\" >";
+
             $subcategory_result = getAllSubCategories($category["nome"]);
             $subcategory = pg_fetch_assoc($subcategory_result);
+            
+            echo "          <form method = \"GET\" action=\"../Non_Auth_user/listProducts.php\">";
             while (isset($subcategory["nome"])) {
-                echo "      <a href=\"#company\">" . $subcategory["nome"] . "</a>";
+                echo "          <div class = \"subnav-content-btn \">
+                                    <input type=\"text\" name=\"filter\" value=\"subcategory\" hidden>";
+                echo "              <input type=\"submit\" name=\"product_subcategory\" value=\"". $subcategory["nome"]."\">";
+                echo "          </div>";
                 $subcategory = pg_fetch_assoc($subcategory_result);
             }
+            echo "          </form>";
+
+            echo "      </div>";
             echo "  </div>";
-            echo "</div>";
 
             $category = pg_fetch_assoc($category_result);
         }
+        echo "  </form>";
         echo "</div>";
-        
+
     }
 
     function footer(){

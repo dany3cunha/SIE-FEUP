@@ -38,6 +38,18 @@
     #$n_product_specs = count($product_specs);
     #echo "DBG:".$n_product_specs;
 
+    # Verify the availability 
+    if($product_qty <= 0){
+        $qtyStyle = "product-out-stock ";
+        $qtyMsg   = "Esgotado";
+    }else if($product_qty > 0 and $product_qty < 50){
+        $qtyStyle = "product-few-stock ";
+        $qtyMsg   = "Poucas Unidades";
+    }else{
+        $qtyStyle = "product-in-stock ";
+        $qtyMsg   = "Disponível";
+    }
+
 ?>
 
 <body>
@@ -79,28 +91,13 @@
                                 </div>
                             </div>";   
         }
-
-        # Verify the availability 
-        if($product_qty <= 0){
-            echo "          <div class = \"product-page-product-availability\">
-                                <div class = \"product-out-stock \">
-                                    Esgotado
-                                </div>                      
+        
+        # Availability message
+        echo "              <div class = \"product-page-product-availability \" >
+                                <div class = \" ".$qtyStyle."\">
+                                    ".$qtyMsg."
+                                </div> 
                             </div>";
-
-        }else if($product_qty > 0 and $product_qty < 50){
-            echo "          <div class = \"product-page-product-availability\">
-                                <div class = \"product-few-stock \">
-                                    Poucas Unidades
-                                </div>                      
-                            </div>";
-        }else{
-            echo "          <div class = \"product-page-product-availability\">
-                                <div class = \"product-in-stock \">
-                                    Disponível
-                                </div>                      
-                            </div>";
-        }
 
         # Buy and Add do cart buttons
         echo "              <div class = \"btn-table-2cols\">";
