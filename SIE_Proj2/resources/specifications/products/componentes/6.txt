@@ -1,12 +1,12 @@
-Socket: AM5
-Nº de Núcleos: 16
-Nº de Threads: 32
-Clock Base: 4.5 GHz
-Clock de Max Boost: Até 5.7 GHz
-Total de Cache L1: 1 MB
-Total de Cache L2: 16 MB
-Total de Cache L3: 64 MB
-TDP Padrão: 170 W
-Tecnologia de Fabrico: TSMC 5nm FinFET
-Gráficos Integrados: AMD Radeon™ Graphics
+Socket: AM5;
+Nº de Núcleos: 16;
+Nº de Threads: 32;
+Clock Base: 4.5 GHz;
+Clock de Max Boost: Até 5.7 GHz;
+Total de Cache L1: 1 MB;
+Total de Cache L2: 16 MB;
+Total de Cache L3: 64 MB;
+TDP Padrão: 170 W;
+Tecnologia de Fabrico: TSMC 5nm FinFET;
+Gráficos Integrados: AMD Radeon™ Graphics;
 Cooler Incluído: Não

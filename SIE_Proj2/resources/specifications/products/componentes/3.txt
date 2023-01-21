@@ -1,15 +1,15 @@
-Nº de Núcleos: 16
-Nº de Performance-cores: 8
-Nº de Efficient-cores: 8
-Nº de Threads: 24
-Frequência Turbo Máxima: 5.40 GHz
-Frequência Turbo Máxima do Performance-core: 5.30 GHz
-Frequência Turbo Máxima do Efficient-core: 4.20 GHz
-Frequência Base do Performance-core: 3.40 GHz
-Frequência Base do Efficient-core: 2.50 GHz
-Cache: 30 MB Intel® Smart Cache
-Cache L2 total: 24 MB
-TDP Base: 125 W
-TDP Máximo: 253 W
-Gráficos Integrados: Não incluídos
+Nº de Núcleos: 16;
+Nº de Performance-cores: 8;
+Nº de Efficient-cores: 8;
+Nº de Threads: 24;
+Frequência Turbo Máxima: 5.40 GHz;
+Frequência Turbo Máxima do Performance-core: 5.30 GHz;
+Frequência Turbo Máxima do Efficient-core: 4.20 GHz;
+Frequência Base do Performance-core: 3.40 GHz;
+Frequência Base do Efficient-core: 2.50 GHz;
+Cache: 30 MB Intel® Smart Cache;
+Cache L2 total: 24 MB;
+TDP Base: 125 W;
+TDP Máximo: 253 W;
+Gráficos Integrados: Não incluídos;
 Cooler Incluído: Não

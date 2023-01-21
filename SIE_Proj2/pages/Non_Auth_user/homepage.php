@@ -1,4 +1,4 @@
-<!-- PHP includes -->
+
 <html>
 <header>
 
@@ -11,8 +11,9 @@
 <body>
 
     <?php
-    
+        /* PHP includes */
         include_once("../../include/menu_footer.php");
+        include_once("../../database/product.php");
         include_once("../../database/homepage_queries.php");
         menu();
 
@@ -22,33 +23,39 @@
               </div>";
         echo "<div class =\"content-body\">";
         echo "  <div class = \"homepage-grid\">";
-        
+    
         while ($row = pg_fetch_row($highlights)) {
-            $prod_ref = $row[0];
-            $prod_name = $row[1];
-            $prod_price =$row[2];
-            $prod_subcat = $row[3];
-            $prod_discount =$row[4];
-            $prod_cat = getCatBySubcat($prod_subcat);
+            $product_ref = $row[0];
+            $product_name = $row[1];
+            $product_price =$row[2];
+            $product_subcat = $row[3];
+            $product_discount =$row[4];
+            $product_cat = getCatBySubcat($product_subcat);
         
             echo "  <div class = \"homepage-grid-product \">                
-                        <div>
-                            <img src=\"../../resources/images/products/".$prod_cat."/".$prod_ref.".jpg\">
-                        </div>";
+                        <form method = \"GET\" action = \"productpage.php \">
+                            <input type=\"text\" name=\"product_ref\" value =\"".$product_ref."\" hidden>
+                            <div class = \"homepage-grid-product-img\">
+                                <input type=\"image\" src=\"../../resources/images/products/".$product_cat."/".$product_ref.".jpg\"> 
+                            </div>
+                        </form>";
                         
-            echo "      <div class = \"homepage-grid-product-name\">
-                            ".$prod_name."
-                        </div>";
+            echo "      <form method = \"GET\" action = \"productpage.php \">  
+                            <input type=\"text\" name=\"product_ref\" value =\"".$product_ref."\" hidden>
+                            <div class = \"homepage-grid-product-name\">
+                                <input type =\"submit\" value =\"".$product_name."\">
+                            </div>
+                        </form>";
             
-            if ($prod_discount <= 0){
+            if ($product_discount <= 0){
             echo "      <div class = \"homepage-grid-product-price\">
-                            ".$prod_price."€
+                            ".$product_price." €
                         </div>";
             }else{
             echo "      <div class = \"homepage-grid-product-price\">
-                            <strike>".round($prod_price,2,PHP_ROUND_HALF_UP)."€ </strike>
+                            <strike>".round($product_price,2,PHP_ROUND_HALF_UP)." € </strike>
                             <div class = \"homepage-grid-product-price-discount\">
-                                ".round($prod_price - ($prod_discount/100)*$prod_price,2,PHP_ROUND_HALF_UP)."€                      
+                                ".round($product_price - ($product_discount/100)*$product_price,2,PHP_ROUND_HALF_UP)."€                      
                             </div>
                         </div>";   
             }

@@ -6,6 +6,7 @@
 </header>
 
 <?php
+
 // PHP include menu
 include_once("../../include/menu_footer.php");
 menu();
@@ -68,3 +69,4 @@ if (!empty($_SESSION['sErrorMsg'])) {
 ?>
 
 </html>
+

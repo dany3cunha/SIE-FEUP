@@ -1,10 +1,10 @@
-Socket: AM4
-Frequência Base: 3.40 GHz
-Frequência Turbo: Até 4.6 GHz
-Número Núcleos: 8
-Número Threads: 16
-Cache L2 total: 4 MB
-Cache L3 total: 32 MB
-Litografia: TSMC 7nm FinFET
-TDP: 65 W
+Socket: AM4;
+Frequência Base: 3.40 GHz;
+Frequência Turbo: Até 4.6 GHz;
+Número Núcleos: 8;
+Número Threads: 16;
+Cache L2 total: 4 MB;
+Cache L3 total: 32 MB;
+Litografia: TSMC 7nm FinFET;
+TDP: 65 W;
 Solução térmica: Não incluído
