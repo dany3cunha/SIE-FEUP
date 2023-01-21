@@ -1,6 +1,5 @@
 <?php
-    
+    session_start();
     session_destroy();
-    echo "authen";
     header("Location: ../../index.php");
 ?>
