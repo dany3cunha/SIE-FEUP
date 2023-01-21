@@ -40,7 +40,7 @@ CREATE TABLE produto (
     ref INT NOT NULL,
     nome VARCHAR(500) NOT NULL,
     quantidade INT NOT NULL,
-    descricao VARCHAR(500) NOT NULL,
+    descricao TEXT NOT NULL,
     preco FLOAT(6),
     desconto INT NOT NULL,
     destaque BOOLEAN,

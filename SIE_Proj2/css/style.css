@@ -1,12 +1,23 @@
 /* Body Common Properties  */
+/*
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
-  margin-bottom: 100px;
-  /* Footer height*/
-  overflow: hidden;
-
+  margin-bottom: 100px; /* Footer height*//*
+  scroll-behavior: auto;
 }
+*/
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px;
+/*  margin-bottom: 100px;  Footer height*/
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
 
 /*  Menu properties */
 
@@ -141,23 +152,19 @@ body {
 /* Footer properties */
 
 .footer {
-  position: absolute;
-  width: 100%;
+  position:relative;
   bottom: 0;
-  height: 100px;
+
   background-color: #C55A11;
-}
+  height: 100px;
+} 
 
 .footer hr {
-  margin-top: 20px;
+
   height: 10px;
   background-color: #DBDBDB;
 }
 
-.footer-flex-container {
-  display: flex;
-  /*justify-content: space-between;*/
-}
 
 .footer-text {
   float: left;
@@ -193,7 +200,7 @@ body {
 
 .body-remaining {
   background-color: #DBDBDB;
-  height: 250px;
+  height: 207px;
 }
 
 /* Homepage properties */
@@ -248,7 +255,7 @@ body {
   color: red;
 }
 
-/* Product Page*/
+/* Product Page Properties*/
 
 .product-page-go-back a{
   display: inline-block;
@@ -315,19 +322,43 @@ body {
   color: red;
 }
 
-.btn-buy-options button {
-  display: inline;
-  border: none;
-  outline: none;
-  color:#DBDBDB;
-  background-color:inherit;
-  margin: 5px;
+.btn-table-2cols{
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 300px;
+  column-gap: 20px;
+  padding-top: 50px;
+}
+
+.btn-buy-options,
+.btn-buy-options input {
+  width: 130px;
+  height: 50px;
+  background-color: inherit;
+  color: #C55A11;
+  border-color: #C55A11;
+  border-width: 2px;
   border-radius: 5px;
-  width: 60px;
+  outline: none;
+  text-align: center;
+  white-space: normal; /* For center text if needed in 2 or more rows */
+  font-size: 16px;
 }
 
-.btn-buy-options:hover{
+.btn-buy-options:hover input{
   background-color:#C55A11;
-  color: #DBDBDB;
+  color: white;
 }
 
+/* Text formatting*/
+
+.product-page-text-title{
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.product-page-product-text{
+  padding: 10px;
+  font-size: 14px;
+}

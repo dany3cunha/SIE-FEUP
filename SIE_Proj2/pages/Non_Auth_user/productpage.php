@@ -13,7 +13,7 @@
     include_once("../../database/product.php");
     
     # GET product ref.
-    $product_ref = $_GET['prod_ref'];
+    $product_ref = $_GET['product_ref'];
 
     # Retrieve from DB product information
     $prod_info = getProductByRef($product_ref);
@@ -28,11 +28,22 @@
     $product_subcategory   = $prod_info['product_subcategory'];
     $product_category      = getCatBySubcat($product_subcategory);
 
+    # Divide the description of each product, delimited by ';'
+    $product_desc = explode(";",$product_desc);
+    $n_product_desc = count($product_desc);
+    #echo "DBG:".$n_product_desc;
+    
     # Access local description of the product
     $product_specs_file_path = '../../resources/specifications/products/'.$product_category.'/'.$product_ref.'.txt';
     $product_specs_file = fopen($product_specs_file_path,"r") or die("Unable to open specs file!");
     $product_specs = fread($product_specs_file,filesize($product_specs_file_path));
     fclose($product_specs_file);
+
+    # Divide the specs of each product, delimited by ';'
+    $product_specs = explode(";",$product_specs);
+    #$n_product_specs = count($product_specs);
+    #echo "DBG:".$n_product_specs;
+
 ?>
 
 <body>
@@ -98,20 +109,42 @@
         }
 
         # Buy and Add do cart buttons
-        echo "              <div class = \"btn-buy-options\">
-                                Compre já
-                            </div>
-                            <div class = \"btn-buy-options\">
-                                Adicionar ao Carrinho
-                            </div>
-        ";
-
+        echo "              <div class = \"btn-table-2cols\">";
+        echo "                  <form method = \"GET\" action = \"../Auth_user/formCheckout.php \">  
+                                    <input type=\"text\" name=\"prod_ref\" value =\"".$product_ref."\" hidden>
+                                    <div class = \"btn-buy-options\">
+                                        <input type =\"submit\" value =\"Compre já\">
+                                    </div>
+                                </form>";
+        echo "                  <form method = \"GET\" action = \"#add2Cart\">  
+                                    <input type=\"text\" name=\"prod_ref\" value =\"".$product_ref."\" hidden>
+                                    <div class = \"btn-buy-options\">
+                                        <input type =\"submit\" value =\"Adicionar ao Carrinho\">
+                                    </div>
+                                </form>";                      
+        echo "              </div>";
 
         echo "          </div>
                     </div>";
 
         # For the product description
         echo "      <div>
+                        <div class = \"product-page-product-text \">";
+        foreach ($product_desc as $desc){
+        echo               $desc."<br><br>";
+        }
+        echo "          </div>
+                        <div class = \"product-page-text-title\">
+                            Especificações
+                        </div>
+                        <div class = \"product-page-product-text \">
+                            <ul>";
+        foreach ($product_specs as $spec){
+            echo "          <li>".$spec."</li>";
+        }
+
+        echo"               </ul>
+                        </div>
                     </div>";
 
         echo "  </div>"; #ending product-page-product

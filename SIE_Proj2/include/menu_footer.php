@@ -50,14 +50,16 @@
     function footer(){
 
         echo "<div class = \"footer\">
-                <hr>                         
+                <div style=\"height:10px;\"></div>
+                <hr>
                 <div class = \"footer-text \">
                     FEUP MEEC - Sistemas de Informação Empresariais (SIE) 2022/23 <br>
                     Projeto 2 - Aplicação PHP, (JS), e Postgres &copy Joaquim Cunha (up201806651@edu.fe.up.pt) &copy Pedro Silva (up201806526@edu.fe.up.pt)
                 </div>       
                 <div class = \"footer-logo\">
                     <img src = \"../../resources/logos/feup_logo.png\">
-                </div>               
+                </div>
+    
             </div>";
 
     }
