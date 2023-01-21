@@ -24,7 +24,7 @@
         
         $_SESSION['sErrorMsg'] = "Preencha todos os campos obrigatórios";    
     }
-    if( !emailIsAvailable($email) ){
+    if(!emailIsAvailable($email) ){
         $_SESSION['sErrorMsg'] = "Este email já se encontra registado";    
     }
 

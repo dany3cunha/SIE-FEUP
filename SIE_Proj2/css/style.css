@@ -3,14 +3,6 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
-  margin-bottom: 100px; /* Footer height*//*
-  scroll-behavior: auto;
-}
-*/
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0px;
-/*  margin-bottom: 100px;  Footer height*/
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +17,7 @@ body {
   background-color: #DBDBDB;
 }
 
-/* Login and Register buttons*/
+/* Login, Register and Form buttons*/
 
 .box {
   display: flex;
@@ -35,6 +27,18 @@ body {
 
 .push-to-right {
   margin-left: auto;
+}
+
+.btn-form{
+  margin: 5px;
+  height: 40px;
+  width: 100px;
+  background-color: inherit;
+  border-color: #C55A11;
+  border-width: 2px;
+  border-radius: 5px;  
+  font-size: 16px;
+  color: #C55A11;
 }
 
 .btn {
@@ -55,20 +59,28 @@ body {
 
 .btn:hover,
 .btn a:hover,
-.btn:hover a {
+.btn:hover a,
+.btn-form:hover {
   background-color: #C55A11;
   color: white;
 }
 
-.btn-info {
+.btn-default {
+  margin: 5px;
+  padding: 20px;
   border: 0px;
   background-color: inherit;
   padding-right: 10px;
 }
 
-.btn-info a {
+.btn-default a {
   text-decoration: none;
   color: inherit;
+}
+
+.btn-default a:hover{
+  filter: opacity(60%);
+  cursor: pointer;
 }
 
 /* Navigation bar  */
@@ -255,6 +267,7 @@ body {
   color: red;
 }
 
+
 /* Product Page Properties*/
 
 .product-page-go-back a{
@@ -362,3 +375,42 @@ body {
   padding: 10px;
   font-size: 14px;
 }
+
+/* Authentication properties */
+
+.auth-mandatory-text{
+  font-size:12px;
+}
+
+.auth-error-text{
+  font-size:12px;
+  color:red;
+}
+
+input[type=text],
+input[type=password] {
+  width:300px;
+  padding: 5px 10px;
+  margin: 2px;
+  box-sizing: border-box;
+  border-radius:5px;
+  border: 1px solid black;
+}
+
+
+.button{
+  height:50px;
+  width: 40px;
+  padding: 0;
+  background: inherit;
+  border: none;
+  border-radius: 5px;
+  border-radius:5px;
+  overflow: hidden;
+}
+
+.button:hover {
+  filter: opacity(60%);
+  cursor: pointer;
+}
+
