@@ -14,10 +14,20 @@
     $cp         = $_POST['newuserCP'];
     $phone      = $_POST['newuserPhone'];
     $nif        = $_POST['newuserNIF'];
-    
-    if(!emailIsAvailable($email) ){
-        $_SESSION['sErrorMsg'] = "Este email já se encontra registado";    
-    }
+
+    // Get old email
+    $current_ID     = $_SESSION['sCurrentUserID'];
+	$userInfo       = getUserInfo($current_ID);
+	$old_email      = $userInfo['email'];
+
+    // Verify if the user updated the email
+    if(!($email==$old_email) ){
+        // If email was updated, verify if the new e-mail is available
+        if(!emailIsAvailable($email) ){
+            $_SESSION['sErrorMsg'] = "Este email já se encontra registado";
+        }    
+    }   
+
     if (empty($email) OR 
         empty($password) OR
         empty($name) OR
@@ -27,27 +37,22 @@
         $_SESSION['sErrorMsg'] = "Preencha todos os campos obrigatórios";    
     }
 
-    //If fields were wrong, save them and exit
-    if(!empty($_SESSION['sErrorMsg'])){
-        $_SESSION['sEmail'] 	 = $email;
-        $_SESSION['sName'] 		 = $name;
-        $_SESSION['sAddress']    = $address;
-        $_SESSION['sCP']         = $cp;
-        $_SESSION['sPhone']      = $phone;
-        $_SESSION['sNIF']        = $nif;   
-        header("Location: ../../pages/Non_Auth_user/register.php"); 
+    //If error was detected, exit without updating
+    if(!empty($_SESSION['sErrorMsg'])){ 
+        header("Location: ../../pages/Auth_user/userInfo.php"); 
         exit();    
     }
 
-    //Insert new user, and checks for error in insert
+    //Update all fields
     $password_md5 = md5($password);
-    if( !insertNewUser($email, $password_md5, $name, $address, $cp, $phone, $nif) ){
+    if( !updateUser($current_ID, $email, $password_md5, $name, $address, $cp, $phone, $nif) ){
         $_SESSION['sErrorMsg'] = "Ocorreu um erro, tente novamente";
         header("Location: ../../pages/Non_Auth_user/register.php"); 
         exit();  
     }
 
-    header("Location: ../../index.php");  
+    $_SESSION['sFieldsUpdated'] = "Os dados foram atualizados com sucesso!";
+    header("Location: ../../pages/Auth_user/userInfo.php");  
 
 ?>
 

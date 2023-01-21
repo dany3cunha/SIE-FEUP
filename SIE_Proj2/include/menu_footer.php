@@ -1,6 +1,7 @@
 <?php
     /* PHP includes */
     include_once("../../database/categories.php");
+    include_once("../../database/user.php");
 ?>
 
 <?php
@@ -17,10 +18,16 @@
                     </button>";
 
         if(isset($_SESSION['sAuthenticated'])){
-            echo "authenticated";
             //If authenticated, enable profile and log out buttons
+            
+            //Show user registered Name
+            $userInfo       = getUserInfo($_SESSION['sCurrentUserID']);
+            $current_Name   = $userInfo['nome'];
+            echo "<div class=\"display-user-name\">Olá, ".$current_Name."</div>";
+            
+            //Buttons
             echo "  <button class = \"btn-default\">
-                        <a href=\"../../action/Auth_user/actionLogout.php\">  
+                        <a href=\"../../pages/Auth_user/userInfo.php\">  
                             <i class=\"fa-solid fa-user fa-2xl\"></i>   
                         </a>             
                     </button>

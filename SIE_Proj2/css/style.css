@@ -152,6 +152,9 @@ body {
   display: block;
 }
 
+.display-user-name{
+  margin-top:15px;
+}
 /* Footer properties */
 
 .footer {
@@ -379,6 +382,11 @@ body {
 .auth-error-text {
   font-size: 12px;
   color: red;
+}
+
+.update-success-text {
+  font-size: 12px;
+  color: green;
 }
 
 input[type=text],

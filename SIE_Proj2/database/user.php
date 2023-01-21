@@ -1,5 +1,5 @@
 <?php
-	
+
 function emailIsAvailable($email) {
     global $conn;
     
@@ -49,6 +49,29 @@ function insertNewUser($email, $password, $name, $address, $cp, $phone, $nif){
     return true;
 }
 
+function updateUser($id, $email, $password, $name, $address, $cp, $phone, $nif){
+    global $conn;
+    		        
+    $query = "  UPDATE utilizador
+                SET email       = '" . $email ."', 
+                    password    = '". $password ."', 
+                    nome        = '" . $name ."', 
+                    morada      = '". $address ."', 
+                    cp          = '". $cp ."', 
+                    telemovel   = '". $phone ."', 
+                    nif         = '". $nif ."' 
+                WHERE id        ="  . $id .";";
+
+    $result = pg_exec($conn, $query);
+
+    if(!$result){
+        echo "Error inserting new user\n";
+        return false;
+    }
+    
+    return true;
+}
+
 function getIdFromEmail($email){
     global $conn;
     
@@ -67,6 +90,49 @@ function getIdFromEmail($email){
     }
     $row = pg_fetch_assoc($result);
     return $row['id']; 
+}
+
+function getNameFromId($id){
+    global $conn;
+    
+    $query = "  SELECT  utilizador.nome
+                FROM 	  utilizador
+                WHERE   id='$id'";
+
+    $result = pg_exec($conn, $query);
+
+    if (!$result) {
+        echo "Error\n";
+        return -1;
+    }
+    $row = pg_fetch_assoc($result);
+    return $row['nome']; 
+}
+
+function getUserInfo($id){
+    global $conn;
+    
+    $query = "  SELECT  utilizador.email        AS email,
+                        utilizador.password     AS password,
+                        utilizador.nome         AS nome,
+                        utilizador.morada       AS morada,
+                        utilizador.cp           AS cp,
+                        utilizador.telemovel    AS telemovel,
+                        utilizador.nif          AS nif,
+                        utilizador.funcionario  AS funcionario 
+                FROM    utilizador
+                WHERE   id='$id'";
+
+    $result = pg_exec($conn, $query);
+
+    if (!$result) {
+        echo "Error\n";
+        return -1;
+    }
+    
+    //variable $row contains the database records
+    $row  = pg_fetch_assoc($result); 
+    return $row; 
 }
 
 /**
