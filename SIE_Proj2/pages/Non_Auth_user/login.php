@@ -1,32 +1,24 @@
-<html>
-<header>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="../../resources/icons/fonts-6/css/all.css">
-	<link rel="stylesheet" href="../../css/style.css">
-</header>
-
 <?php
-
-// PHP include menu
-include_once("../../include/menu_footer.php");
-menu();
-
-
-$errorMsg = "";
-$email = "";
-
-
-if (!empty($_SESSION['sErrorMsg'])) {
-	//echo "<p class='error'>" . $_SESSION['sErrorMsg'] . "<p>";
-	$errorMsg = $_SESSION['sErrorMsg'];
-	$_SESSION['sErrorMsg'] = NULL;
-
-	//Get the form data stored in the session vars, then clean them
-	if (!empty($_SESSION['sEmail'])) 	$email = $_SESSION['sEmail'];
-	$_SESSION['sEmail'] = NULL;
-}
+    /* PHP includes */
+    include_once("../../include/header.php");
 ?>
 
+<?php
+	menu();
+
+	$errorMsg = "";
+	$email = "";
+
+	if (!empty($_SESSION['sErrorMsg'])) {
+		//echo "<p class='error'>" . $_SESSION['sErrorMsg'] . "<p>";
+		$errorMsg = $_SESSION['sErrorMsg'];
+		$_SESSION['sErrorMsg'] = NULL;
+
+		//Get the form data stored in the session vars, then clean them
+		if (!empty($_SESSION['sEmail'])) 	$email = $_SESSION['sEmail'];
+		$_SESSION['sEmail'] = NULL;
+	}
+?>
 
 
 <body>
@@ -62,7 +54,11 @@ if (!empty($_SESSION['sErrorMsg'])) {
 			</table>
 		</form>
 	</div>
+
+	<div style="height:459px"></div>
+
 </body>
+
 
 <?php
 	footer();

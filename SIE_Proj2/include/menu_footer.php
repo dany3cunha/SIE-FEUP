@@ -1,10 +1,12 @@
 <?php
-    
-    include_once("../../database/homepage_queries.php");
+    /* PHP includes */
+    include_once("../../database/categories.php");
+?>
+
+<?php
 
     function menu(){
-        session_start();
-        
+
         //Show navbox common elements
         echo "  <div class = \"box\">
                     <div class = \"push-to-right\"></div>

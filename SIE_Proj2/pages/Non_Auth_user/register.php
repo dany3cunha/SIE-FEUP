@@ -1,44 +1,39 @@
-<html>
-<header>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="../../resources/icons/fonts-6/css/all.css">
-	<link rel="stylesheet" href="../../css/style.css">
-</header>
+<?php
+    /* PHP includes */
+    include_once("../../include/header.php");
+?>
 
 <?php
-// PHP include menu
-include_once("../../include/menu_footer.php");
-menu();
+	menu();
 
+	$errorMsg = "";
+	$email = "";
+	$name = "";
+	$address = "";
+	$cp = "";
+	$phone = "";
+	$nif = "";
 
-$errorMsg = "";
-$email = "";
-$name = "";
-$address = "";
-$cp = "";
-$phone = "";
-$nif = "";
+	if (!empty($_SESSION['sErrorMsg'])) {
+		//echo "<p class='error'>" . $_SESSION['sErrorMsg'] . "<p>";
+		$errorMsg = $_SESSION['sErrorMsg'];
+		$_SESSION['sErrorMsg'] = NULL;
 
-if (!empty($_SESSION['sErrorMsg'])) {
-	//echo "<p class='error'>" . $_SESSION['sErrorMsg'] . "<p>";
-	$errorMsg = $_SESSION['sErrorMsg'];
-	$_SESSION['sErrorMsg'] = NULL;
+		//Get the form data stored in the session vars, then clean them
+		if (!empty($_SESSION['sEmail'])) 	$email = $_SESSION['sEmail'];
+		if (!empty($_SESSION['sName'])) 	$name = $_SESSION['sName'];
+		if (!empty($_SESSION['sAddress'])) 	$address = $_SESSION['sAddress'];
+		if (!empty($_SESSION['sCP'])) 	    $cp = $_SESSION['sCP'];
+		if (!empty($_SESSION['sPhone'])) 	$phone = $_SESSION['sPhone'];
+		if (!empty($_SESSION['sNIF'])) 	    $nif = $_SESSION['sNIF'];
 
-	//Get the form data stored in the session vars, then clean them
-	if (!empty($_SESSION['sEmail'])) 	$email = $_SESSION['sEmail'];
-	if (!empty($_SESSION['sName'])) 	$name = $_SESSION['sName'];
-	if (!empty($_SESSION['sAddress'])) 	$address = $_SESSION['sAddress'];
-	if (!empty($_SESSION['sCP'])) 	    $cp = $_SESSION['sCP'];
-	if (!empty($_SESSION['sPhone'])) 	$phone = $_SESSION['sPhone'];
-	if (!empty($_SESSION['sNIF'])) 	    $nif = $_SESSION['sNIF'];
-
-	$_SESSION['sEmail']     = NULL;
-	$_SESSION['sName'] 		= NULL;
-	$_SESSION['sAddress']   = NULL;
-	$_SESSION['sCP']        = NULL;
-	$_SESSION['sPhone']     = NULL;
-	$_SESSION['sNIF']       = NULL;
-}
+		$_SESSION['sEmail']     = NULL;
+		$_SESSION['sName'] 		= NULL;
+		$_SESSION['sAddress']   = NULL;
+		$_SESSION['sCP']        = NULL;
+		$_SESSION['sPhone']     = NULL;
+		$_SESSION['sNIF']       = NULL;
+	}
 ?>
 
 

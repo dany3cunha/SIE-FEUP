@@ -47,9 +47,7 @@
         header("Location: ../../pages/Non_Auth_user/register.php"); 
         exit();  
     }
-    //Everything verified, so let's insert the new user!
-    $_SESSION['sAuthenticated'] = true; 
-    $_SESSION['sCurrentUserID'] = getIdFromEmail($email);  
+
     header("Location: ../../index.php");  
 
 ?>

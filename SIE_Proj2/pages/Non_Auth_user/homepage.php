@@ -1,20 +1,12 @@
-
-<html>
-<header>
-
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../../resources/icons/fonts-6/css/all.css">
-    <link rel="stylesheet" href="../../css/style.css">
-
-</header>
+<?php
+    /* PHP includes */
+    include_once("../../include/header.php");
+    include_once("../../database/product.php");
+    include_once("../../database/categories.php");
+?>
 
 <body>
-
     <?php
-        /* PHP includes */
-        include_once("../../include/menu_footer.php");
-        include_once("../../database/product.php");
-        include_once("../../database/homepage_queries.php");
         menu();
 
         $highlights = get3Highlights();

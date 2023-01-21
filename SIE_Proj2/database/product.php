@@ -28,24 +28,34 @@
 
     }
 
-    function getCatBySubcat($subcategory){
+
+    function get3Highlights(){
+        
+        /*select your_columns from your_table ORDER BY random() - and select only 3 results */
+
         global $conn;
+        $query = "select produto.ref             AS product_ref,
+                         produto.nome            AS product_name,
+                         produto.preco           AS product_price,
+                         produto.fk_subcategoria AS product_subcategory,
+                         produto.desconto        AS product_discount
+                  from produto
+                  where produto.destaque = TRUE
+                  ORDER BY random()
+                  LIMIT 3"; 
 
-        $query = "select  subcategoria.fk_categoria AS category 
-				  from 	  subcategoria 
-                  where nome = '".$subcategory."'";
-
-		//echo "DEBUG query: " . $query;
+        
+        //echo "DEBUG query: " .$query. "</br>";
 	
 		$result = pg_exec($conn, $query);
 		//echo "DEBUG num_rows: " . pg_num_rows($result);
         if (!$result) {
-            echo "An error occurred in getCatBySubcat().";
+            echo "An error occurred in get3Highlights().";
             exit();
         }
-        $result = pg_fetch_assoc($result);
-		return $result['category'];
-		//exit();		    
+        
+		return $result;
+               
     }
 
 ?>
