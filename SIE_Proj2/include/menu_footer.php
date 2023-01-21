@@ -3,18 +3,42 @@
     include_once("../../database/homepage_queries.php");
 
     function menu(){
-            
+        session_start();
+        
+        //Show navbox common elements
         echo "  <div class = \"box\">
                     <div class = \"push-to-right\"></div>
-                    <button class = \"btn-info\"> 
-                        <a href=\"#info\">
+                    <button class = \"btn-default\"> 
+                        <a href=\"../../action/Non_Auth_user/login.php\">
                             <i class = \"fa-solid fa-circle-info fa-2xl\"></i>
                         </a> 
+                    </button>";
+
+        if(isset($_SESSION['sAuthenticated'])){
+            echo "authenticated";
+            //If authenticated, enable profile and log out buttons
+            echo "  <button class = \"btn-default\">
+                        <a href=\"../../action/Auth_user/actionLogout.php\">  
+                            <i class=\"fa-solid fa-user fa-2xl\"></i>   
+                        </a>             
                     </button>
-                    <button class = \"btn\"> <a href=\"../../pages/Non_Auth_user/login.php\">Login</a> </button>
-                    <button class = \"btn\"> <a href=\"../../pages/Non_Auth_user/register.php\">Register</a> </button>
+                    <button class = \"btn-default\">
+                        <a href=\"../../action/Auth_user/actionLogout.php\">  
+                            <i class=\"fa-solid fa-right-from-bracket fa-2xl\"></i> 
+                        </a>             
+                    </button>  
                     <div style = \"padding-right: 20px; \"> </div>
                 </div>";
+        }
+        else{
+            //If not authenticated, enable login and register buttons
+            echo "  <button class = \"btn\"> <a href=\"../../pages/Non_Auth_user/login.php\">Login</a> </button>
+                    <button class = \"btn\"> <a href=\"../../pages/Non_Auth_user/register.php\">Register</a> </button>
+                    <div style = \"padding-right: 20px; \"> </div>
+                </div>";            
+        }
+
+
 
         $category_result = getAllCategories();
 

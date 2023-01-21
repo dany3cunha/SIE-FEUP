@@ -10,7 +10,6 @@
 include_once("../../include/menu_footer.php");
 menu();
 
-session_start();
 
 $errorMsg = "";
 $email = "";

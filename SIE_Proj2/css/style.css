@@ -63,15 +63,22 @@ body {
   color: white;
 }
 
-.btn-info {
+.btn-default {
+  margin: 5px;
+  padding: 20px;
   border: 0px;
   background-color: inherit;
   padding-right: 10px;
 }
 
-.btn-info a {
+.btn-default a {
   text-decoration: none;
   color: inherit;
+}
+
+.btn-default a:hover{
+  filter: opacity(60%);
+  cursor: pointer;
 }
 
 /* Navigation bar  */
