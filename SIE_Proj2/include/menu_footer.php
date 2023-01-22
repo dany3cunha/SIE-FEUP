@@ -25,13 +25,19 @@
             $current_Name   = $userInfo['nome'];
             echo "<div class=\"display-user-name\">Olá, ".$current_Name."</div>";
             
-            //Buttons
+            //User Profile Dropdown Menu                    
+            echo "  <div class=\"dropdown\">
+                        <button class=\"btn-default\">
+                            <i class=\"fa-solid fa-user fa-2xl\"></i>
+                        </button>
+                        <div class=\"dropdown-content\">
+                            <a href=\"../../pages/Auth_user/userInfo.php\">Dados pessoais</a>
+                            <a href=\"#\">Encomendas</a>
+                        </div>
+                    </div>";
+
+            //Logout button
             echo "  <button class = \"btn-default\">
-                        <a href=\"../../pages/Auth_user/userInfo.php\">  
-                            <i class=\"fa-solid fa-user fa-2xl\"></i>   
-                        </a>             
-                    </button>
-                    <button class = \"btn-default\">
                         <a href=\"../../action/Auth_user/actionLogout.php\">  
                             <i class=\"fa-solid fa-right-from-bracket fa-2xl\"></i> 
                         </a>             
@@ -46,8 +52,6 @@
                     <div style = \"padding-right: 20px; \"> </div>
                 </div>";            
         }
-
-
 
         $category_result = getAllCategories();
 
