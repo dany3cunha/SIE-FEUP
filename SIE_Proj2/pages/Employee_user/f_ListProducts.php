@@ -48,21 +48,24 @@
         $selected_text  = "";
         $category       = pg_fetch_assoc($category_result);
     }
-?>
+    echo "              </select>
+                    </td>";
 
-                        </select>               
-                    </td>
 
-<?php
+
     /**************************** SubCategory Select Box ****************************/
     
     // Show subcategory selection if category is selected and is not "All"
+    $disable_text = "";
+    if( !(isset($_POST['category']) && $categorySelected!="*") ) $disable_text = "disabled";
+    
+    echo"           <td>
+                        <select name = \"subcategory\"    class = \"emp-cat-select\"  onchange = \"this.form.submit()\" ".$disable_text." >
+                            <option value   =   \"\" >  Selecionar subcategoria:    </option>";    
+
+    // Retrieve subcategories for the category selected
     if( isset($_POST['category']) && $categorySelected!="*"){
-        echo"       <td>
-                        <select name=\"subcategory\" class=\"emp-cat-select\" onchange=\"this.form.submit()\">
-                            <option value=\"\">Selecionar subcategoria:</option>";
-        
-        $selected_text          = "";
+        $selected_text = "";
         // Detect if some subcategory is already detected
         if( isset($_POST['subcategory'])   ) $subCategorySelected = $_POST['subcategory'];
 
@@ -81,16 +84,33 @@
             // Show option
             echo "              <option value = '" . $subCategory['nome'] . "' ".$selected_text." >" . $subCategory['nome'] . "</option>";
             $selected_text  = "";
-            $subCategory       = pg_fetch_assoc($subCategory_result);
+            $subCategory    = pg_fetch_assoc($subCategory_result);
         }   
-        
-        echo"           </select>
-                    </td>";
     }
+
+    echo"               /select>
+                    </td>";   
 ?>
                 </tr>
             </table>
         </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>    Referência  </td>
+                    <td>    Produto     </td>
+                    <td>    Quantidade  </td>
+                    <td>    Destaque    </td>
+                    <td>    &nbsp       </td>
+                </tr>
+            <thead>
+
+        </table>
+        
+
+
+
 	</div>
 </body>
 
