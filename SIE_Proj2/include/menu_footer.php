@@ -60,10 +60,8 @@
 
     function LoginAndRegisterButtons(){
         //If not authenticated, enable login and register buttons
-        echo "  <button class = \"btn\"> <a href=\"../../pages/Non_Auth_user/login.php\">Login</a> </button>
-                
-                <a href=\"../../pages/Non_Auth_user/login.php\" class=\"btn\">Login</a>
-                <button class = \"btn\"> <a href=\"../../pages/Non_Auth_user/register.php\">Register</a> </button>
+        echo "  <a href=\"../../pages/Non_Auth_user/login.php\"> <button class=\"btn\">Login</button></a>
+                <a href=\"../../pages/Non_Auth_user/register.php\"> <button class=\"btn\">Register</button></a>
                 <div style = \"padding-right: 20px; \"> </div>
             </div>"; 
     }
@@ -100,9 +98,11 @@
 
         echo "<div class=\"navbar\">";
         echo "  <div class=\"subnav\">
-                    <button class = \"subnavbtn-home \">
-                    <a href=\"../../index.php\"> <i class=\"fa-solid fa-house\"></i></a>
-                    </button>
+                    <a href=\"../../index.php\">
+                        <button class = \"subnavbtn-home \"> 
+                            <i class=\"fa-solid fa-house fa-xl\"></i>
+                        </button>
+                    </a>
                 </div>";
 
         $category = pg_fetch_assoc($category_result);
@@ -111,7 +111,6 @@
             echo "  <div class = \"subnav\">
                         <form method = \"GET\" action=\"../Non_Auth_user/listProducts.php\">
                             <div class= \"subnavbtn\" >
-                                
                                 <input type=\"submit\" name=\"info\" value=\"".$category["nome"]."\">
                             </div>
                         </form>
@@ -143,25 +142,29 @@
     function EmployeeNavBar(){
         echo "  <div class=\"navbar\">";
         // Home button
-        echo "      <div class=\"subnav\">
-                        
-                        <button class = \"subnavbtn-home \">
-                            <a href=\"../../index.php\">    <i class=\"fa-solid fa-house\"></i>    </a>
+        echo "  <div class=\"subnav\">
+                    <a href=\"../../index.php\">
+                        <button class = \"subnavbtn-home \"> 
+                            <i class=\"fa-solid fa-house fa-xl\"></i>
                         </button>
-                        
-                    </div>";
+                    </a>
+                </div>";
         
-                    // Employee custom menu
-        echo "      <div class = \"subnav\" >
-                        <button class= \"subnavbtn\" > 
-                            <a href=\"../Employee_user/f_ListProducts.php\">    Inventário    </a>
-                        </button>
-                    </div>
-                    <div class = \"subnav\" >
-                        <button class= \"subnavbtn\" > 
-                            <a href=\"../Employee_user/f_ListOrders.php\">    Encomendas    </a>
-                        </button>
-                    </div>";
+        // Employee custom menu        
+        echo " <div class = \"subnav\" > 
+                    <form action=\"../Employee_user/f_ListProducts.php\">
+                        <div class= \"subnavbtn\" >
+                            <input type=\"submit\" name=\"info\" value=\"Inventário\">
+                        </div>
+                    </form>
+                </div>
+                <div class = \"subnav\" > 
+                    <form action=\"../Employee_user/f_ListOrders.php\">
+                        <div class= \"subnavbtn\" >
+                            <input type=\"submit\" name=\"info\" value=\"Encomendas\">
+                        </div>
+                    </form>
+                </div>";
                     
         echo "  </div>";
     }
