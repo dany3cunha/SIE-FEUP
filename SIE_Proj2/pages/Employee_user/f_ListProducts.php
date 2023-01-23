@@ -9,7 +9,9 @@
 ?>
 
 <?php
-
+    $categorySelected       = "";
+    $subCategorySelected    = "";
+    $selected_text          = "";
 ?>
 
 
@@ -17,15 +19,15 @@
 <body>
 	<div class="content-title">Inventário </div>
 	<div class="content-body">
-        <table>
-            <tr>
-                <td>
-                    <form action="" method="post" >
+        <form action="" method="post" >
+            <table>
+                <tr>
+                    <td> 
                         <select name="category" class="emp-cat-select" onchange="this.form.submit()">
                             <option value="">Selecionar categoria:</option>
 <?php
-    $categorySelected   = "";
-    $selected_text      = "";
+    /**************************** Category Select Box ****************************/
+
     // Detect if some category is already detected
     if( isset($_POST['category'])   ) $categorySelected = $_POST['category'];
 
@@ -48,19 +50,18 @@
     }
 ?>
 
-                        </select>
-                    </form>                
-                </td>
+                        </select>               
+                    </td>
 
 <?php
+    /**************************** SubCategory Select Box ****************************/
+    
     // Show subcategory selection if category is selected and is not "All"
     if( isset($_POST['category']) && $categorySelected!="*"){
-        echo"   <td>
-                    <form action=\"\" method=\"post\">
+        echo"       <td>
                         <select name=\"subcategory\" class=\"emp-cat-select\" onchange=\"this.form.submit()\">
                             <option value=\"\">Selecionar subcategoria:</option>";
         
-        $subCategorySelected    = "";
         $selected_text          = "";
         // Detect if some subcategory is already detected
         if( isset($_POST['subcategory'])   ) $subCategorySelected = $_POST['subcategory'];
@@ -84,17 +85,17 @@
         }   
         
         echo"           </select>
-                    </form>
-                </td>";
+                    </td>";
     }
-
 ?>
-
-            </tr>
-        </table>
+                </tr>
+            </table>
+        </form>
 	</div>
 </body>
 
 <?php
+    echo $categorySelected;
+    echo $subCategorySelected;
     footer();
 ?>
