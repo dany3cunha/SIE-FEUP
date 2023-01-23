@@ -5,7 +5,7 @@
 ?>
 
 <?php 
-    
+    /*
     $products_list = NULL;
     $type = $_GET["filter"];
 
@@ -20,7 +20,27 @@
     }    
     else
         echo "Error on listProducts, no category or subcategory";
-    
+    */
+
+    $info = $_GET["info"];
+
+    if(searchCat($info) == true){
+        # The value passed matches with a category
+        $products_category = $info;
+        $type = "category";
+    }else {
+        # The value passed don't matches with a category
+        $products_category = getCatBySubcat($info);
+        if ($products_category != null){
+          # But maches with  a subcategory
+          $products_subcategory = $info;
+          $type = "subcategory";
+        }
+        else{
+            echo "Not a category or subcategory !";
+        }
+    }
+
     menu();
 ?>
 
@@ -30,23 +50,33 @@
     echo "<div class = \"content-body\">";
 
     # Different go back based on category or subcategory
-    if($type == "category")
-        echo "  <div class = \"product-page-go-back\">
-                    <u> <a href =\"homepage.php\" > Página Inicial </u></a> 
+    echo "  <div class=\"go-back-line \">";
+    echo "      <form method=\"GET\" action = \"../../index.php\">
+                    <div class = \"go-back-line-text\">
+                        <input type=\"submit\" name=\"go-to-homepage\" value=\"Página Inicial\">
+                    </div>
                     >
-                    <u> <a href = #category >". $products_category."</u></a> 
-                </div>";
-    else{
-        echo "  <div class = \"product-page-go-back\">
-                    <u> <a href =\"homepage.php\" > Página Inicial </u></a> 
-                    >
-                    <u> <a href = #category >". $products_category."</u></a>
-                    >
-                    <u> <a href = #subcategory >". $products_subcategory."</u></a>
-                </div>";
+                </form>";
+    echo "      <form method=\"GET\" action = \"listProducts.php\">
+                    <div class = \"go-back-line-text\">";
+
+    if($type == "category"){
+        echo "          
+                        <input type=\"submit\" name=\"info\" value=\"".$products_category."\">";
+    }else{
+        echo "          <input type=\"submit\" name=\"info\" value=\"".$products_category."\">
+                        >
+                        <input type=\"submit\" name=\"info\" value=\"".$products_subcategory."\">";
     }
+    echo "          </div>
+                </form>";
     
-    echo "</div>";
+    echo "  </div>"; // end go-back-line div
+    
+    
+    
+    
+    echo "</div>";   // end content-body div
 
     ?>
 

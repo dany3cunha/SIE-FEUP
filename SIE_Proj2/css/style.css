@@ -95,12 +95,12 @@ body {
   overflow: hidden;
 }
 
-.subnav form{
+.subnav form {
   margin: 0;
 
 }
 
-.subnav .subnavbtn{
+.subnav .subnavbtn {
   font-size: 16px;
   border: none;
   outline: none;
@@ -114,13 +114,15 @@ body {
   cursor: pointer;
 
 }
-.subnav .subnavbtn input{
+
+.subnav .subnavbtn input {
   border: none;
   outline: none;
   background-color: inherit;
   font-size: 16px;
   cursor: pointer;
 }
+
 .subnav .subnavbtn-home {
   border: none;
   outline: none;
@@ -134,12 +136,12 @@ body {
 
 .navbar a:hover,
 .subnav:hover .subnavbtn,
-.subnav .subnavbtn input:hover, 
+.subnav .subnavbtn input:hover,
 .subnav:hover .subnavbtn-home {
   background-color: #F4B183;
 }
 
-.subnav-content  {
+.subnav-content {
   display: none;
   position: absolute;
   left: 0;
@@ -149,7 +151,7 @@ body {
   z-index: 1;
 }
 
-.subnav-content-btn input{
+.subnav-content-btn input {
   border: none;
   outline: none;
   color: black;
@@ -289,11 +291,27 @@ body {
 
 /* Product Page Properties*/
 
-.product-page-go-back a {
-  display: inline-block;
+.go-back-line{
+  display: flex;
+  padding-left: 10px;
+}
+
+.go-back-line form{
+  display: flex;
+  vertical-align: top;
+  margin: 0;
+}
+
+
+.go-back-line-text input {
+  border: none;
+  background-color: inherit;
+  /*display: inline-block;*/
   font-size: 14px;
   color: black;
-  padding-left: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+  vertical-align: top;
 }
 
 .product-page-grid {

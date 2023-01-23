@@ -54,8 +54,33 @@
             echo "An error occurred in getCatBySubcat().";
             exit();
         }
-        $result = pg_fetch_assoc($result);
-		return $result['category'];
+        if(pg_num_rows($result) == 1){
+            $result = pg_fetch_assoc($result);
+            return $result['category'];
+        }else
+            return null;
+		//exit();		    
+    }
+
+    function searchCat($category){
+        global $conn;
+
+        $query = "select  * 
+				  from 	 categoria 
+                  where categoria.nome = '".$category."'";
+
+		//echo "DEBUG query: " . $query;
+	
+		$result = pg_exec($conn, $query);
+		//echo "DEBUG num_rows: " . pg_num_rows($result);
+        if (!$result) {
+            echo "An error occurred in getCatBySubcat().";
+            exit();
+        }
+        if(pg_num_rows($result) == 1)
+		    return true;
+        else
+            return false;
 		//exit();		    
     }
 ?>
