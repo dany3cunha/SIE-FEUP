@@ -2,10 +2,10 @@
 <?php
     include_once "../../include/opendb.php";
     include_once "../../database/user.php";
+    session_start();
 ?>
 
 <?php
-    session_start();
 
     $email 		= $_POST['userEmail'];
 	$password   = $_POST['userPassword'];
@@ -28,6 +28,10 @@
         exit();    
     }
 
+    //Check if user is employee
+    if( getUserInfo($current_userID)['funcionario'] == "t" ){
+        $_SESSION['sEmployeePerm']=true;
+    }
 
     //Credentials valid, user authenticated and userID saved!
     $_SESSION['sAuthenticated'] = true; 

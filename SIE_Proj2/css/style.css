@@ -86,7 +86,6 @@ body {
   font-size: 16px;
   color: black;
   text-align: center;
-  padding: 14px;
   text-decoration: none;
 }
 
@@ -121,6 +120,7 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+
 .subnav .subnavbtn-home {
   border: none;
   outline: none;
@@ -130,6 +130,7 @@ body {
   margin: 5px;
   margin-left: 10px;
   border-radius: 5px;
+  padding:14px;
 }
 
 .navbar a:hover,
