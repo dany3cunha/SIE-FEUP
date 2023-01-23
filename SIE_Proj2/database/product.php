@@ -58,4 +58,55 @@
                
     }
 
+    function getProductsByCategory($category) {
+
+        global $conn;
+		
+        $query = "select produto.ref             AS product_ref,
+                         produto.nome            AS product_name,
+                         produto.quantidade      AS product_qty,
+                         produto.descricao       AS product_desc,
+                         produto.preco           AS product_price,                          
+                         produto.desconto        AS product_discount,
+                         produto.destaque        AS product_highlighted,
+                         produto.fk_subcategoria AS product_subcategory
+                  from produto
+                  join subcategoria on produto.fk_subcategoria=subcategoria.nome
+                  where subcategoria.fk_categoria = '".$category."'";
+    
+		//echo "DEBUG query: " . $query;
+	
+		$result = pg_exec($conn, $query);
+		//echo "DEBUG num_rows: " . pg_num_rows($result);
+		
+		return $result;
+		//exit();		
+    }
+
+    function getProductsBySubcategory($subcategory){
+
+        global $conn;
+		
+        $query = "select produto.ref             AS product_ref,
+                         produto.nome            AS product_name,
+                         produto.quantidade      AS product_qty,
+                         produto.descricao       AS product_desc,
+                         produto.preco           AS product_price,                          
+                         produto.desconto        AS product_discount,
+                         produto.destaque        AS product_highlighted,
+                         produto.fk_subcategoria AS product_subcategory
+                  from produto
+                  where produto.fk_subcategoria = '".$subcategory."'";
+    
+		//echo "DEBUG query: " . $query;
+	
+		$result = pg_exec($conn, $query);
+		//echo "DEBUG num_rows: " . pg_num_rows($result);
+		
+		return $result;
+		//exit();	
+
+    }
+
+
 ?>
