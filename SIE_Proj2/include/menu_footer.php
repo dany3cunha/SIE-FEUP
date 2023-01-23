@@ -26,7 +26,6 @@
         }
         else if(    isset($_SESSION['sAuthenticated'])  and !isset($_SESSION['sEmployeePerm'])  ){
             //Authenticated client
-            echo "entrei aqui";
             ProfileAndLogOutButtons();
             ProductNavBar();
         }
