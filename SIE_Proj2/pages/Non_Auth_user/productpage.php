@@ -50,6 +50,8 @@
         $qtyMsg   = "Disponível";
     }
 
+    
+
 ?>
 
 <body>
@@ -58,14 +60,28 @@
 
         menu();
         
-        echo "<div class = \"content-body\">
-                <div class = \"product-page-go-back\">
-                    <u> <a href =\"homepage.php\" > Página Inicial </u></a> 
-                    >
-                    <u> <a href = #category >". $product_category."</u></a> 
-                    >
-                    <u> <a href = #subcategory >". $product_subcategory." </u></a>
-                </div>";
+        echo "<div class = \"content-body\">";
+        
+        # Different go back based on category or subcategory
+        echo "  <div class=\"go-back-line \">";
+        echo "      <form method=\"GET\" action = \"../../index.php\">
+                        <div class = \"go-back-line-text\">
+                            <input type=\"submit\" name=\"go-to-homepage\" value=\"Página Inicial\">
+                        </div>
+                        >
+                    </form>";
+        echo "      <form method=\"GET\" action = \"listProducts.php\">
+                        <div class = \"go-back-line-text\">                           
+                            <input type=\"submit\" name=\"info\" value=\"".$product_category."\">
+                            >
+                            <input type=\"submit\" name=\"info\" value=\"".$product_subcategory."\">";   
+        echo "          </div>
+                    </form>";
+        echo "      <div class = \"go-back-line-text\">
+                            >
+                            ".$product_name."
+                        </div>";
+        echo "  </div>"; // end go-back-line div
 
         # Page Content
         echo "   <div class = \"product-page-grid\">

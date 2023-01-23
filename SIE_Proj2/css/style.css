@@ -95,12 +95,12 @@ body {
   overflow: hidden;
 }
 
-.subnav form{
+.subnav form {
   margin: 0;
 
 }
 
-.subnav .subnavbtn{
+.subnav .subnavbtn {
   font-size: 16px;
   border: none;
   outline: none;
@@ -114,7 +114,8 @@ body {
   cursor: pointer;
 
 }
-.subnav .subnavbtn input{
+
+.subnav .subnavbtn input {
   border: none;
   outline: none;
   background-color: inherit;
@@ -136,12 +137,12 @@ body {
 
 .navbar a:hover,
 .subnav:hover .subnavbtn,
-.subnav .subnavbtn input:hover, 
+.subnav .subnavbtn input:hover,
 .subnav:hover .subnavbtn-home {
   background-color: #F4B183;
 }
 
-.subnav-content  {
+.subnav-content {
   display: none;
   position: absolute;
   left: 0;
@@ -151,7 +152,7 @@ body {
   z-index: 1;
 }
 
-.subnav-content-btn input{
+.subnav-content-btn input {
   border: none;
   outline: none;
   color: black;
@@ -248,16 +249,17 @@ body {
 
 }
 
-.homepage-grid-product {
+.grid-product {
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 10px;
   padding: 5px;
   background-color: white;
   border-radius: 20px;
+  height: 100%;
 }
 
-.homepage-grid-product-img input {
+.grid-product-img input {
   width: 50%;
   border-radius: 10px;
   display: block;
@@ -265,7 +267,7 @@ body {
   margin-right: auto;
 }
 
-.homepage-grid-product-name input {
+.grid-product-name input {
   border-style: none;
   background-color: inherit;
   padding-left: 10px;
@@ -276,14 +278,14 @@ body {
   cursor: pointer;
 }
 
-.homepage-grid-product-price {
+.grid-product-price {
   float: left;
   padding-left: 10px;
   font-size: 16px;
   font-weight: bold;
 }
 
-.homepage-grid-product-price-discount {
+.grid-product-price-discount {
   float: right;
   padding-right: 10px;
   font-size: 16px;
@@ -294,11 +296,27 @@ body {
 
 /* Product Page Properties*/
 
-.product-page-go-back a {
-  display: inline-block;
+.go-back-line{
+  display: flex;
+  padding-left: 10px;
+}
+
+.go-back-line form{
+  display: flex;
+  vertical-align: top;
+  margin: 0;
+}
+
+
+.go-back-line-text input {
+  border: none;
+  background-color: inherit;
+  /*display: inline-block;*/
   font-size: 14px;
   color: black;
-  padding-left: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+  vertical-align: top;
 }
 
 .product-page-grid {
@@ -379,8 +397,8 @@ body {
   border-radius: 5px;
   outline: none;
   text-align: center;
-  white-space: normal;
   /* For center text if needed in 2 or more rows */
+  white-space: normal;
   font-size: 16px;
 }
 
@@ -402,6 +420,42 @@ body {
   padding: 10px;
   font-size: 14px;
 }
+
+/* List products properties */
+
+.listproducts-grid{
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+
+}
+
+.listproducts-content-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.listproducts-content-filters{
+  padding: 10px 20px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 20px;
+}
+.listproducts-content-filters h1{
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+.listproducts-content-filters label{
+  color: black;
+  font-size: 14px;
+}
+
+.listproducts-content-products{
+  padding: 0 20px;
+}
+
 
 /* Authentication properties */
 

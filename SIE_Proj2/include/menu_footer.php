@@ -111,8 +111,8 @@
             echo "  <div class = \"subnav\">
                         <form method = \"GET\" action=\"../Non_Auth_user/listProducts.php\">
                             <div class= \"subnavbtn\" >
-                                <input type=\"text\" name=\"filter\" value=\"category\" hidden>
-                                <input type=\"submit\" name=\"product_category\" value=\"".$category["nome"]."\">
+                                
+                                <input type=\"submit\" name=\"info\" value=\"".$category["nome"]."\">
                             </div>
                         </form>
                         
@@ -124,8 +124,8 @@
             echo "          <form method = \"GET\" action=\"../Non_Auth_user/listProducts.php\">";
             while (isset($subcategory["nome"])) {
                 echo "          <div class = \"subnav-content-btn \">
-                                    <input type=\"text\" name=\"filter\" value=\"subcategory\" hidden>";
-                echo "              <input type=\"submit\" name=\"product_subcategory\" value=\"". $subcategory["nome"]."\">";
+                                    ";
+                echo "              <input type=\"submit\" name=\"info\" value=\"". $subcategory["nome"]."\">";
                 echo "          </div>";
                 $subcategory = pg_fetch_assoc($subcategory_result);
             }
