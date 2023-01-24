@@ -550,15 +550,18 @@ a .btn {
 .auth-error-text {
   font-size: 12px;
   color: red;
+  font-weight: bold;
 }
 
 .update-success-text {
   font-size: 12px;
   color: green;
+  font-weight: bold;
 }
 
 input[type=text],
 input[type=password],
+input[type=number],
 .shorter-field [type=text],
 .name-field [type=text] {
   width: 300px;
@@ -624,17 +627,20 @@ input[type=password],
 /****** Employee List Products *******/
 
 /* Selection Form */
-.emp-cat-select {
-  font-size: 16px;
-  padding: 5px;
+.emp-cat-select,
+.add-cat-select{
+  font-size:16px;
+  padding:5px;
   margin-right: 30px;
   font-family: inherit;
   border-radius: 3px;
+  border: 1px solid black;
 }
 
-.add-cat-select {
+
+.add-cat-select{
   margin: 2px;
-  padding: 5px 10px;
+  padding: 5px 10px;  
 }
 
 .emp-cat-select option:first-child,
@@ -642,8 +648,12 @@ input[type=password],
   display: none;
 }
 
+
+
 /* Add Product Form */
-.shorter-field [type=text] {
+
+.shorter-field [type=text],
+.shorter-field [type=number]{
   width: 100px;
 }
 

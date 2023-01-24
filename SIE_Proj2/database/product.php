@@ -157,4 +157,53 @@
         return $row[0];
     }
 
+    function refIsAvailable($ref) {
+        global $conn;
+        
+        $query = "  SELECT  produto.ref
+                    FROM 	produto
+                    WHERE   produto.ref=$ref";
+    
+        //echo "DEBUG query: " . $query;
+    
+        $result = pg_exec($conn, $query);
+        //echo "DEBUG num_rows: " . pg_num_rows($result);
+        
+        if (!$result) {
+            echo "Error\n";
+            return false;
+        }
+    
+        if( pg_num_rows($result) > 0){
+            //There is already a product with this ref!
+            return false;
+        }
+    
+        //This product ref is available
+        return true;		
+    }
+
+    function insertProduct($ref, $name, $quantity, $description, $price, $discount, $highlight, $subcategory){
+        global $conn;
+        
+        $query = "  INSERT INTO produto (ref, nome, quantidade, descricao, preco, desconto, destaque, fk_subcategoria)
+                    VALUES ( $ref, 
+                            '$name', 
+                             $quantity, 
+                            '$description', 
+                             $price, 
+                             $discount, 
+                            '$highlight',
+                            '$subcategory')";
+    
+        $result = pg_exec($conn, $query);
+    
+        if(!$result){
+            echo "Error inserting new product\n";
+            return false;
+        }
+        
+        return true;
+    }
+
 ?>
