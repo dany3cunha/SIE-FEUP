@@ -25,14 +25,14 @@
             $product_cat = getCatBySubcat($product_subcat);
         
             echo "  <div class = \"grid-product \">                
-                        <form method = \"GET\" action = \"productpage.php \">
+                        <form method = \"GET\" action = \"detailProduct.php \">
                             <input type=\"text\" name=\"product_ref\" value =\"".$product_ref."\" hidden>
                             <div class = \"grid-product-img\">
                                 <input type=\"image\" src=\"../../resources/images/products/".$product_cat."/".$product_ref.".jpg\"> 
                             </div>
                         </form>";
                         
-            echo "      <form method = \"GET\" action = \"productpage.php \">  
+            echo "      <form method = \"GET\" action = \"detailProduct.php \">  
                             <input type=\"text\" name=\"product_ref\" value =\"".$product_ref."\" hidden>
                             <div class = \"grid-product-name\">
                                 <input type =\"submit\" value =\"".$product_name."\">

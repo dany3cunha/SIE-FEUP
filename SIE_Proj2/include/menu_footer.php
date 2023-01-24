@@ -142,29 +142,29 @@
     function EmployeeNavBar(){
         echo "  <div class=\"navbar\">";
         // Home button
-        echo "  <div class=\"subnav\">
-                    <a href=\"../../index.php\">
-                        <button class = \"subnavbtn-home \"> 
-                            <i class=\"fa-solid fa-house fa-xl\"></i>
-                        </button>
-                    </a>
-                </div>";
+        echo "      <div class=\"subnav\">
+                        <a href=\"../../index.php\">
+                            <button class = \"subnavbtn-home \"> 
+                                <i class=\"fa-solid fa-house fa-xl\"></i>
+                            </button>
+                        </a>
+                    </div>";
         
         // Employee custom menu        
-        echo " <div class = \"subnav\" > 
-                    <form action=\"../Employee_user/f_ListProducts.php\">
-                        <div class= \"subnavbtn\" >
-                            <input type=\"submit\" name=\"info\" value=\"Inventário\">
-                        </div>
-                    </form>
-                </div>
-                <div class = \"subnav\" > 
-                    <form action=\"../Employee_user/f_ListOrders.php\">
-                        <div class= \"subnavbtn\" >
-                            <input type=\"submit\" name=\"info\" value=\"Encomendas\">
-                        </div>
-                    </form>
-                </div>";
+        echo "      <div class = \"subnav\" > 
+                        <form action=\"../Employee_user/f_ListProducts.php\">
+                            <div class= \"subnavbtn\" >
+                                <input type=\"submit\" name=\"info\" value=\"Inventário\">
+                            </div>
+                        </form>
+                    </div>
+                    <div class = \"subnav\" > 
+                        <form action=\"../Employee_user/f_ListOrders.php\">
+                            <div class= \"subnavbtn\" >
+                                <input type=\"submit\" name=\"info\" value=\"Encomendas\">
+                            </div>
+                        </form>
+                    </div>";
                     
         echo "  </div>";
     }

@@ -147,14 +147,14 @@ include_once("../../database/product.php");
         
         echo "              <td>
                                 <div class = \"grid-product \">                                                        
-                                    <form method = \"GET\" action = \"productpage.php \">
+                                    <form method = \"GET\" action = \"detailProduct.php \">
                                         <input type=\"text\" name=\"product_ref\" value =\"".$product["product_ref"]."\" hidden>
                                         <div class = \"grid-product-img\">
                                             <input type=\"image\" src=\"../../resources/images/products/".$products_category."/".$product["product_ref"].".jpg\"> 
                                         </div>
                                     </form>   
 
-                                    <form method = \"GET\" action = \"productpage.php \">  
+                                    <form method = \"GET\" action = \"detailProduct.php \">  
                                         <input type=\"text\" name=\"product_ref\" value =\"".$product["product_ref"]."\" hidden>
                                         <div class = \"grid-product-name\">
                                             <input type =\"submit\" value =\"".$product["product_name"]."\">
