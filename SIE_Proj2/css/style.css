@@ -519,11 +519,13 @@ a .btn {
 .auth-error-text {
   font-size: 12px;
   color: red;
+  font-weight: bold;
 }
 
 .update-success-text {
   font-size: 12px;
   color: green;
+  font-weight: bold;
 }
 
 input[type=text],
