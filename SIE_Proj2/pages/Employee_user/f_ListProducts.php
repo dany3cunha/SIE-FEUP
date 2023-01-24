@@ -1,6 +1,7 @@
 <?php
     /* PHP includes */
     include_once("../../include/header.php");
+    include_once "../../database/product.php";
 ?>
 
 <?php
@@ -82,23 +83,53 @@
         
 
 <?php
-// Show filter results
+    /**************************** Show Filter Results ****************************/
     
-    echo $categorySelected;
-    echo $subCategorySelected;
-?>
-        <table>
-            <thead>
-                <tr>
-                    <td>    Referência  </td>
-                    <td>    Produto     </td>
-                    <td>    Quantidade  </td>
-                    <td>    Destaque    </td>
-                    <td>    &nbsp       </td>
-                </tr>
-            <thead>
+    // Retrieve products by category, if category was selected, and subcat was not selected
+    if( $categorySelected!= "" and $subCategorySelected == "") $products_result = getProductsByCategory($categorySelected, NULL, NULL);
+    if( $categorySelected!= "" and $subCategorySelected != "") $products_result = getProductsBySubCategory($subCategorySelected, NULL, NULL);
 
-        </table>
+    // If it has some product results, show them
+    if( isset($products_result) ){
+
+        // Start results table
+        echo"
+        <table class=\"product-list\">
+            <tr>
+                <th>    Referência  </th>
+                <th>    Produto     </th>
+                <th>    Preço (€)   </th>
+                <th>    Desconto (%)</th>
+                <th>    Quantidade  </th>
+                <th>    Destaque    </th>
+                <th>    &nbsp       </th>
+            </tr>";
+
+        $product = pg_fetch_assoc($products_result);
+        while(isset($product['product_ref']) ){
+            
+            echo"
+            <tr>
+                <td> ".$product['product_ref']."                                                </td>
+                <td> ".$product['product_name']."                                               </td>
+                <td> ".$product['product_price']."                                              </td>
+                <td> ".($product['product_discount']>0 ? $product['product_discount'] : "--")." </td>
+                <td> ".$product['product_qty']."                                                </td>
+                <td> ".($product['product_highlighted']=="t" ? "Sim" : "--")."                  </td>
+                <td> &nbsp </td>
+            </tr>";
+
+            $product = pg_fetch_assoc($products_result);
+        }
+
+        // Close results table
+        echo"  
+        </table>";
+
+    }
+
+?>
+
         
 
 

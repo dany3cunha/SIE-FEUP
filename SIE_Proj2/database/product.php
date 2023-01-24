@@ -71,9 +71,13 @@
                             produto.desconto        AS product_discount,
                             produto.destaque        AS product_highlighted,
                             produto.fk_subcategoria AS product_subcategory
-                    from produto
-                    join subcategoria on produto.fk_subcategoria=subcategoria.nome
-                    where subcategoria.fk_categoria = '" . $category . "'";
+                    from produto ";
+                    
+        
+        if ($category!="*"){
+            $query = $query . "join subcategoria on produto.fk_subcategoria=subcategoria.nome
+                               where subcategoria.fk_categoria = '" . $category . "'";
+        }
 
         if (isset($availability) and $availability == "true")
             $query = $query . " and produto.quantidade > 0 ";
@@ -109,8 +113,12 @@
                             produto.desconto        AS product_discount,
                             produto.destaque        AS product_highlighted,
                             produto.fk_subcategoria AS product_subcategory
-                    from produto
-                    where produto.fk_subcategoria = '" . $subcategory . "'";
+                    from produto ";
+        
+        if($subcategory!="*"){
+            $query = $query . "where produto.fk_subcategoria = '" . $subcategory . "'";
+        }
+
 
         if (isset($availability) and $availability == "true")
             $query = $query . " and produto.quantidade > 0 ";
