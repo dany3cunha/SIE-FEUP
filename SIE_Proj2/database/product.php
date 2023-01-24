@@ -5,13 +5,13 @@
 
         global $conn;
         $query = "select produto.ref             AS product_ref,
-                            produto.nome            AS product_name,
-                            produto.quantidade      AS product_qty,
-                            produto.descricao       AS product_desc,
-                            produto.preco           AS product_price,                          
-                            produto.desconto        AS product_discount,
-                            produto.destaque        AS product_highlighted,
-                            produto.fk_subcategoria AS product_subcategory
+                         produto.nome            AS product_name,
+                         produto.quantidade      AS product_qty,
+                         produto.descricao       AS product_desc,
+                         produto.preco           AS product_price,                          
+                         produto.desconto        AS product_discount,
+                         produto.destaque        AS product_highlighted,
+                         produto.fk_subcategoria AS product_subcategory
                     from produto
                     where produto.ref = '" . $ref . "'";
 
@@ -178,7 +178,7 @@
         //echo "DEBUG num_rows: " . pg_num_rows($result);
         
         if (!$result) {
-            echo "Error\n";
+            echo "An error occurred in refIsAvailable()\n";
             return false;
         }
     
@@ -207,11 +207,35 @@
         $result = pg_exec($conn, $query);
     
         if(!$result){
-            echo "Error inserting new product\n";
+
+            echo "An error occurred in insertProduct()\n";
             return false;
         }
         
         return true;
     }
 
-?>
+
+    function updateProduct($ref, $name, $quantity, $description, $price, $discount, $highlight, $subcategory){
+    
+        global $conn;
+        
+        $query = "  update produto 
+                    set nome            = '$name', 
+                        quantidade      = '$quantity', 
+                        descricao       = '$description', 
+                        preco           = '$price', 
+                        desconto        = '$discount', 
+                        destaque        = '$highlight', 
+                        fk_subcategoria = '$subcategory'
+                    where ref = '$ref'";
+
+        $result = pg_exec($conn, $query);
+    
+        if(!$result){
+            echo "An error occurred in updateProduct()\n";
+            return false;
+        }
+        
+        return true;
+    }

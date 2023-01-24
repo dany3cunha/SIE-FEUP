@@ -16,8 +16,9 @@ CREATE TABLE utilizador (
 );
 
 CREATE TABLE encomenda (
-    id SERIAL NOT NULL,
+    id INT NOT NULL,
     data TIMESTAMP,
+    pagamento VARCHAR(50) NOT NULL,
     FK_utilizador INT NOT NULL,
     FK_status VARCHAR(50) NOT NULL,
     CONSTRAINT PK_encomenda PRIMARY KEY (id)

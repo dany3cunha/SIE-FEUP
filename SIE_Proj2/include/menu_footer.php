@@ -11,11 +11,11 @@
         //Show navbox common elements
         echo "  <div class = \"box\">
                     <div class = \"push-to-right\"></div>
-                    <button class = \"btn-default\"> 
-                        <a href=\"../../action/Non_Auth_user/login.php\">
-                            <i class = \"fa-solid fa-circle-info fa-2xl\"></i>
-                        </a> 
-                    </button>";
+                        <button class = \"btn-default\"> 
+                            <a href=\"../../action/Non_Auth_user/login.php\">
+                                <i class = \"fa-solid fa-circle-info fa-2xl\"></i>
+                            </a> 
+                        </button>";
 
         
         if(         !isset($_SESSION['sAuthenticated'])   ){
@@ -110,11 +110,8 @@
 
             echo "  <div class = \"subnav\">
                         <form method = \"GET\" action=\"../Non_Auth_user/listProducts.php\">
-                            <div class= \"subnavbtn\" >
-                                <input type=\"submit\" name=\"info\" value=\"".$category["nome"]."\">
-                            </div>
+                            <input class= \"subnavbtn\" type=\"submit\" name=\"info\" value=\"".$category["nome"]."\">
                         </form>
-                        
                         <div class= \"subnav-content\" >";
 
             $subcategory_result = getAllSubCategories($category["nome"]);
@@ -122,14 +119,10 @@
             
             echo "          <form method = \"GET\" action=\"../Non_Auth_user/listProducts.php\">";
             while (isset($subcategory["nome"])) {
-                echo "          <div class = \"subnav-content-btn \">
-                                    ";
-                echo "              <input type=\"submit\" name=\"info\" value=\"". $subcategory["nome"]."\">";
-                echo "          </div>";
+                echo "          <input class = \"subnav-content-btn \" type=\"submit\" name=\"info\" value=\"". $subcategory["nome"]."\">";
                 $subcategory = pg_fetch_assoc($subcategory_result);
             }
             echo "          </form>";
-
             echo "      </div>";
             echo "  </div>";
 
@@ -153,16 +146,12 @@
         // Employee custom menu        
         echo "      <div class = \"subnav\" > 
                         <form action=\"../Employee_user/f_ListProducts.php\">
-                            <div class= \"subnavbtn\" >
-                                <input type=\"submit\" name=\"info\" value=\"Inventário\">
-                            </div>
+                            <input class= \"subnavbtn\" type=\"submit\" name=\"info\" value=\"Inventário\">
                         </form>
                     </div>
                     <div class = \"subnav\" > 
                         <form action=\"../Employee_user/f_ListOrders.php\">
-                            <div class= \"subnavbtn\" >
-                                <input type=\"submit\" name=\"info\" value=\"Encomendas\">
-                            </div>
+                            <input class= \"subnavbtn\" type=\"submit\" name=\"info\" value=\"Encomendas\">
                         </form>
                     </div>";
                     
