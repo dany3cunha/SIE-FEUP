@@ -1,7 +1,7 @@
 <?php
-/* PHP includes */
-include_once("../../include/header.php");
-include_once("../../database/product.php");
+    /* PHP includes */
+    include_once("../../include/header.php");
+    include_once("../../database/product.php");
 ?>
 
 <?php
@@ -27,10 +27,10 @@ include_once("../../database/product.php");
         }
 
         # The value of the cookie is always setted when came from other page
-        setcookie('cType', $type, 0);
-        setcookie('cCategory', $products_category, 0);
+        setcookie('cType', $type, 0,'/');
+        setcookie('cCategory', $products_category, 0,'/');
         if (isset($products_subcategory))
-            setcookie('cSubcategory', $products_subcategory, 0);
+            setcookie('cSubcategory', $products_subcategory, 0,'/');
     } else {
         # else came from this page, a filter was applied
         if (!isset($type))

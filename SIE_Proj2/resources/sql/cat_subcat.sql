@@ -1,6 +1,13 @@
 
 /* Populating the Database */
 
+/* Status */
+
+INSERT into status (descricao) VALUES ('Aguarda Pagamento');
+INSERT into status (descricao) VALUES ('Em Processamento');
+INSERT into status (descricao) VALUES ('Enviada');
+INSERT into status (descricao) VALUES ('Entregue');
+
 /* Category */
 INSERT into categoria (nome) VALUES ('Componentes');
 INSERT into categoria (nome) VALUES ('Computadores');

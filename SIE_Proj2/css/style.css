@@ -118,14 +118,6 @@ a .btn {
 
 }
 
-.subnav .subnavbtn input {
-  border: none;
-  outline: none;
-  background-color: inherit;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 .subnav a {
   margin: 6px 10px;
   border-radius: 5px;
@@ -159,7 +151,7 @@ a .btn {
   z-index: 1;
 }
 
-.subnav-content-btn input {
+.subnav-content-btn {
   border: none;
   outline: none;
   color: black;
@@ -477,7 +469,7 @@ a .btn {
 .checkout-content-grid {
   display: grid;
   grid-template-columns: 75% auto;
-  gap: 20px;
+  gap: 10px;
 }
 
 .checkout-content-grid-right{
@@ -490,6 +482,7 @@ a .btn {
   border: 2px solid black;
   border-radius: 10px;
   width: 100%;
+  margin: 10px;
 }
 
 .checkout-content-table td {
@@ -632,7 +625,11 @@ input[type=password],
   border-radius: 3px;
 }
 
+<<<<<<< Updated upstream
 .add-cat-select {
+=======
+.add-cat-select{
+>>>>>>> Stashed changes
   margin: 2px;
   padding: 5px 10px;
 }

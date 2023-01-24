@@ -1,56 +1,82 @@
 <?php
-/* PHP includes */
-include_once("../../include/header.php");
-include_once("../../database/product.php");
+    /* PHP includes */
+    include_once("../../include/header.php");
+    include_once("../../database/product.php");
 ?>
 
 <?php
 
-# GET product ref.
-$product_ref = $_GET['product_ref'];
+    # GET product ref.
+    $product_ref = $_GET['product_ref'];
 
-# Retrieve from DB product information
-$prod_info = getProductByRef($product_ref);
-$prod_info = pg_fetch_assoc($prod_info);
+    # Retrieve from DB product information
+    $prod_info = getProductByRef($product_ref);
+    $prod_info = pg_fetch_assoc($prod_info);
 
-$product_name          = $prod_info['product_name'];
-$product_qty           = $prod_info['product_qty'];
-$product_desc          = $prod_info['product_desc'];
-$product_price         = $prod_info['product_price'];
-$product_discount      = $prod_info['product_discount'];
-$product_highlighted   = $prod_info['product_highlighted'];
-$product_subcategory   = $prod_info['product_subcategory'];
-$product_category      = getCatBySubcat($product_subcategory);
+    $product_name          = $prod_info['product_name'];
+    $product_qty           = $prod_info['product_qty'];
+    $product_desc          = $prod_info['product_desc'];
+    $product_price         = $prod_info['product_price'];
+    $product_discount      = $prod_info['product_discount'];
+    $product_highlighted   = $prod_info['product_highlighted'];
+    $product_subcategory   = $prod_info['product_subcategory'];
+    $product_category      = getCatBySubcat($product_subcategory);
 
-$tax = 0.23; #iva 23%
+    $tax = 0.23; #iva 23%
 
-if($product_discount > 0) 
-    $product_final_price = round($product_price - ($product_discount / 100) * $product_price, 2, PHP_ROUND_HALF_UP);
- else
-    $product_final_price =  $product_price;
+    if ($product_discount > 0)
+        $product_final_price = round($product_price - ($product_discount / 100) * $product_price, 2, PHP_ROUND_HALF_UP);
+    else
+        $product_final_price =  $product_price;
 
-$product_tax = round($product_final_price * $tax,2,PHP_ROUND_HALF_UP);
+    $product_tax = round($product_final_price * $tax, 2, PHP_ROUND_HALF_UP);
 
-# Validate the user login
-if (isset($_SESSION['sAuthenticated'])) {
-    //Show user registered Name
-    $userInfo       = getUserInfo($_SESSION['sCurrentUserID']);
-    $user_name      = $userInfo['nome'];
-    $user_address   = $userInfo['morada'];
-    $user_contact   = $userInfo['telemovel'];
-    $user_nif       = $userInfo['nif'];
-} else {
-    header('Location: ../Non_Auth_user/login.php');
-}
+    # Validate the user login
+    if (isset($_SESSION['sAuthenticated'])) {
+        //Show user registered Name
+        $user_id = $_SESSION['sAuthenticated'];
+        $userInfo       = getUserInfo($user_id);
+        $user_name      = $userInfo['nome'];
+        $user_address   = $userInfo['morada'];
+        $user_contact   = $userInfo['telemovel'];
+        $user_nif       = $userInfo['nif'];
+    } else {
+        header('Location: ../Non_Auth_user/login.php');
+    }
 
-$order_qty = 1;
+    if(!isset($_COOKIE['cPayMethod'])){
+        $pay_method = "false";
+    }else{
+        $pay_method = $_COOKIE['cPayMethod'];
+    }
 
-# Related to the filters option
-# POST method for the filters
-if (isset($_POST["order_qty"])) {
-    $order_qty = $_POST["order_qty"];
-    #echo "DBG (order_qty): " . $order_qty;
-}
+    if(isset($_POST['pay_method'])){
+        $pay_method = $_POST['pay_method'];
+        #echo $pay_method;
+        setcookie('pay_method',$_POST['pay_method'],0,"/");
+    }
+    
+    #echo "DBG (pay_method): " . $pay_method;
+    
+    $order_qty = 1;
+    $outStock = 'false';
+    
+    # Related to the filters option
+    # POST method for the filters
+    if (isset($_POST["order_qty"])) {
+        $order_qty = $_POST["order_qty"];
+        if ($order_qty > $product_qty)
+            $outStock = 'true';
+
+        if ($order_qty <= $product_qty and $outStock == 'true') {
+            $outStock = 'false';
+        }
+        
+        if($order_qty <0)
+            $order_qty = 0;
+        #echo "DBG (order_qty): " . $order_qty;
+    }
+
 
 ?>
 
@@ -82,7 +108,7 @@ if (isset($_POST["order_qty"])) {
                                     <td style=\"width:150px;\">
                                         <img src=\"../../resources/images/products/" . $product_category . "/" . $product_ref . ".jpg\"> 
                                     </td>
-                                    <td >
+                                    <td style=\"width:600px;\">
                                         " . $product_name . "
                                     </td>
                                     <td class=\"shorter-field\">
@@ -92,10 +118,9 @@ if (isset($_POST["order_qty"])) {
                                         </form>                                    
                                     </td>
                                     <td>
-                                        ".$product_final_price." € 
+                                        " . $product_final_price . " € 
                                     </td>
                                 </tr>
-
                             </table>
                         </div>
 
@@ -136,11 +161,13 @@ if (isset($_POST["order_qty"])) {
                                     <tr>
                                         <td> Método de Pagamento </td>
                                         <td>
-                                            <select name=\"pay_meth\" class = \"checkout-select-payment \">
-                                                <option value=\"\" >       Escolha Pag.     </option>
-                                                <option value=\"MB\">      Referência MB    </option>
-                                                <option value=\"Entrega\"> Pag. na Entrega  </option>
-                                            </select> 
+                                            <form method=\"POST\" action = \"\">
+                                                <select name=\"pay_method\" class = \"checkout-select-payment\" onchange=\"this.form.submit()\">
+                                                    <option value=\"\" >       Escolha Pag.     </option>
+                                                    <option name = \"pay_method_MB\" ".($pay_method == "MB" ? "selected" : "" )."       value=\"MB\"> Referência MB   </option>
+                                                    <option name = \"pay_method_Entrega\" ".($pay_method == "Entrega" ? "selected" : "" )."  value=\"Entrega\"> Pag. na Entrega </option>
+                                                </select>
+                                            </form> 
                                         </td>
                                     </tr>                                              
                                 </table>
@@ -152,15 +179,15 @@ if (isset($_POST["order_qty"])) {
                                     </tr>
                                     <tr>
                                         <td>Produto</td>
-                                        <td style = \"margin-left:auto;\"> ".$product_final_price - $product_tax." €</td>
+                                        <td style = \"margin-left:auto;\"> " . $order_qty * ($product_final_price - $product_tax) . " €</td>
                                     </tr>
                                     <tr>
-                                        <td> IVA (".($tax*100)."%) </td>
-                                        <td style = \"margin-left:auto;\">".$product_tax." €</td>
+                                        <td> IVA (" . ($tax * 100) . "%) </td>
+                                        <td style = \"margin-left:auto;\">" . $order_qty * $product_tax . " €</td>
                                     </tr>
                                     <tr class =\"checkout-content-title\">
                                         <td> Total </td>
-                                        <td style = \"margin-left:auto;\"> ".$product_final_price." €</td>
+                                        <td style = \"margin-left:auto;\"> " . $order_qty * $product_final_price . " €</td>
                                     </tr>
                                 </table>
                             </div>
@@ -168,9 +195,25 @@ if (isset($_POST["order_qty"])) {
                                 <table style = \"width:100%;\">
                                     <tr>
                                         <td style = \"float:right;\"> 
-                                            <a href=\"userInfo.php\"> 
-                                                <button class=\"btn\">Editar</button>
-                                            </a>
+                                            <form method = \"POST\" action=\"../../action/Auth_user/actionCreateOrder.php\">
+                                                <input type = \"text\" name=\"user_id\"     value=\"" . $user_id     . "\" hidden>
+                                                <input type = \"text\" name=\"product_ref\" value=\"" . $product_ref . "\" hidden>
+                                                <input type = \"text\" name=\"order_qty\"   value=\"" . $order_qty   . "\" hidden>
+                                                <input type = \"text\" name=\"pay_method\"  value=\"" . $pay_method  . "\" hidden>";
+    # Payment method verification
+    if($pay_method == "false"){
+        echo " Por favor escolha um método de pagamento!";
+    }                                            
+    # stock verification
+    if ($outStock == 'true') {
+        echo " Sem stock suficiente!";
+    } 
+    if($pay_method != "false" and $outStock == "false"){
+        echo "                                      <input type=\"submit\" class=\"btn-form\" value=\"Avançar\">";
+    }
+
+
+    echo "                                  </form>
                                         </td>
                                     </tr>                                                                   
                                 </table>                              
@@ -185,4 +228,8 @@ if (isset($_POST["order_qty"])) {
 
 </body>
 
-</html
+<?php
+    footer();
+?>
+
+</html>
