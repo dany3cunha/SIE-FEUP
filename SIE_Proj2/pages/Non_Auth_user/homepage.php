@@ -55,7 +55,7 @@
         }
         echo "   </div>";
         echo " </div>";
-        echo "<div class=\"body-remaining\"> </div>";
+        //echo "<div class=\"body-remaining\"> </div>";
         footer();
     ?>
 

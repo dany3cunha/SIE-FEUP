@@ -80,3 +80,7 @@
 		</form>
 	</div>
 </body>
+
+<?php
+	footer();
+?>
