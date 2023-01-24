@@ -53,7 +53,7 @@
     if(isset($_POST['pay_method'])){
         $pay_method = $_POST['pay_method'];
         #echo $pay_method;
-        setcookie('pay_method',$_POST['pay_method'],0,"/");
+        setcookie('cPayMethod',$_POST['pay_method'],0,"/");
     }
     
     #echo "DBG (pay_method): " . $pay_method;
@@ -164,8 +164,8 @@
                                             <form method=\"POST\" action = \"\">
                                                 <select name=\"pay_method\" class = \"checkout-select-payment\" onchange=\"this.form.submit()\">
                                                     <option value=\"\" >       Escolha Pag.     </option>
-                                                    <option name = \"pay_method_MB\" ".($pay_method == "MB" ? "selected" : "" )."       value=\"MB\"> Referência MB   </option>
-                                                    <option name = \"pay_method_Entrega\" ".($pay_method == "Entrega" ? "selected" : "" )."  value=\"Entrega\"> Pag. na Entrega </option>
+                                                    <option name = \"pay_method\" ".($pay_method == "MB" ? "selected" : "" )."       value=\"MB\"> Referência MB   </option>
+                                                    <option name = \"pay_method\" ".($pay_method == "Entrega" ? "selected" : "" )."  value=\"Entrega\"> Pag. na Entrega </option>
                                                 </select>
                                             </form> 
                                         </td>

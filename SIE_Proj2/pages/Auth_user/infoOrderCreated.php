@@ -41,7 +41,7 @@
     
     echo "<table style = \"width:100%;\">
                 <tr style =\"text-align:center;\">
-                    <td class = \"content-title\"> Encomenda realizada com sucesso!</td>
+                    <td class = \"content-title\"> Encomenda #".$order_id." realizada com sucesso!</td>
                     <br>
                 </tr>
                 <tr style =\"text-align:center;\">
@@ -74,13 +74,13 @@
             </table>";
     
     if($order['order_pay_method'] == "MB"){
-        echo "  
-            <table>
+         
+        echo"<table>
                 <tr>
                     <td>Para completar a sua encomenda, efetue o pagamento num terminal multibanco no prazo máximo de 24h. </td>
                 </tr>
-            </table>
-            <table style = \"width:20%;\">
+             </table>
+             <table style = \"width:20%;\">
                 <tr> 
                     <td>Entidade  </td> <td> 22148 </td>
                 </tr>
@@ -90,9 +90,19 @@
                 <tr> 
                     <td>Montante</td>   <td>". $total_price." €</td>
                 </tr>
+             </table>
+             <table>
+                <tr>
+                    <td> Pode acompanhar a evolução da sua encomenda na sua área pessoal.</td>
+                </tr>
             </table>";
     }else if($order['order_pay_method'] == "Entrega"){
-
+        echo"<table>
+                <tr>
+                    <td> Optou pelo pagamento na entrega. <br>
+                         Pode acompanhar a evolução da sua encomenda na sua área pessoal.</td>
+                </tr>
+            </table>";  
     }else {
         echo "UPS something went wrong with the payment method!";
     }
