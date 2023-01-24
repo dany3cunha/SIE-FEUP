@@ -118,13 +118,13 @@
         # Buy and Add do cart buttons
         echo "              <div class = \"btn-table-2cols\">";
         echo "                  <form method = \"GET\" action = \"../Auth_user/formCheckout.php \">  
-                                    <input type=\"text\" name=\"prod_ref\" value =\"".$product_ref."\" hidden>
+                                    <input type=\"text\" name=\"product_ref\" value =\"".$product_ref."\" hidden>
                                     <div class = \"btn-buy-options\">
                                         <input type =\"submit\" value =\"Compre já\">
                                     </div>
                                 </form>";
         echo "                  <form method = \"GET\" action = \"#add2Cart\">  
-                                    <input type=\"text\" name=\"prod_ref\" value =\"".$product_ref."\" hidden>
+                                    <input type=\"text\" name=\"product_ref\" value =\"".$product_ref."\" hidden>
                                     <div class = \"btn-buy-options\">
                                         <input type =\"submit\" value =\"Adicionar ao Carrinho\">
                                     </div>

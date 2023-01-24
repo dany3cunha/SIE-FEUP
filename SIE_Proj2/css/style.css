@@ -463,6 +463,52 @@ a .btn {
   padding: 0 20px;
 }
 
+/* Checkout Properties */
+
+.checkout-grid{
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+
+}
+
+.checkout-content-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.checkout-content-table{
+  padding: 10px 20px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 10px ;
+}
+
+.checkout-content-table img {
+  width: 20%;
+  border-radius: 20px;
+}
+
+.checkout-content-table-qty {
+  width: 10%;
+  border-radius: 20px;
+}
+
+.checkout-content h1{
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+.checkout-content-text {
+  color: black;
+  font-size: 14px;
+}
+
+.checkout-content-text-right{
+  text-align: right;
+}
 
 /* Authentication properties */
 
