@@ -481,7 +481,9 @@ a .btn {
 }
 
 input[type=text],
-input[type=password] {
+input[type=password],
+.shorter-field [type=text],
+.name-field [type=text]{
   width: 300px;
   padding: 5px 10px;
   margin: 2px;
@@ -543,7 +545,6 @@ input[type=password] {
 /****** Employee List Products *******/
 
 /* Selection Form */
-
 .emp-cat-select{
   font-size:16px;
   padding:5px;
@@ -554,6 +555,27 @@ input[type=password] {
 
 .emp-cat-select option:first-child {
   display: none;
+}
+
+/* Add Product Form */
+.shorter-field [type=text]{
+  width: 100px;
+}
+
+.name-field [type=text]{
+  width: 600px;
+}
+
+.description-field{
+  width: 600px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 2px;
+  padding: 5px 10px;
+}
+
+input[type=radio]{
+  margin: 10px 2px;  
 }
 
 

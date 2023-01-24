@@ -19,9 +19,9 @@
 <body>
 	<div class="content-title">Inventário </div>
 	<div class="content-body">
-        <form action="" method="post" >
-            <table>
-                <tr>
+        <table>
+            <tr>
+                <form action="" method="post" >
                     <td> 
                         <select name="category" class="emp-cat-select" onchange="this.form.submit()">
                             <option value="">Selecionar categoria:</option>
@@ -89,11 +89,15 @@
     }
 
     echo"               /select>
-                    </td>";   
+                    </td>  
+                </form>";
+    echo"       <td>
+                    <a href=\"../../pages/Employee_user/formAddProduct.php\"> <button class=\"btn\">Adicionar</button></a>
+                </td>";
 ?>
-                </tr>
-            </table>
-        </form>
+            </tr>
+        </table>
+        
 
         <table>
             <thead>
