@@ -25,6 +25,7 @@
             <tr>
                 <td>
                     <form  style= "margin: 0px" action="../../action/Employee_user/actionCategoryFilter.php" method="post" > 
+                        <input type="text" name="page" value="f_ListProducts" hidden>
                         <select name="category" class="emp-cat-select" onchange="this.form.submit()">
                             <option value="">Selecionar categoria:</option>
 <?php
@@ -52,6 +53,7 @@
     $disable_select = ( ($categorySelected=="" || $categorySelected=="*") ? "disabled" : "");
     echo"       <td>
                     <form style= \"margin: 0px\" action=\"../../action/Employee_user/actionSubCategoryFilter.php\" method=\"post\">
+                        <input type=\"text\" name=\"page\" value=\"f_ListProducts\" hidden>
                         <select name = \"subcategory\"    class = \"emp-cat-select\"  onchange = \"this.form.submit()\" ".$disable_select.">
                             <option value   =   \"\" >  Selecionar subcategoria:    </option>";    
 
