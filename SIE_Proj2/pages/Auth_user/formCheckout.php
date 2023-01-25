@@ -2,6 +2,7 @@
     /* PHP includes */
     include_once("../../include/header.php");
     include_once("../../database/product.php");
+
 ?>
 
 <?php

@@ -1,8 +1,8 @@
 <?php
     /* PHP Includes */
-    include_once("../../include/opendb.php");
-    include_once("../../include/menu_footer.php");
-    include_once("../../include/cookies.php");
+    include_once("opendb.php");
+    include_once("menu_footer.php");
+    include_once("cookies.php");
 ?>
 
 <?php

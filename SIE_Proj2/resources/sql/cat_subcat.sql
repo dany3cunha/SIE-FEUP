@@ -224,3 +224,33 @@ insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_su
                 3,
                 FALSE,
                 'Processadores');
+
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
+        values (7,
+                'Caixa ATX Nox Hummer Quantum RGB Full Tempered Glass Preta',
+                74,
+                'Uma caixa robusta com um design original e inovador que permite criar efeitos de cores espetaculares graças às quatro ventoinhas ARGB de 
+                120 mm que ela inclui e que você pode contemplar o tempo todo graças ao seu painel lateral de vidro temperado.;
+
+                PAINEL FRONTAL;
+                No painel frontal superior, você pode controlar a cor das ventoinhas, além de conectar até 3 USB, uma vez que possui duas conexões 2.0. e 
+                uma de alta velocidade 3.0, bem como conexões de áudio.;
+
+                OPÇÕES DE ARMAZENAMENTO;
+                A Hummer Quantum oferece amplas possibilidades para uma configuração de alto desempenho. É compatível com motherboards ATX, Micro ATX e 
+                ITX e possui espaço suficiente para montar dois HDDs de 3,5" e sete SSDs de 2,5". Além disso, para uma configuração mais limpa, possui um 
+                sistema de roteamento de cabos de 29 mm para montagem segura e ordenada.;
+
+                REFRIGERAÇÃO;
+                Uma caixa projetada para instalar opções diferentes em termos de refrigeração e ventilação. Permite instalar até 6 ventoinhas ARGB: três 
+                delas no painel frontal que estão incluídas junto com a traseira de 120 mm e a possibilidade de instalar mais duas no painel superior de 
+                120 ou 140 mm. Da mesma forma, os sistemas de refrigeração líquida com radiadores 240/280 podem ser instalados nos painéis frontal e superior 
+                e traseiro de 120 mm.;
+
+                CAPACIDADE INTERNA;
+                A Hummer Quantum possui um amplo espaço interno que permite a montagem de grandes componentes, como placas gráficas de até 325 mm de comprimento 
+                e Cooler para CPU com uma altura máxima de 168 mm.;',
+                76.90,
+                5,
+                FALSE,
+                'Caixas');

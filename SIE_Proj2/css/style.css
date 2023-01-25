@@ -231,6 +231,7 @@ a .btn {
 
 .content-body {
   margin: 0 30px;
+  margin-bottom: 10px;
   padding: 20px;
   background-color: #DBDBDB;
   min-height: 68vh;
@@ -294,6 +295,19 @@ a .btn {
   color: red;
 }
 
+
+/* User Info properties*/ 
+
+.user-info-page-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+
+.user-info-page-delete{
+  margin-top: auto;
+  margin-right: auto;
+}
 
 /* Product Page Properties*/
 
@@ -534,6 +548,21 @@ a .btn {
   display: none;
 }
 
+
+/* Orders History properties */
+
+.product-list-product{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  width: 600px;
+  background-color: inherit;
+}
+
+.product-list-product img {
+  width: 100px;
+  border-radius: 10px;
+}
 
 /* Authentication properties */
 
