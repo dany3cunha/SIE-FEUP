@@ -92,6 +92,32 @@
         return $result;
     }
 
+    function getOrdersByCategory($category){
+        global $conn;
+        $query = "  SELECT  encomenda.id         AS order_id,
+                            encomenda.pagamento AS pay_method,
+                            encomenda.fk_status AS order_status,
+                            enc_prod.quantidade AS quantity,
+                            produto.nome        AS product_name 
+                    FROM encomenda 
+                    JOIN enc_prod   ON encomenda.id = enc_prod.fk_encomenda 
+                    JOIN produto    ON produto.ref  = enc_prod.fk_produto ";
 
+        
+        if ($category!="*"){
+            // If category selected was not "All"
+            $query = $query . " JOIN  subcategoria ON produto.fk_subcategoria=subcategoria.nome 
+                                WHERE subcategoria.fk_categoria = '" . $category . "'";
+        }
+
+        $result = pg_exec($conn, $query);
+
+        if (!$result) {
+            echo "Error\n";
+            return -1;
+        }
+        
+        return $result;
+    }
 
 ?>

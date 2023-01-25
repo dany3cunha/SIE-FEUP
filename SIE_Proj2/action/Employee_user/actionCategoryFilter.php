@@ -7,6 +7,7 @@
 <?php
 
     $categorySelected = $_POST['category']; 
+    $page             = $_POST['page'];
 
     //Clear category cookie
     unset($_COOKIE['cCategory']);
@@ -18,5 +19,5 @@
     setcookie("cCategory", $categorySelected, 0, "/");
     
 
-    header("Location: ../../pages/Employee_user/f_ListProducts.php");  
+    header("Location: ../../pages/Employee_user/".$page.".php");  
 ?>

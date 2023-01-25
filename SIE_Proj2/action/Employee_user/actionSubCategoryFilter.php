@@ -7,6 +7,7 @@
 <?php
 
     $subCategorySelected = $_POST['subcategory']; 
+    $page                = $_POST['page'];
 
     //Clear subcategory cookie
     unset($_COOKIE['cSubCategory']);
@@ -15,5 +16,6 @@
     setcookie("cSubCategory", $subCategorySelected, 0, "/");
     
 
-    header("Location: ../../pages/Employee_user/f_ListProducts.php");  
+    header("Location: ../../pages/Employee_user/f_ListProducts.php"); 
+    header("Location: ../../pages/Employee_user/".$page.".php");  
 ?>
