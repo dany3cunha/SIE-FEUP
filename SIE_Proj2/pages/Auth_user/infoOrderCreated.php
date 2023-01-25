@@ -21,7 +21,7 @@
     $product_category = getCatBySubcat($product['product_subcategory']);
     
     $total_price = $order['order_qty'] * $product['product_price'] * (1 - ($product['product_discount']/100) ) ;
-    $total_price = round($total_price,2,PHP_ROUND_HALF_UP)
+    $total_price = round($total_price,2,PHP_ROUND_HALF_UP);
 ?>
 
 <body>

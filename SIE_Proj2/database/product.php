@@ -33,18 +33,16 @@
     {
 
         /*select your_columns from your_table ORDER BY random() - and select only 3 results */
-
         global $conn;
         $query = "select produto.ref             AS product_ref,
-                            produto.nome            AS product_name,
-                            produto.preco           AS product_price,
-                            produto.fk_subcategoria AS product_subcategory,
-                            produto.desconto        AS product_discount
-                    from produto
-                    where produto.destaque = TRUE
-                    ORDER BY random()
-                    LIMIT 3";
-
+                         produto.nome            AS product_name,
+                         produto.preco           AS product_price,
+                         produto.fk_subcategoria AS product_subcategory,                    
+                         produto.desconto        AS product_discount
+                  from produto
+                  where produto.destaque = TRUE and produto.desconto = 0
+                  ORDER BY random()
+                  LIMIT 3";
 
         //echo "DEBUG query: " .$query. "</br>";
 
@@ -56,6 +54,32 @@
         }
 
         return $result;
+    }
+
+    function get6BiggestDiscounts(){
+        
+        global $conn;
+        $query = "select produto.ref             AS product_ref,
+                         produto.nome            AS product_name,
+                         produto.preco           AS product_price,
+                         produto.fk_subcategoria AS product_subcategory,                    
+                         produto.desconto        AS product_discount
+                  from  produto
+                  where produto.desconto > 0
+                  ORDER BY produto.desconto desc
+                  LIMIT 6";
+
+        //echo "DEBUG query: " .$query. "</br>";
+
+        $result = pg_exec($conn, $query);
+        //echo "DEBUG num_rows: " . pg_num_rows($result);
+        if (!$result) {
+            echo "An error occurred in get6BiggestDiscounts().";
+            exit();
+        }
+
+        return $result;
+
     }
 
     function getProductsByCategory($category, $availability, $max_price)

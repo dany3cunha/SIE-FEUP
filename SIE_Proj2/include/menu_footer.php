@@ -79,7 +79,7 @@
                     </button>
                     <div class=\"dropdown-content\">
                         <a href=\"../../pages/Auth_user/userInfo.php\">Dados pessoais</a>
-                        <a href=\"#\">Encomendas</a>
+                        <a href=\"../../pages/Auth_user/listOrdersHistory.php\">Encomendas</a>
                     </div>
                 </div>";
 

@@ -72,6 +72,26 @@ function updateUser($id, $email, $password, $name, $address, $cp, $phone, $nif){
     return true;
 }
 
+function deleteUser($user_id){
+    global $conn;
+    
+    $query = "  DELETE 
+                FROM 	utilizador
+                WHERE   utilizador.id='$user_id'";
+
+    //echo "DEBUG query: " . $query;
+
+    $result = pg_exec($conn, $query);
+    //echo "DEBUG num_rows: " . pg_num_rows($result);
+
+    if(!$result){
+        echo "Error in deleteUser().\n";
+        return false;
+    }
+    
+    return true;
+}
+
 function getIdFromEmail($email){
     global $conn;
     

@@ -72,12 +72,12 @@
 
     function getOrderById($order_id){
         global $conn;
-        $query = "select  encomenda.data          as date,
-                          encomenda.fk_utilizador as user_id,
-                          encomenda.fk_status     as order_status,
-                          encomenda.pagamento     as order_pay_method,
-                          enc_prod.quantidade     as order_qty,
-                          enc_prod.fk_produto     as order_product_ref                                        
+        $query = "select  TO_CHAR(encomenda.data, 'dd-mm-yyyy HH24:MI') as date,
+                          encomenda.fk_utilizador                       as user_id,
+                          encomenda.fk_status                           as order_status,
+                          encomenda.pagamento                           as order_pay_method,
+                          enc_prod.quantidade                           as order_qty,
+                          enc_prod.fk_produto                           as order_product_ref                                        
                   from encomenda
                   join enc_prod on encomenda.id=enc_prod.fk_encomenda
                   where encomenda.id  = '" .$order_id. "'";
@@ -87,6 +87,29 @@
 
         if (!$result) {
             echo "An error occurred in getProductsByCategory().";
+            exit();
+        }
+        return $result;
+    }
+
+    function getAllOrdersByUser($user_id){
+        global $conn;
+        $query = "select  encomenda.id                                  as order_id,
+                          TO_CHAR(encomenda.data, 'dd-mm-yyyy HH24:MI') as date,
+                          encomenda.fk_utilizador                       as user_id,
+                          encomenda.fk_status                           as order_status,
+                          encomenda.pagamento                           as order_pay_method,
+                          enc_prod.quantidade                           as order_qty,
+                          enc_prod.fk_produto                           as order_product_ref                                        
+                  from encomenda
+                  join enc_prod on encomenda.id=enc_prod.fk_encomenda
+                  where encomenda.fk_utilizador  = '" .$user_id. "'";
+       
+        $result = pg_exec($conn, $query);
+        //echo "DEBUG num_rows: " . pg_num_rows($result);
+
+        if (!$result) {
+            echo "An error occurred in getAllOrdersByUser().";
             exit();
         }
         return $result;
