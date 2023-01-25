@@ -2,7 +2,7 @@
     session_start();
     session_destroy();
 
-    // unset cookies
+    // clear all cookies
     if (isset($_SERVER['HTTP_COOKIE'])) {
         $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
         foreach($cookies as $cookie) {

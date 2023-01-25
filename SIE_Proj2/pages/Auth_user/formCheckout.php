@@ -80,56 +80,6 @@
 
     $product_tax = round($product_final_price * $tax, 2, PHP_ROUND_HALF_UP);
 
-<<<<<<< Updated upstream
-    # Validate the user login
-    if (isset($_SESSION['sAuthenticated'])) {
-        //Show user registered Name
-        $user_id = $_SESSION['sAuthenticated'];
-        $userInfo       = getUserInfo($user_id);
-        $user_name      = $userInfo['nome'];
-        $user_address   = $userInfo['morada'];
-        $user_contact   = $userInfo['telemovel'];
-        $user_nif       = $userInfo['nif'];
-    } else {
-        header('Location: ../Non_Auth_user/login.php');
-    }
-
-    if(!isset($_COOKIE['cPayMethod'])){
-        $pay_method = "false";
-    }else{
-        $pay_method = $_COOKIE['cPayMethod'];
-    }
-
-    if(isset($_POST['pay_method'])){
-        $pay_method = $_POST['pay_method'];
-        #echo $pay_method;
-        setcookie('pay_method',$_POST['pay_method'],0,"/");
-    }
-    
-    #echo "DBG (pay_method): " . $pay_method;
-    
-    $order_qty = 1;
-    $outStock = 'false';
-    
-    # Related to the filters option
-    # POST method for the filters
-    if (isset($_POST["order_qty"])) {
-        $order_qty = $_POST["order_qty"];
-        if ($order_qty > $product_qty)
-            $outStock = 'true';
-
-        if ($order_qty <= $product_qty and $outStock == 'true') {
-            $outStock = 'false';
-        }
-        
-        if($order_qty <0)
-            $order_qty = 0;
-        #echo "DBG (order_qty): " . $order_qty;
-    }
-
-
-=======
->>>>>>> Stashed changes
 ?>
 
 <body>
@@ -216,15 +166,9 @@
                                         <td>
                                             <form method=\"POST\" action = \"../../action/Auth_user/actionCreateOrder.php\">
                                                 <select name=\"pay_method\" class = \"checkout-select-payment\" onchange=\"this.form.submit()\">
-<<<<<<< Updated upstream
-                                                    <option value=\"\" >       Escolha Pag.     </option>
-                                                    <option name = \"pay_method_MB\" ".($pay_method == "MB" ? "selected" : "" )."       value=\"MB\"> Referência MB   </option>
-                                                    <option name = \"pay_method_Entrega\" ".($pay_method == "Entrega" ? "selected" : "" )."  value=\"Entrega\"> Pag. na Entrega </option>
-=======
                                                     <option name = \"pay_method\" value=\"Escolha\" >       Escolha Pag.     </option>
                                                     <option name = \"pay_method\" ".($pay_method == "MB" ? "selected" : "" )."       value=\"MB\"> Referência MB   </option>
                                                     <option name = \"pay_method\" ".($pay_method == "Entrega" ? "selected" : "" )."  value=\"Entrega\"> Pag. na Entrega </option>
->>>>>>> Stashed changes
                                                 </select>
                                                 <input type = \"text\" name=\"product_ref\" value=\"" . $product_ref . "\" hidden>    
                                             </form> 
