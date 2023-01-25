@@ -8,11 +8,10 @@
 ?>
 
 <?php
-    menu();
-
-    # Get value from the payment method
+    
     if(isset($_COOKIE['cOrderCreated'])){
-        $order_id = $_COOKIE['cOrderCreated']; 
+        $order_id = $_COOKIE['cOrderCreated'];
+        deleteCookie('cOrderCreated');
     }
 
     $order = getOrderById($order_id);
@@ -26,6 +25,9 @@
 ?>
 
 <body>
+    <?php
+        menu();
+    ?>
 
     <div class="content-body">
         <div class="go-back-line">
