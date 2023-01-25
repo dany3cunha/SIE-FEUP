@@ -34,7 +34,6 @@
     //If error was detected, exit without updating
     if(!empty($_SESSION['sErrorMsg'])){
         header("Location: ../../pages/Employee_user/formUpdateProduct.php"); 
-        echo "a";
         exit();    
     }
 
@@ -42,10 +41,9 @@
     if( !updateProduct($ref, $name, $quantity, $description, $price, $discount, $highlight, $subcategory) ){
         $_SESSION['sErrorMsg']  = "Ocorreu um erro, tente novamente";
         header("Location: ../../pages/Employee_user/formUpdateProduct.php"); 
-        echo "b";
         exit();  
     }
-    echo "c";
+
     $_SESSION['sFieldsUpdated'] = "As informações do produto foram atualizadas com sucesso!";
     header("Location: ../../pages/Employee_user/formUpdateProduct.php");  
 ?>

@@ -239,3 +239,20 @@
         
         return true;
     }
+
+    function deleteProduct($ref){
+    
+        global $conn;
+        
+        $query = "  DELETE FROM produto 
+                    WHERE ref = '$ref'";
+
+        $result = pg_exec($conn, $query);
+    
+        if(!$result){
+            echo "An error occurred in deleteProduct()\n";
+            return false;
+        }
+        
+        return true;
+    }

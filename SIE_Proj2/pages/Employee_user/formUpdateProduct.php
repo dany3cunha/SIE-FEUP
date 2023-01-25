@@ -57,7 +57,8 @@
 					<tr>
 						<td>Referência</td>
                         <td></td>
-						<td class=\"shorter-field\"><input  type=\"number\" value=\"".$ref."\" name=\"newRef\"></td>
+                        <td class=\"shorter-field\"><input disabled type=\"number\" value=\"".$ref."\" name=\"newRef\"></td>
+						<td class=\"shorter-field\"><input hidden type=\"number\" value=\"".$ref."\" name=\"newRef\"></td>
 					</tr>
 					<tr>
 						<td>Nome</td>
@@ -122,7 +123,7 @@
 						<td>Destaque</td>
                         <td></td>
 						<td>
-                            <input type=\"radio\" name=\"newHighlight\" value=\"true\"  ".($highlight=="t"   ? "checked" : "").   "> Sim
+                            <input type=\"radio\" name=\"newHighlight\" value=\"true\"  ".($highlight=="t"  ? "checked" : "").   "> Sim
                             <input type=\"radio\" name=\"newHighlight\" value=\"false\" ".($highlight=="f"  ? "checked" : "").   "> Não
                         </td>
 					</tr>

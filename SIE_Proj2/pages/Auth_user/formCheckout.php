@@ -34,7 +34,7 @@
     # Validate the user login
     if (isset($_SESSION['sAuthenticated'])) {
         //Show user registered Name
-        $user_id = $_SESSION['sAuthenticated'];
+        $user_id = $_SESSION['sCurrentUserID'];
         $userInfo       = getUserInfo($user_id);
         $user_name      = $userInfo['nome'];
         $user_address   = $userInfo['morada'];

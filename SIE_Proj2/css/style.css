@@ -692,3 +692,47 @@ input[type=number],
 input[type=radio] {
   margin: 10px 2px;
 }
+
+/* Delete Product Form */
+.confirm-buttons-div{
+  margin-top:20px;
+  margin-left:0px;                                
+}
+
+.cancel-button{
+  margin: 5px;
+  margin-right:20px;
+  height: 40px;
+  width: 100px;
+  background-color: inherit;
+  border-color: #CDCED3;
+  border-width: 3px;
+  border-radius: 5px; 
+  color:#373D49;
+  cursor: pointer;
+  font-weight:bold;
+  font-size:17px;
+}
+
+.cancel-button:hover{
+  opacity:70%;
+}
+
+.delete-button{
+  margin: 5px;
+  height: 40px;
+  width: 100px;
+  background-color: #B31038;
+  border-color: #B31038;
+  border-width: 3px;
+  border-radius: 5px; 
+  color:white;
+  cursor: pointer;
+  font-weight:bold;
+  font-size:17px;  
+}
+
+.delete-button:hover{
+  opacity:70%;
+}
+
