@@ -12,19 +12,28 @@
 
     if (!empty($_SESSION['sErrorMsg'])) {
         //Error detected!
-		$displayMsg = $_SESSION['sErrorMsg'];
-		$_SESSION['sErrorMsg'] = NULL;
+		$displayMsg  = $_SESSION['sErrorMsg'];
+        $product_ref = $_SESSION['ProductREF'];
+		
+        $_SESSION['sErrorMsg']  = NULL;
+        $_SESSION['ProductREF'] = NULL;
 	}
     else if(!empty($_SESSION['sFieldsUpdated'])) {
         //Update detected!
-		$displayMsg = $_SESSION['sFieldsUpdated'];
-        $msgStyle = "update-success-text";
+		$displayMsg  = $_SESSION['sFieldsUpdated'];
+        $product_ref = $_SESSION['ProductREF'];
+        
+        $msgStyle    = "update-success-text";
+        
 		$_SESSION['sFieldsUpdated'] = NULL;
+        $_SESSION['ProductREF']     = NULL;
 	}
+    else{
+        //Comes from f_ListProducts page
+        $product_ref = $_GET['product_ref'];        
+    }
 
     //Get all user fields using current ID
-    $product_ref = $_GET['product_ref'];
-    
 	$row            = getProductByRef($product_ref);
     $productInfo    = pg_fetch_assoc($row); 
 
@@ -69,18 +78,22 @@
     
     // Retrieve categories and subcategories from DB for the selection box
     $category_result = getAllCategories();
-    $category = pg_fetch_assoc($category_result);
-    while (isset($category["nome"])) {
-        echo"                   <optgroup label=    \"".$category["nome"]."\" >";
+    $list_category = pg_fetch_assoc($category_result);
+    while (isset($list_category["nome"])) {
+        echo"                   <optgroup label=    \"".$list_category["nome"]."\" >";
         
-        $subcategory_result = getAllSubCategories($category["nome"]);
-        $subcategory        = pg_fetch_assoc($subcategory_result);
-        while (isset($subcategory["nome"])) {
-            echo"                   <option value=\"".$subcategory["nome"]."\"> ".$subcategory["nome"]." </option>";
+        $subcategory_result = getAllSubCategories($list_category["nome"]);
+        $list_subcategory        = pg_fetch_assoc($subcategory_result);
+        
+        while (isset($list_subcategory["nome"])) {
+            $selected = ($list_subcategory["nome"] == $subCategory) ? "selected" : "";
+            echo"                   <option value=\"".$list_subcategory["nome"]."\" ".$selected."> "
+                                        .$list_subcategory["nome"]." 
+                                    </option>";
             
-            $subcategory    = pg_fetch_assoc($subcategory_result);
+            $list_subcategory = pg_fetch_assoc($subcategory_result);
         }
-        $category           = pg_fetch_assoc($category_result);
+        $list_category        = pg_fetch_assoc($category_result);
 
         echo"                   </optgroup>";
     }
@@ -116,8 +129,7 @@
 					<tr>
                         <td></td>
                         <td></td>
-                        ".(!empty($errorMsg)     ? "<td class=\"auth-error-text\">     ".$errorMsg."    </td>" : "" )."
-                        ".(!empty($successMsg)   ? "<td class=\"update-success-text\"> ".$successMsg. " </td>" : "" )."
+                        <td class=\"".$msgStyle."\"> ".$displayMsg." </td>
 					</tr>
 					<tr>
 						<td></td>

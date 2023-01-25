@@ -20,7 +20,7 @@
     if(!refIsAvailable($ref) ){
         $_SESSION['sErrorMsg'] = "Esta referência já se encontra registada!";    
     }
-    //Numeric variables need to be compared in a way that accepts the value "0"
+    //Numeric variables need to be compared in a way that differentiates values "" from "0"
     if ($ref=="" OR 
         empty($name) OR
         empty($description) OR
