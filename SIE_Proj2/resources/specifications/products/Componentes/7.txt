@@ -1,0 +1,17 @@
+Material: Chassi em aço SPCC 0,7 mm | Vidro Temperado | ABS + mesh metálica;
+Motherboards compatíveis: ATX, micro-ATX, mini-ITX;
+Slots de expansão: 8;
+Baías: 2 x 3.5"; 7 x 2.5";
+Sistema de Refrigeração:;
+Frontal: Suporta 3 x ventoinhas 120mm (3 x 120mm ARGB incluídas);
+Traseira: Suporta 1 x ventoinha 120mm (1 x 120mm ARGB incluída);
+Superior: Suporta 2 x ventoihas 120mm ou 140mm (opcionais/não incluídas);
+Portas I/O Painel Frontal:;
+1 x USB 3.0;
+2 x USB 2.0;
+1 x HD audio;
+1 x Mic;
+Altura máx. Cooler CPU: Até 168 mm;
+Comprimento máx. VGA: Até 325 mm;
+Dimensões do produto: 210 x 510 x 447 mm (W x H x D);
+Peso do produto: 6.1 Kg
