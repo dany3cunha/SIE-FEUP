@@ -6,6 +6,12 @@
 
 <?php
     
+    # Delete cookies from the previous checkout if it happened
+    deleteCookie("cProduct_ref");
+    deleteCookie("cOrder_qty");
+    deleteCookie("cPay_method");
+    deleteCookie("cErrorCreateOrder");
+
     # GET product ref.
     $product_ref = $_GET['product_ref'];
 

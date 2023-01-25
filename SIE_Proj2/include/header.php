@@ -2,6 +2,7 @@
     /* PHP Includes */
     include_once("../../include/opendb.php");
     include_once("../../include/menu_footer.php");
+    include_once("../../include/cookies.php");
 ?>
 
 <?php

@@ -6,8 +6,57 @@
 
 <?php
 
+    # Validate the user login
+    if (isset($_SESSION['sAuthenticated'])) {
+        //Show user registered Name
+        $user_id = $_SESSION['sCurrentUserID'];
+        $userInfo       = getUserInfo($user_id);
+        $user_name      = $userInfo['nome'];
+        $user_address   = $userInfo['morada'];
+        $user_contact   = $userInfo['telemovel'];
+        $user_nif       = $userInfo['nif'];
+    } else {
+        header('Location: ../Non_Auth_user/login.php');
+        exit();
+    }  
+
     # GET product ref.
-    $product_ref = $_GET['product_ref'];
+    if(isset($_COOKIE['cProduct_ref'])){
+        # It returned from the actionCreateOrder
+        $product_ref = $_COOKIE['cProduct_ref'];
+
+    }else{
+        # It came from the productDetails
+        $product_ref = $_GET['product_ref'];
+    }
+
+    #GET order quantity information
+    if(isset($_COOKIE['cOrder_qty'])){
+        # It returned from the actionCreateOrder
+        $order_qty = $_COOKIE['cOrder_qty'];
+    }else{
+        # It came from the productDetails, so it is the default: 1
+        $order_qty = 1;
+    }
+
+     #GET payment method information
+     if(isset($_COOKIE['cPay_method'])){
+        # It returned from the actionCreateOrder
+        $pay_method = $_COOKIE['cPay_method'];
+
+    }else{
+        # It came from the productDetails, so it is the default: Escolha
+        $pay_method = "Escolha";
+    }
+
+    # check if there are errors
+    if(isset($_COOKIE['cErrorCreateOrder'])){
+        $cErrorMsg = $_COOKIE['cErrorCreateOrder'];
+        deleteCookie("cErrorCreateOrder");
+    }
+    else{
+        $cErrorMsg = " ";
+    }
 
     # Retrieve from DB product information
     $prod_info = getProductByRef($product_ref);
@@ -31,6 +80,7 @@
 
     $product_tax = round($product_final_price * $tax, 2, PHP_ROUND_HALF_UP);
 
+<<<<<<< Updated upstream
     # Validate the user login
     if (isset($_SESSION['sAuthenticated'])) {
         //Show user registered Name
@@ -78,11 +128,13 @@
     }
 
 
+=======
+>>>>>>> Stashed changes
 ?>
 
 <body>
     <?php
-    menu();
+        menu();
 
     echo "<div class = \"content-body\">
        
@@ -112,9 +164,10 @@
                                         " . $product_name . "
                                     </td>
                                     <td class=\"shorter-field\">
-                                        <form method=\"POST\" action = \"\">
+                                        <form method=\"POST\" action = \"../../action/Auth_user/actionCreateOrder.php\">
                                                 <label id=\"order_qty\">Quantidade</label> <br>
                                                 <input type=\"number\" id=\"order_qty\" name = \"order_qty\" value = \"" . $order_qty . "\"  onchange=\"this.form.submit()\">
+                                                <input type = \"text\" name=\"product_ref\" value=\"" . $product_ref . "\" hidden>
                                         </form>                                    
                                     </td>
                                     <td>
@@ -161,12 +214,19 @@
                                     <tr>
                                         <td> Método de Pagamento </td>
                                         <td>
-                                            <form method=\"POST\" action = \"\">
+                                            <form method=\"POST\" action = \"../../action/Auth_user/actionCreateOrder.php\">
                                                 <select name=\"pay_method\" class = \"checkout-select-payment\" onchange=\"this.form.submit()\">
+<<<<<<< Updated upstream
                                                     <option value=\"\" >       Escolha Pag.     </option>
                                                     <option name = \"pay_method_MB\" ".($pay_method == "MB" ? "selected" : "" )."       value=\"MB\"> Referência MB   </option>
                                                     <option name = \"pay_method_Entrega\" ".($pay_method == "Entrega" ? "selected" : "" )."  value=\"Entrega\"> Pag. na Entrega </option>
+=======
+                                                    <option name = \"pay_method\" value=\"Escolha\" >       Escolha Pag.     </option>
+                                                    <option name = \"pay_method\" ".($pay_method == "MB" ? "selected" : "" )."       value=\"MB\"> Referência MB   </option>
+                                                    <option name = \"pay_method\" ".($pay_method == "Entrega" ? "selected" : "" )."  value=\"Entrega\"> Pag. na Entrega </option>
+>>>>>>> Stashed changes
                                                 </select>
+                                                <input type = \"text\" name=\"product_ref\" value=\"" . $product_ref . "\" hidden>    
                                             </form> 
                                         </td>
                                     </tr>                                              
@@ -193,27 +253,16 @@
                             </div>
                             <div>
                                 <table style = \"width:100%;\">
+                                    <tr> ".$cErrorMsg." </tr>
                                     <tr>
                                         <td style = \"float:right;\"> 
                                             <form method = \"POST\" action=\"../../action/Auth_user/actionCreateOrder.php\">
                                                 <input type = \"text\" name=\"user_id\"     value=\"" . $user_id     . "\" hidden>
                                                 <input type = \"text\" name=\"product_ref\" value=\"" . $product_ref . "\" hidden>
                                                 <input type = \"text\" name=\"order_qty\"   value=\"" . $order_qty   . "\" hidden>
-                                                <input type = \"text\" name=\"pay_method\"  value=\"" . $pay_method  . "\" hidden>";
-    # Payment method verification
-    if($pay_method == "false"){
-        echo " Por favor escolha um método de pagamento!";
-    }                                            
-    # stock verification
-    if ($outStock == 'true') {
-        echo " Sem stock suficiente!";
-    } 
-    if($pay_method != "false" and $outStock == "false"){
-        echo "                                      <input type=\"submit\" class=\"btn-form\" value=\"Avançar\">";
-    }
-
-
-    echo "                                  </form>
+                                                <input type = \"text\" name=\"pay_method\"  value=\"" . $pay_method  . "\" hidden>
+                                                <input type=\"submit\" class=\"btn-form\" value=\"Avançar\">    
+                                            </form>
                                         </td>
                                     </tr>                                                                   
                                 </table>                              
@@ -225,7 +274,6 @@
 
               </div>"; #end content-body
     ?>
-
 </body>
 
 <?php

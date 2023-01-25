@@ -3,11 +3,16 @@
     function createOrder($order_id,$user_id,$pagamento){
 
         global $conn;
+
+        $pay_method = "Aguarda Pagamento";
+        if($pagamento == "Entrega")
+            $pay_method = "Em Processamento";
+
         $query = "insert into encomenda (id,data,fk_utilizador,fk_status,pagamento)                          
                   values('$order_id',
                          CURRENT_TIMESTAMP,
                          '$user_id',
-                         'Aguarda Pagamento',
+                         '$pay_method',
                           '$pagamento')";
 
         //echo "DEBUG query: " .$query. "</br>";
