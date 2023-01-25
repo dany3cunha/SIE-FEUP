@@ -645,7 +645,7 @@ input[type=number],
   margin:3px;
   font-family:inherit;
   border-collapse: collapse;
-  width: 80%;
+  width: 90%;
 }
 
 .product-list td, .product-list th {
@@ -663,6 +663,11 @@ input[type=number],
   text-align: left;
   background-color: #C55A11 ;
   color: white;
+}
+
+.product-op-button{
+  text-align:center; 
+  margin:0px;
 }
 
 /* Add Product Form */

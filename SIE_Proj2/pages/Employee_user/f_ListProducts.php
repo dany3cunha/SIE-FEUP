@@ -1,7 +1,7 @@
 <?php
     /* PHP includes */
     include_once("../../include/header.php");
-    include_once "../../database/product.php";
+    include_once ("../../database/product.php");
 ?>
 
 <?php
@@ -94,37 +94,54 @@
 
         // Start results table
         echo"
-        <table class=\"product-list\">
-            <tr>
-                <th>    Referência  </th>
-                <th>    Produto     </th>
-                <th>    Preço (€)   </th>
-                <th>    Desconto (%)</th>
-                <th>    Quantidade  </th>
-                <th>    Destaque    </th>
-                <th>    &nbsp       </th>
-            </tr>";
+        
+            <table class=\"product-list\">
+                <tr>
+                    <th>    Referência  </th>
+                    <th>    Produto     </th>
+                    <th>    Preço (€)   </th>
+                    <th>    Desconto (%)</th>
+                    <th>    Quantidade  </th>
+                    <th>    Destaque    </th>
+                </tr>";
 
         $product = pg_fetch_assoc($products_result);
         while(isset($product['product_ref']) ){
             
             echo"
-            <tr>
-                <td> ".$product['product_ref']."                                                </td>
-                <td> ".$product['product_name']."                                               </td>
-                <td> ".$product['product_price']."                                              </td>
-                <td> ".($product['product_discount']>0 ? $product['product_discount'] : "--")." </td>
-                <td> ".$product['product_qty']."                                                </td>
-                <td> ".($product['product_highlighted']=="t" ? "Sim" : "--")."                  </td>
-                <td> &nbsp </td>
-            </tr>";
+                <tr>
+                    <td> ".$product['product_ref']."                                                </td>
+                    <td> ".$product['product_name']."                                               </td>
+                    <td> ".$product['product_price']."                                              </td>
+                    <td> ".($product['product_discount']>0 ? $product['product_discount'] : "--")." </td>
+                    <td> ".$product['product_qty']."                                                </td>
+                    <td> ".($product['product_highlighted']=="t" ? "Sim" : "--")."                  </td>
+                    <td > 
+                        <form class=\"product-op-button\" method = \"GET\" action = \"formUpdateProduct.php \">
+                            <input type=\"text\" name=\"product_ref\" value =\"".$product['product_ref']."\" hidden>
+                            <button type=\"submit\" class=\"button\">
+                                <i class=\"fa-regular fa-pen-to-square fa-2xl\"></i>
+                            </button> 
+                        </form>
+                    </td>
+                    <td > 
+                        <form class=\"product-op-button\" method = \"GET\" action = \"formDeleteProduct.php \">
+                            <input type=\"text\" name=\"product_ref\" value =\"".$product['product_ref']."\" hidden>
+                            <button type=\"submit\" class=\"button\">
+                                <i class=\"fa-regular fa-trash-can fa-2xl\"></i>
+                            </button> 
+                        </form>
+                    </td>
+                </tr>";
+            
+
 
             $product = pg_fetch_assoc($products_result);
         }
 
         // Close results table
         echo"  
-        </table>";
+            </table>";
 
     }
 

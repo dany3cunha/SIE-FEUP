@@ -20,19 +20,21 @@
     if(!refIsAvailable($ref) ){
         $_SESSION['sErrorMsg'] = "Esta referência já se encontra registada!";    
     }
-    if (is_null($ref) OR 
+    //Numeric variables need to be compared in a way that accepts the value "0"
+    if ($ref=="" OR 
         empty($name) OR
         empty($description) OR
         empty($subcategory) OR
-        is_null($price) OR
-        is_null($quantity) OR
-        is_null($discount) OR
+        empty($price) OR
+        $quantity=="" OR
+        $discount=="" OR
         empty($highlight) ) { 
-        
+
         $_SESSION['sErrorMsg'] = "Preencha todos os campos do produto!";    
     }
     if( $price == 0 ) $_SESSION['sErrorMsg'] = "Um produto não pode ser gratuito!"; 
-
+    
+    
     //If fields were wrong, save them and exit
     if(!empty($_SESSION['sErrorMsg'])){
         $_SESSION['sRef']           = $ref;

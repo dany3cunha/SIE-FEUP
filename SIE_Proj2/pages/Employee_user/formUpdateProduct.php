@@ -1,62 +1,47 @@
 <?php
     /* PHP includes */
     include_once("../../include/header.php");
+    include_once("../../database/product.php");
 ?>
 
 <?php
 	menu();
+    
+    $displayMsg = "";
+    $msgStyle = "auth-error-text";
 
-	$errorMsg       = "";
-    $successMsg     = "";
-
-	$ref            = "";
-	$name           = "";
-	$description    = "";
-	$subCategory    = "";
-	$price          = "";
-	$quantity       = "";
-    $discount       = "";
-    $highlight      = "";
-
-    //Check for errors
-	if (!empty($_SESSION['sErrorMsg'])) {
-		//echo "<p class='error'>" . $_SESSION['sErrorMsg'] . "<p>";
-		$errorMsg = $_SESSION['sErrorMsg'];
+    if (!empty($_SESSION['sErrorMsg'])) {
+        //Error detected!
+		$displayMsg = $_SESSION['sErrorMsg'];
 		$_SESSION['sErrorMsg'] = NULL;
-
-		//Get the form data stored in the session vars, then clean them
-		if (!is_null($_SESSION['sRef'])) 	        $ref            = $_SESSION['sRef'];
-        if (!empty($_SESSION['sName'])) 	    $name           = $_SESSION['sName'];
-        if (!empty($_SESSION['sDescription'])) 	$description    = $_SESSION['sDescription'];
-        if (!empty($_SESSION['sSubCategory'])) 	$subCategory    = $_SESSION['sSubCategory'];
-        if (!empty($_SESSION['sPrice'])) 	    $price          = $_SESSION['sPrice'];
-        if (!is_null($_SESSION['sQuantity'])) 	$quantity       = $_SESSION['sQuantity'];
-        if (!is_null($_SESSION['sDiscount'])) 	$discount       = $_SESSION['sDiscount'];
-        if (!empty($_SESSION['sHighlight'])) 	$highlight      = $_SESSION['sHighlight'];
-        
-        $_SESSION['sRef']           = NULL;
-        $_SESSION['sName']          = NULL;
-        $_SESSION['sDescription']   = NULL;
-        $_SESSION['sSubCategory']   = NULL;
-        $_SESSION['sPrice']         = NULL;
-        $_SESSION['sQuantity']      = NULL;
-        $_SESSION['sDiscount']      = NULL;
-        $_SESSION['sHighlight']    = NULL;  
+	}
+    else if(!empty($_SESSION['sFieldsUpdated'])) {
+        //Update detected!
+		$displayMsg = $_SESSION['sFieldsUpdated'];
+        $msgStyle = "update-success-text";
+		$_SESSION['sFieldsUpdated'] = NULL;
 	}
 
-    //Check if product was inserted successfuly
-    if(!empty($_SESSION['sSuccessMsg'])){
-        $successMsg                 = $_SESSION['sSuccessMsg'];  
-        $_SESSION['sSuccessMsg']    = NULL;  
-    }    
+    //Get all user fields using current ID
+    $product_ref = $_GET['product_ref'];
+    
+	$row            = getProductByRef($product_ref);
+    $productInfo    = pg_fetch_assoc($row); 
+
+	$ref            = $productInfo['product_ref'];
+	$name           = $productInfo['product_name'];
+	$description    = $productInfo['product_desc'];
+	$subCategory    = $productInfo['product_subcategory'];
+	$price          = $productInfo['product_price'];
+	$quantity       = $productInfo['product_qty'];
+    $discount       = $productInfo['product_discount'];
+    $highlight      = $productInfo['product_highlighted'];
 ?>
 
-
-
 <body>
-	<div class="content-title">Adicionar novo produto </div>
+	<div class="content-title">Atualizar informações do produto </div>
 	<div class="content-body">
-		<form method="POST" action="../../action/Employee_user/actionAddProduct.php">
+		<form method="POST" action="../../action/Employee_user/actionUpdateProduct.php">
 			<table>
 <?php
 	echo "
@@ -124,8 +109,8 @@
 						<td>Destaque</td>
                         <td></td>
 						<td>
-                            <input type=\"radio\" name=\"newHighlight\" value=\"true\"  ".($highlight=="true"   ? "checked" : "").   "> Sim
-                            <input type=\"radio\" name=\"newHighlight\" value=\"false\" ".($highlight=="false"  ? "checked" : "").   "> Não
+                            <input type=\"radio\" name=\"newHighlight\" value=\"true\"  ".($highlight=="t"   ? "checked" : "").   "> Sim
+                            <input type=\"radio\" name=\"newHighlight\" value=\"false\" ".($highlight=="f"  ? "checked" : "").   "> Não
                         </td>
 					</tr>
 					<tr>
@@ -137,7 +122,7 @@
 					<tr>
 						<td></td>
                         <td></td>
-						<td><input type=\"submit\" class=\"btn-form\" value=\"Adicionar\"></td>
+						<td><input type=\"submit\" class=\"btn-form\" value=\"Atualizar\"></td>
 					</tr>"
 				?>
 			</table>
