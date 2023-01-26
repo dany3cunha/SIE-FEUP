@@ -17,8 +17,7 @@
             exit();
         }
         
-        return $result;
-        //exit();		  
+        return $result;		  
     }
 
     /**
@@ -41,8 +40,7 @@
             exit();
         }
         
-        return $result;
-        //exit();		  
+        return $result;		  
     }
     
     /**
@@ -69,7 +67,6 @@
             return $result['category'];
         }else
             return null;
-    
     }
 
     /**
