@@ -36,6 +36,9 @@
                         <?php   select_subcategory($categorySelected, $subCategorySelected) ?>
                     </form>
                 </td>
+                <td>
+                    <a href="../../pages/Employee_user/formAddProduct.php"> <button class="btn">Adicionar</button></a>
+                </td>
             </tr>
         </table>
 <?php
