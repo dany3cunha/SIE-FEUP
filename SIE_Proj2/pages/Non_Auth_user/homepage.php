@@ -59,10 +59,10 @@
         
         $row_cnt = pg_num_rows($discounts);
         $cols_cnt = 0;
-        echo "          <div class = \"homepage-grid\">";
+        #echo "          <div class = \"homepage-grid\">";
         while ($row_cnt > 0){
             
-            if($row_cnt % 3 == 0 and $row_cnt > 3)
+            if($cols_cnt == 0)
                 echo "  <div class = \"homepage-grid\">";
             
             $row_cnt = $row_cnt - 1;

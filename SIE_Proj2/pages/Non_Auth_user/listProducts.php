@@ -138,7 +138,7 @@
     $cols_cnt = 0;
     #echo "      <tr>";
     while ($row_cnt > 0){
-        if($row_cnt % 3 == 0 and $row_cnt > 3)
+        if($cols_cnt == 0 )
             echo "      <tr>";
         
         $product = pg_fetch_assoc($allProducts);
