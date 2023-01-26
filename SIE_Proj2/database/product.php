@@ -1,5 +1,8 @@
 <?php
-
+    /**
+     * Param: product reference (PK)
+     * Returns all product fields 
+     */ 
     function getProductByRef($ref)
     {
 
@@ -28,11 +31,11 @@
         return $result;
     }
 
-
+    /**
+     * Returns 3 random product that have the highlighted field true
+     */ 
     function get3Highlights()
     {
-
-        /*select your_columns from your_table ORDER BY random() - and select only 3 results */
         global $conn;
         $query = "select produto.ref             AS product_ref,
                          produto.nome            AS product_name,
@@ -56,6 +59,9 @@
         return $result;
     }
 
+    /**
+     * Returns six products that have the higher discount setted
+     */ 
     function get6BiggestDiscounts(){
         
         global $conn;
@@ -82,6 +88,11 @@
 
     }
 
+    /**
+     * Mandatory params: product category (* is All)
+     * Optional params: availability and maxprice, if they aren't needed, then use NULL for both
+     * Returns a product list accordingly to the category and optional filters
+     */ 
     function getProductsByCategory($category, $availability, $max_price)
     {
 
@@ -124,6 +135,11 @@
 	
     }
 
+    /**
+     * Mandatory params: product subcategory (* is All)
+     * Optional params: availability and maxprice, if they aren't needed, then use NULL for both
+     * Returns a product list accordingly to the subcategory and optional filters
+     */ 
     function getProductsBySubcategory($subcategory, $availability, $max_price)
     {
 
@@ -165,7 +181,11 @@
         return $result;
         
     }
-    
+
+    /**
+     * Params: category filter
+     * Returns the most expensive product from a specific category
+     */ 
     function getMostExpensiveProduct($category){
         global $conn;
 
@@ -189,6 +209,11 @@
         return $row[0];
     }
 
+    /**
+     * Params: product reference
+     * Returns true if there are no products with that reference already registered
+     *         false otherwise
+     */ 
     function refIsAvailable($ref) {
         global $conn;
         
@@ -215,6 +240,11 @@
         return true;		
     }
 
+    /**
+     * Params: new product parameters
+     * Returns true inserted successfuly
+     *         false otherwise
+     */ 
     function insertProduct($ref, $name, $quantity, $description, $price, $discount, $highlight, $subcategory){
         global $conn;
         
@@ -239,7 +269,11 @@
         return true;
     }
 
-
+    /**
+     * Params: updated product parameters
+     * Returns true updated successfuly
+     *         false otherwise
+     */ 
     function updateProduct($ref, $name, $quantity, $description, $price, $discount, $highlight, $subcategory){
     
         global $conn;
@@ -263,7 +297,12 @@
         
         return true;
     }
-
+    
+    /**
+     * Params: product referece to be deleted
+     * Returns true if deleted successfuly
+     *         false otherwise
+     */ 
     function deleteProduct($ref){
     
         global $conn;

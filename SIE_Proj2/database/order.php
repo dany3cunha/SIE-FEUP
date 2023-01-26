@@ -199,7 +199,7 @@
     }
     
     /**
-     * @return $result all possible status, -1 if error 
+     * Returns $result all possible status, -1 if error 
      */  
     function getOrdersPossibleStatus(){
         global $conn;
@@ -217,6 +217,10 @@
         return $result;
     }
 
+    /**
+     * Params order_id and desired status
+     * Returns true if updated, false if error
+     */     
     function updateOrderStatus($id, $status){
         global $conn;
         
