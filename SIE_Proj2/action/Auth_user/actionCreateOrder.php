@@ -82,7 +82,7 @@
     }
 
     # Verify that all the fields are present to 
-    if(isset($user_id) and isset($product_ref) and isset($order_qty) and isset($pay_method)){
+    if(isset($user_id) and isset($product_ref) and isset($order_qty) and isset($pay_method) and isset($_POST['buy'])){
         
         $order_id = getLastOrderId() + 1;
         if(createOrder($order_id,$user_id,$pay_method)){

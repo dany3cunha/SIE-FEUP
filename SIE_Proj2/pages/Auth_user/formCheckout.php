@@ -210,6 +210,7 @@
                                                 <input type = \"text\" name=\"product_ref\" value=\"" . $product_ref . "\" hidden>
                                                 <input type = \"text\" name=\"order_qty\"   value=\"" . $order_qty   . "\" hidden>
                                                 <input type = \"text\" name=\"pay_method\"  value=\"" . $pay_method  . "\" hidden>
+                                                <input type = \"text\" name=\"buy\"         value=\"true\"                 hidden>
                                                 <input type=\"submit\" class=\"btn-form\" value=\"Avançar\">    
                                             </form>
                                         </td>
