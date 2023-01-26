@@ -13,8 +13,7 @@
     function verifyEmployeePermission(){
 
         if(!isset($_SESSION['sEmployeePerm'])){
-            //header("Location: ../../index.php");
-            echo $_SESSION['sEmployeePerm'];
+            header("Location: ../../index.php");
             exit();
         }
     }

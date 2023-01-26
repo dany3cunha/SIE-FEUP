@@ -50,8 +50,8 @@
 ?>
 
 <body>
-	<div class="content-title">Atualizar informações do produto </div>
 	<div class="content-body">
+        <div class="content-title">Atualizar informações do produto </div>
 		<form method="POST" action="../../action/Employee_user/actionUpdateProduct.php">
 			<table>
 <?php

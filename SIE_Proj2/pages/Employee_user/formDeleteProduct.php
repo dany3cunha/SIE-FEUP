@@ -19,8 +19,8 @@
 ?>
 
 <body>
-	<div class="content-title">Apagar produto</div>
 	<div class="content-body">
+       <div class="content-title">Apagar produto</div> 
 			<table>
                 <tr>
                     <td>

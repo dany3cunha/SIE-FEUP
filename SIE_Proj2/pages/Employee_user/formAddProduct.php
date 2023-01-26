@@ -57,8 +57,8 @@
 
 
 <body>
-	<div class="content-title">Adicionar novo produto </div>
 	<div class="content-body">
+        <div class="content-title">Adicionar novo produto </div>
 		<form method="POST" action="../../action/Employee_user/actionAddProduct.php">
 			<table>
 <?php
