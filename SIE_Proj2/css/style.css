@@ -651,7 +651,8 @@ input[type=number],
 
 /* Selection Form */
 .emp-cat-select,
-.add-cat-select{
+.add-cat-select,
+.update-order-select{
   font-size:16px;
   padding:5px;
   margin-right: 30px;
@@ -668,6 +669,11 @@ input[type=number],
 .emp-cat-select option:first-child,
 .selection_text {
   display: none;
+}
+
+.update-order-select{
+  width:200px;
+  margin-right: 0px;
 }
 
 .product-list{

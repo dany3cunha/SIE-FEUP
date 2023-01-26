@@ -146,4 +146,64 @@
         return $result;
     }
 
+    function getOrdersBySubCategory($subcategory){
+        global $conn;
+        $query = "  SELECT  encomenda.id         AS order_id,
+                            encomenda.pagamento AS pay_method,
+                            encomenda.fk_status AS order_status,
+                            enc_prod.quantidade AS quantity,
+                            produto.nome        AS product_name 
+                    FROM encomenda 
+                    JOIN enc_prod   ON encomenda.id = enc_prod.fk_encomenda 
+                    JOIN produto    ON produto.ref  = enc_prod.fk_produto ";
+
+
+        if($subcategory!="*"){
+            // If subcategory selected was not "All"
+            $query = $query . "WHERE produto.fk_subcategoria = '" . $subcategory . "'";
+        }
+
+        $result = pg_exec($conn, $query);
+
+
+        if (!$result) {
+            echo "Error\n";
+            return -1;
+        }
+        
+        return $result;
+    }
+
+    function getOrdersPossibleStatus(){
+        global $conn;
+
+        $query = "  SELECT  descricao    AS description 
+                    FROM    status";
+
+        $result = pg_exec($conn, $query);
+        
+        if (!$result) {
+            echo "Error\n";
+            return -1;
+        }
+        
+        return $result;
+    }
+
+    function updateOrderStatus($id, $status){
+        global $conn;
+        
+        $query = "  UPDATE  encomenda 
+                    SET     fk_status   = '$status' 
+                    WHERE   id          = '$id'";
+
+        $result = pg_exec($conn, $query);
+    
+        if(!$result){
+            echo "An error occurred in updateOrder()\n";
+            return false;
+        }
+        
+        return true;
+    }
 ?>
