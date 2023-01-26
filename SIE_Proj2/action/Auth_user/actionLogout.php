@@ -1,7 +1,11 @@
 <!-- PHP includes -->
 <?php
     include_once("../../include/cookies.php");
+    include_once("../../include/security.php");
     session_start();
+?>
+<?php
+	verifyAuthenticatedPermission();
 ?>
 
 <?php

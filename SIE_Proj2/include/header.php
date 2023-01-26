@@ -3,6 +3,7 @@
     include_once("opendb.php");
     include_once("menu_footer.php");
     include_once("cookies.php");
+    include_once("security.php");
 ?>
 
 <?php

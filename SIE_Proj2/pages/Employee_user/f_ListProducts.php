@@ -4,12 +4,11 @@
     include_once("../../include/category_filter.php");
     include_once ("../../database/product.php");
 ?>
-
 <?php
+    verifyEmployeePermission();
+
 	menu();
-?>
 
-<?php
     if( isset($_COOKIE['cCategory']) )      $categorySelected       = $_COOKIE['cCategory'];
     else $categorySelected = "";
 

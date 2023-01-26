@@ -35,7 +35,7 @@
         $_SESSION['sCP']         = $cp;
         $_SESSION['sPhone']      = $phone;
         $_SESSION['sNIF']        = $nif;   
-        header("Location: ../../pages/Non_Auth_user/register.php"); 
+        header("Location: ../../pages/Non_Auth_user/formRegister.php"); 
         exit();    
     }
 
@@ -43,7 +43,7 @@
     $password_md5 = md5($password);
     if( !insertNewUser($email, $password_md5, $name, $address, $cp, $phone, $nif) ){
         $_SESSION['sErrorMsg'] = "Ocorreu um erro, tente novamente";
-        header("Location: ../../pages/Non_Auth_user/register.php"); 
+        header("Location: ../../pages/Non_Auth_user/formRegister.php"); 
         exit();  
     }
 

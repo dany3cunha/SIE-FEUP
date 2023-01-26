@@ -6,6 +6,10 @@
 ?>
 
 <?php
+	verifyAuthenticatedPermission();
+?>
+
+<?php
     
     # Validate the user login
     if (isset($_SESSION['sAuthenticated'])) {
@@ -17,7 +21,7 @@
         $user_contact   = $userInfo['telemovel'];
         $user_nif       = $userInfo['nif'];
     } else {
-        header('Location: ../Non_Auth_user/login.php');
+        header('Location: ../Non_Auth_user/formLogin.php');
         exit();
     }  
 ?>
@@ -30,7 +34,7 @@
 	
 	<div class="content-body">
         <div class="content-title">Encomendas </div>
-        <table class="product-list">
+            <table class="product-list">
                 <tr>
                     <th>    Nº encomenda  </th>
                     <th>    Produto       </th>
@@ -75,13 +79,12 @@
         }
 
         // Close results table
-        echo"  
-        </table>
+        echo "  
+            </table>
         </div>";
     ?>
 </body>
 
 <?php
-
     footer();
 ?>

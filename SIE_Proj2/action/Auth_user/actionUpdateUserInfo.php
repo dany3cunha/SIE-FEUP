@@ -2,8 +2,13 @@
 <?php
     include_once "../../include/opendb.php";
     include_once "../../database/user.php";
+    include_once "../../include/security.php";
     session_start();
 ?>
+<?php
+	verifyAuthenticatedPermission();
+?>
+
 
 <?php
     // New data to be updated
@@ -47,7 +52,7 @@
     $password_md5 = md5($password);
     if( !updateUser($current_ID, $email, $password_md5, $name, $address, $cp, $phone, $nif) ){
         $_SESSION['sErrorMsg'] = "Ocorreu um erro, tente novamente";
-        header("Location: ../../pages/Non_Auth_user/register.php"); 
+        header("Location: ../../pages/Non_Auth_user/formRegister.php"); 
         exit();  
     }
 

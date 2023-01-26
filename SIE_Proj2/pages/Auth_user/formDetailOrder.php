@@ -6,6 +6,11 @@
 ?>
 
 <?php
+	verifyAuthenticatedPermission();
+?>
+
+
+<?php
 
     # Validate the user login
     if (isset($_SESSION['sAuthenticated'])) {
@@ -17,7 +22,7 @@
         $user_contact   = $userInfo['telemovel'];
         $user_nif       = $userInfo['nif'];
     } else {
-        header('Location: ../Non_Auth_user/login.php');
+        header('Location: ../Non_Auth_user/formLogin.php');
         exit();
     }  
 
@@ -122,7 +127,7 @@
                                         <td>
                                             <form method=\"POST\" action = \"\">
                                                 <select name=\"pay_method\" class = \"checkout-select-payment\" disabled>
-                                                    <option name = \"pay_method\" " . ($order['order_pay_method'] == "MB" ? "selected" : "") . "       value=\"MB\" > Referência MB   </option>
+                                                    <option name = \"pay_method\" " . ($order['order_pay_method'] == "MB" ? "selected" : "") . "       value=\"MB\"      > Referência MB   </option>
                                                     <option name = \"pay_method\" " . ($order['order_pay_method'] == "Entrega" ? "selected" : "") . "  value=\"Entrega\" > Pag. na Entrega </option>
                                                 </select>
                                             </form> 

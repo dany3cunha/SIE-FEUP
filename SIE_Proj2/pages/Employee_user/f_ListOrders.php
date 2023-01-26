@@ -6,18 +6,16 @@
 ?>
 
 <?php
-	menu();
-?>
+    verifyEmployeePermission();
 
-<?php
+	menu();
+
     if( isset($_COOKIE['cCategory']) )      $categorySelected       = $_COOKIE['cCategory'];
     else $categorySelected = "";
 
     if( isset($_COOKIE['cSubCategory']) )   $subCategorySelected    = $_COOKIE['cSubCategory'];
     else $subCategorySelected = "";    
 ?>
-
-
 
 <body>
 	

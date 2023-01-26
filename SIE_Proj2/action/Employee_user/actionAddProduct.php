@@ -2,10 +2,14 @@
 <?php
     include_once "../../include/opendb.php";
     include_once "../../database/product.php";
+    include_once "../../include/security.php";
     session_start();
 ?>
 
 <?php
+     
+    verifyEmployeePermission();
+    
     // New product data
 	$ref            = $_POST['newRef'];
 	$name           = $_POST['newName'];

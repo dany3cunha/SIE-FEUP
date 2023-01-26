@@ -163,18 +163,6 @@
         echo "  </div>"; #ending product-page-product
         echo " </div>";  #ending product-page-grid
 
-        /*
-        echo "<p>". $product_ref         ." </p>";
-        echo "<p>". $product_name        ." </p>";
-        echo "<p>". $product_qty         ." </p>";
-        echo "<p>". $product_discount    ." </p>";
-        echo "<p>". $product_price       ." </p>";
-        echo "<p>". $product_discount    ." </p>";
-        echo "<p>". $product_highlighted ." </p>";
-        echo "<p>". $product_subcategory ." </p>";
-        echo "<p>". $product_category    ." </p>";
-        echo "<p>". $product_specs          ." </p>";
-        */
         footer();
     ?>
 

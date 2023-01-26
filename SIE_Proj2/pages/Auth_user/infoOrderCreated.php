@@ -8,6 +8,10 @@
 ?>
 
 <?php
+	verifyAuthenticatedPermission();
+?>
+
+<?php
     
     if(isset($_COOKIE['cOrderCreated'])){
         $order_id = $_COOKIE['cOrderCreated'];
@@ -41,7 +45,7 @@
 
     <?php 
     
-    echo "<table style = \"width:100%;\">
+    echo "  <table style = \"width:100%;\">
                 <tr style =\"text-align:center;\">
                     <td class = \"content-title\"> Encomenda #".$order_id." realizada com sucesso!</td>
                     <br>
@@ -98,6 +102,7 @@
                     <td> Pode acompanhar a evolução da sua encomenda na sua área pessoal.</td>
                 </tr>
             </table>";
+
     }else if($order['order_pay_method'] == "Entrega"){
         echo"<table>
                 <tr>
@@ -106,7 +111,7 @@
                 </tr>
             </table>";  
     }else {
-        echo "UPS something went wrong with the payment method!";
+        echo "UPS! Something went wrong with the payment method!";
     }
     echo "  </table>
          </div>";
@@ -114,7 +119,6 @@
     ?>
 
     </div>
-
 
 </body>
 

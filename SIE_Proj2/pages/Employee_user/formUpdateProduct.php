@@ -5,7 +5,9 @@
 ?>
 
 <?php
-	menu();
+	
+    verifyEmployeePermission();
+    menu();
     
     $displayMsg = "";
     $msgStyle = "auth-error-text";

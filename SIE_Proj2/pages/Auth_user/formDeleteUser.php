@@ -5,14 +5,18 @@
 ?>
 
 <?php
+	verifyAuthenticatedPermission();
+?>
+
+<?php
 	menu();
     //Comes from userInfo page
     $user_id = $_POST['user_id']
 ?>
 
 <body>
-	<div class="content-title">Apagar Conta</div>
 	<div class="content-body">
+        <div class="content-title">Apagar Conta</div>
 			<table>
                 <tr>
                     <td>

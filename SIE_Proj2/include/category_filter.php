@@ -5,7 +5,6 @@
 
 <?php
     // Selection forms for filter in category and subcategory
-
     function select_category($categorySelected){
         echo"   <select name=\"category\" class=\"emp-cat-select\" onchange=\"this.form.submit()\">
                     <option value=\"\">Selecionar categoria:</option>

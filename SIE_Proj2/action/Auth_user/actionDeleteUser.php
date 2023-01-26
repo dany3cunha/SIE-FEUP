@@ -2,7 +2,11 @@
 <?php
     include_once "../../include/opendb.php";
     include_once "../../database/user.php";
+    include_once "../../include/security.php";
     session_start();
+?>
+<?php
+	verifyAuthenticatedPermission();
 ?>
 
 <?php

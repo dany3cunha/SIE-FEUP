@@ -5,7 +5,10 @@
 
 ?>
 
+
 <?php
+
+    verifyAuthenticatedPermission();
 
     # Validate the user login
     if (isset($_SESSION['sAuthenticated'])) {
@@ -17,7 +20,7 @@
         $user_contact   = $userInfo['telemovel'];
         $user_nif       = $userInfo['nif'];
     } else {
-        header('Location: ../Non_Auth_user/login.php');
+        header('Location: ../Non_Auth_user/formLogin.php');
         exit();
     }  
 

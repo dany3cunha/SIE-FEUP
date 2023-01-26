@@ -5,7 +5,10 @@
 ?>
 
 <?php
-	menu();
+
+    verifyEmployeePermission();
+	
+    menu();
 
     //Comes from f_ListProducts page
     $product_ref = $_GET['product_ref'];

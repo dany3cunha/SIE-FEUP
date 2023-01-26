@@ -4,6 +4,9 @@
 ?>
 
 <?php
+
+    verifyEmployeePermission();
+    
 	menu();
 
 	$errorMsg       = "";

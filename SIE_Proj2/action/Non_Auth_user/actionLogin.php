@@ -26,7 +26,7 @@
     //If fields where wrong, save them and exit
     if(!empty($_SESSION['sErrorMsg'])){
         $_SESSION['sEmail'] = $email;   
-        header("Location: ../../pages/Non_Auth_user/login.php"); 
+        header("Location: ../../pages/Non_Auth_user/formLogin.php"); 
         exit();    
     }
 

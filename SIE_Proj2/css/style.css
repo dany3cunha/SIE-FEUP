@@ -6,7 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #DBDBDB;
-  
+
   /* To disable horizontal scroll */
   overflow-x: hidden;
   max-width: 100%;
@@ -20,7 +20,8 @@ body {
   padding: 10px;
   background-color: white;
 }
- .logo-img{
+
+.logo-img {
   padding-left: 20px;
   width: 30%;
 }
@@ -120,7 +121,7 @@ a .btn {
   padding: 14px;
   background-color: inherit;
   font-family: inherit;
-  font-weight:900;
+  font-weight: 900;
   margin: 5px;
   margin-left: 10px;
   border-radius: 5px;
@@ -164,7 +165,7 @@ a .btn {
 .subnav-content-btn {
   border: none;
   outline: none;
-  color:#373D49;
+  color: #373D49;
   background-color: inherit;
   font-family: inherit;
   margin: 5px;
@@ -177,7 +178,7 @@ a .btn {
 .subnav-content input {
   float: left;
   font-weight: 900;
-  color:#373D49;
+  color: #373D49;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -185,7 +186,7 @@ a .btn {
 
 .subnav-content input:hover {
   background-color: #C55A11;
-  color:white;
+  color: white;
   font-weight: 900;
   border-radius: 5px;
 }
@@ -205,17 +206,14 @@ a .btn {
 .footer {
   position: relative;
   bottom: 0;
-
   background-color: #C55A11;
   height: 100px;
 }
 
 .footer hr {
-
   height: 10px;
   background-color: #DBDBDB;
 }
-
 
 .footer-text {
   float: left;
@@ -239,7 +237,7 @@ a .btn {
   font-weight: bold;
   margin: 10px;
   padding-top: 20px;
-  padding-bottom:20px;
+  padding-bottom: 20px;
   margin-left: 0;
   color: #C55A11;
 }
@@ -249,7 +247,7 @@ a .btn {
   margin-bottom: 10px;
   padding: 20px;
   background-color: #DBDBDB;
-  min-height: 68vh;
+  min-height: 67.8vh;
 }
 
 .body-remaining {
@@ -258,22 +256,60 @@ a .btn {
 }
 
 /* Authors page properties*/
-
-.authors-page-grid{
+.authors-page-grid {
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 100px; 
+  grid-template-columns: auto 30% auto;
+  gap: 50px;
 }
 
-.authors-page-grid-text{
+.authors-page-grid-col {
   border-radius: 20px;
-  background-color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.author-page-name {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
 
 }
-.aut-page-grid-images{
+
+.author-page-text {
+  font-family: inherit;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.author-page-downloads {
+  width: 100%;
+  margin: 10px;
+  padding: 40px;
+  text-align: center;
+}
+
+.author-page-downloads a {
+  text-decoration: none;
+  color: #373D49;
+}
+
+.author-page-users {
+  width: 100%;
+  text-align: center;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.author-layout {
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 10px; 
+  grid-template-rows: auto auto;
+  gap: 10px;
+  text-align: center;
+}
+
+.authors-page-grid-img {
+  width: 267px;
+  border-radius: 20px;
 }
 
 /* Homepage properties */
@@ -329,19 +365,6 @@ a .btn {
   color: red;
 }
 
-
-/* User Info properties*/ 
-
-.user-info-page-grid{
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 30px;
-}
-
-.user-info-page-delete{
-  margin-top: auto;
-  margin-right: auto;
-}
 
 /* Product Page Properties*/
 
@@ -449,6 +472,7 @@ a .btn {
   /* For center text if needed in 2 or more rows */
   white-space: normal;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .btn-buy-options:hover input {
@@ -467,7 +491,8 @@ a .btn {
 
 .product-page-product-text {
   padding: 10px;
-  font-size: 14px;
+  text-align: justify;
+
 }
 
 /* List products properties */
@@ -521,7 +546,7 @@ a .btn {
   gap: 10px;
 }
 
-.checkout-content-grid-right{
+.checkout-content-grid-right {
   display: grid;
   grid-template-rows: auto auto auto auto auto;
   gap: 10px;
@@ -585,7 +610,7 @@ a .btn {
 
 /* Orders History properties */
 
-.product-list-product{
+.product-list-product {
   display: grid;
   grid-template-columns: auto auto;
   gap: 20px;
@@ -689,18 +714,18 @@ input[type=number],
 /* Selection Form */
 .emp-cat-select,
 .add-cat-select,
-.update-order-select{
-  font-size:16px;
-  padding:5px;
+.update-order-select {
+  font-size: 16px;
+  padding: 5px;
   margin-right: 30px;
   font-family: inherit;
   border-radius: 3px;
   border: 1px solid black;
 }
 
-.add-cat-select{
+.add-cat-select {
   margin: 2px;
-  padding: 5px 10px;  
+  padding: 5px 10px;
 }
 
 .emp-cat-select option:first-child,
@@ -708,44 +733,53 @@ input[type=number],
   display: none;
 }
 
-.update-order-select{
-  width:200px;
+.update-order-select {
+  width: 200px;
   margin-right: 0px;
 }
 
-.product-list{
-  margin:3px;
-  font-family:inherit;
+.product-list {
+  margin: 3px;
+  font-family: inherit;
   border-collapse: collapse;
   width: 90%;
 }
 
-.product-list td, .product-list th {
+.product-list td,
+.product-list th {
   border: 1px solid black;
   padding: 8px;
 }
-.product-list tr:nth-child(odd){background-color: lightgray}
-.product-list tr:nth-child(even){background-color: #f2f2f2;}
 
-.product-list tr:hover {background-color: #F8CBAD;}
+.product-list tr:nth-child(odd) {
+  background-color: lightgray
+}
+
+.product-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.product-list tr:hover {
+  background-color: #F8CBAD;
+}
 
 .product-list th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #C55A11 ;
+  background-color: #C55A11;
   color: white;
 }
 
-.product-op-button{
-  text-align:center; 
-  margin:0px;
+.product-op-button {
+  text-align: center;
+  margin: 0px;
 }
 
 /* Add Product Form */
 
 .shorter-field [type=text],
-.shorter-field [type=number]{
+.shorter-field [type=number] {
   width: 100px;
 }
 
@@ -766,45 +800,44 @@ input[type=radio] {
 }
 
 /* Delete Product Form */
-.confirm-buttons-div{
-  margin-top:20px;
-  margin-left:0px;                                
+.confirm-buttons-div {
+  margin-top: 20px;
+  margin-left: 0px;
 }
 
-.cancel-button{
+.cancel-button {
   margin: 5px;
-  margin-right:20px;
+  margin-right: 20px;
   height: 40px;
   width: 100px;
   background-color: inherit;
   border-color: #CDCED3;
   border-width: 3px;
-  border-radius: 5px; 
-  color:#373D49;
+  border-radius: 5px;
+  color: #373D49;
   cursor: pointer;
-  font-weight:bold;
-  font-size:17px;
+  font-weight: bold;
+  font-size: 17px;
 }
 
-.cancel-button:hover{
-  opacity:70%;
+.cancel-button:hover {
+  opacity: 70%;
 }
 
-.delete-button{
+.delete-button {
   margin: 5px;
   height: 40px;
   width: 100px;
   background-color: #B31038;
   border-color: #B31038;
   border-width: 3px;
-  border-radius: 5px; 
-  color:white;
+  border-radius: 5px;
+  color: white;
   cursor: pointer;
-  font-weight:bold;
-  font-size:17px;  
+  font-weight: bold;
+  font-size: 17px;
 }
 
-.delete-button:hover{
-  opacity:70%;
+.delete-button:hover {
+  opacity: 70%;
 }
-

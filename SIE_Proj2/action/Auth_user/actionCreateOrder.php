@@ -1,9 +1,16 @@
 <!-- PHP includes -->
 <?php
-    include_once "../../include/opendb.php";
-    include_once "../../database/product.php";
-    include_once "../../database/order.php";
+    include_once("../../include/opendb.php");
+    include_once("../../database/product.php");
+    include_once("../../database/order.php");
+    include_once("../../include/security.php");
+    include_once("../../include/cookies.php");
+    session_start();
 ?>
+<?php
+	verifyAuthenticatedPermission();
+?>
+
 
 <?php
 

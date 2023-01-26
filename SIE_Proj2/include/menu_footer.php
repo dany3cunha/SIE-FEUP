@@ -15,7 +15,7 @@
                     </div>
                     <div class = \"push-to-right\"></div>
                         <button class = \"btn-default\"> 
-                            <a href=\"../../action/Non_Auth_user/login.php\" >
+                            <a href=\"../../pages/Non_Auth_user/infoAuthors.php\" >
                                 <i class = \"fa-solid fa-circle-info fa-2xl\"></i>
                             </a> 
                         </button>";
@@ -62,8 +62,8 @@
 
     function LoginAndRegisterButtons(){
         //If not authenticated, enable login and register buttons
-        echo "  <a href=\"../../pages/Non_Auth_user/login.php\" style = \"margin-top: auto; margin-bottom: auto ;\"> <button class=\"btn\">Login</button></a>
-                <a href=\"../../pages/Non_Auth_user/register.php\" style = \"margin-top: auto; margin-bottom: auto ;\"> <button class=\"btn\">Register</button></a>
+        echo "  <a href=\"../../pages/Non_Auth_user/formLogin.php\" style = \"margin-top: auto; margin-bottom: auto ;\"> <button class=\"btn\">Login</button></a>
+                <a href=\"../../pages/Non_Auth_user/formRegister.php\" style = \"margin-top: auto; margin-bottom: auto ;\"> <button class=\"btn\">Register</button></a>
                 <div style = \"padding-right: 20px; \"> </div>
             </div>"; 
     }
