@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @param string $email email to verify
+ * @return boolean TRUE if the email exists, FALSE otherwise
+ */
 function emailIsAvailable($email) {
     global $conn;
     
@@ -96,16 +99,16 @@ function getIdFromEmail($email){
     global $conn;
     
     $query = "  SELECT  utilizador.id
-                FROM 	  utilizador
+                FROM 	utilizador
                 WHERE   email='$email'";
 
     //echo "DEBUG query: " . $query;
 
     $result = pg_exec($conn, $query);
-    //echo "DEBUG num_rows: " . pg_num_rows($result);
+    echo "DEBUG num_rows: " . pg_num_rows($result);
 
-    if (!$result) {
-        echo "Error\n";
+    if (!$result or pg_num_rows($result) == 0) {
+        echo "Error in getIdFromEmail()\n";
         return -1;
     }
     $row = pg_fetch_assoc($result);
@@ -116,12 +119,12 @@ function getNameFromId($id){
     global $conn;
     
     $query = "  SELECT  utilizador.nome
-                FROM 	  utilizador
+                FROM 	utilizador
                 WHERE   id='$id'";
 
     $result = pg_exec($conn, $query);
 
-    if (!$result) {
+    if (!$result or pg_num_rows($result) == 0) {
         echo "Error\n";
         return -1;
     }
@@ -145,7 +148,7 @@ function getUserInfo($id){
 
     $result = pg_exec($conn, $query);
 
-    if (!$result) {
+    if (!$result or pg_num_rows($result) == 0) {
         echo "Error\n";
         return -1;
     }
@@ -162,6 +165,13 @@ function getUserInfo($id){
 * @return boolean Returns user id or -1 if credentials weren't valid
 */
 function verifyLogin($email, $password){
+    
+    # First verify if the user exists
+    if(getIdFromEmail($email) == -1){
+        # The user does not exist
+        return -2;
+    }
+    
     global $conn;
     
     $query = "  SELECT  utilizador.id
@@ -175,7 +185,7 @@ function verifyLogin($email, $password){
     //echo "DEBUG num_rows: " . pg_num_rows($result);
 
     if( !$result or pg_num_rows($result) == 0){
-        //No match found
+        # No match found, the password is incorrect
         return -1;
     }
 

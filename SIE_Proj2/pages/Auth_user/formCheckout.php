@@ -171,7 +171,8 @@
                                                     <option name = \"pay_method\" ".($pay_method == "MB" ? "selected" : "" )."       value=\"MB\"> Referência MB   </option>
                                                     <option name = \"pay_method\" ".($pay_method == "Entrega" ? "selected" : "" )."  value=\"Entrega\"> Pag. na Entrega </option>
                                                 </select>
-                                                <input type = \"text\" name=\"product_ref\" value=\"" . $product_ref . "\" hidden>    
+                                                <input type = \"text\" name=\"product_ref\" value=\"" . $product_ref . "\" hidden>   
+                                                <input type= \"text\" name = \"order_qty\" value = \"" . $order_qty . "\" hidden>    
                                             </form> 
                                         </td>
                                     </tr>                                              

@@ -14,5 +14,8 @@
 
     # And then the account is deleted
     deleteUser($user_id);
-
+    
+    header("Location: ../../index.php");
+        
+    
 ?>

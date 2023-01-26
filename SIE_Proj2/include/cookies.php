@@ -1,4 +1,9 @@
 <?php
+
+    function createCookie($name,$duration){
+        
+    }
+
     function deleteCookie($name){
 
         if(isset($_COOKIE[$name])){
