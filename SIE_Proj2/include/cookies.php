@@ -1,5 +1,7 @@
 <?php
-
+    /**
+     * @param string cookie name for delete
+     */
     function deleteCookie($name){
 
         if(isset($_COOKIE[$name])){
@@ -10,6 +12,9 @@
         return;
     }
 
+    /**
+     * Clear all cookies created before
+     */
     function deleteAllCookies(){
         
         # clear all cookies

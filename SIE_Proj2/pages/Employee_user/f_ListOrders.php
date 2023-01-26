@@ -20,8 +20,9 @@
 
 
 <body>
-	<div class="content-title">Encomendas </div>
+	
 	<div class="content-body">
+        <div class="content-title">Encomendas </div>
         <table>
             <tr>
                 <td>

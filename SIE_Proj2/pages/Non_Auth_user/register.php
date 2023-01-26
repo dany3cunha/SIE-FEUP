@@ -39,8 +39,9 @@
 
 
 <body>
-	<div class="content-title">Registo </div>
+	
 	<div class="content-body">
+		<div class="content-title">Registo </div>
 		<form method="POST" action="../../action/Non_Auth_user/actionRegister.php">
 			<table>
 				<?php

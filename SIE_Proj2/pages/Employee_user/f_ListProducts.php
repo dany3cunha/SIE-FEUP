@@ -20,8 +20,9 @@
 
 
 <body>
-	<div class="content-title">Inventário </div>
+	
 	<div class="content-body">
+        <div class="content-title">Inventário </div>
         <table>
             <tr>
                 <td>

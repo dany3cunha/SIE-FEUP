@@ -18,7 +18,11 @@ body {
 .box {
   display: flex;
   padding: 10px;
-  background-color: inherit;
+  background-color: white;
+}
+ .logo-img{
+  padding-left: 20px;
+  width: 30%;
 }
 
 .push-to-right {
@@ -109,13 +113,14 @@ a .btn {
 }
 
 .subnav .subnavbtn {
-  font-size: 16px;
+  font-size: 18px;
   border: none;
   outline: none;
-  color: black;
+  color: white;
   padding: 14px;
   background-color: inherit;
   font-family: inherit;
+  font-weight:900;
   margin: 5px;
   margin-left: 10px;
   border-radius: 5px;
@@ -134,7 +139,7 @@ a .btn {
   border: none;
   outline: none;
   background-color: inherit;
-  color: black;
+  color: white;
   margin: 5px;
   cursor: pointer;
 }
@@ -159,7 +164,7 @@ a .btn {
 .subnav-content-btn {
   border: none;
   outline: none;
-  color: black;
+  color:#373D49;
   background-color: inherit;
   font-family: inherit;
   margin: 5px;
@@ -171,7 +176,8 @@ a .btn {
 
 .subnav-content input {
   float: left;
-  color: black;
+  font-weight: 900;
+  color:#373D49;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -179,7 +185,8 @@ a .btn {
 
 .subnav-content input:hover {
   background-color: #C55A11;
-  color: black;
+  color:white;
+  font-weight: 900;
   border-radius: 5px;
 }
 
@@ -189,6 +196,8 @@ a .btn {
 
 .display-user-name {
   margin-top: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* Footer properties */
@@ -230,7 +239,8 @@ a .btn {
   font-weight: bold;
   margin: 10px;
   padding-top: 20px;
-  padding-left: 40px;
+  padding-bottom:20px;
+  margin-left: 0;
   color: #C55A11;
 }
 
@@ -245,6 +255,25 @@ a .btn {
 .body-remaining {
   background-color: #DBDBDB;
   height: 207px;
+}
+
+/* Authors page properties*/
+
+.authors-page-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 100px; 
+}
+
+.authors-page-grid-text{
+  border-radius: 20px;
+  background-color: white;
+
+}
+.aut-page-grid-images{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px; 
 }
 
 /* Homepage properties */
@@ -621,6 +650,9 @@ input[type=number],
 .dropdown {
   position: relative;
   display: inline-block;
+  /*display: flex;*/
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .dropdown-content {

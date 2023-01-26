@@ -27,8 +27,9 @@
 ?>
 
 <body>
-	<div class="content-title">Encomendas </div>
+	
 	<div class="content-body">
+        <div class="content-title">Encomendas </div>
         <table class="product-list">
                 <tr>
                     <th>    Nº encomenda  </th>

@@ -22,8 +22,9 @@
 
 
 <body>
-	<div class="content-title">Login </div>
+	
 	<div class="content-body">
+		<div class="content-title">Login </div>
 		<form method="POST" action="../../action/Non_Auth_user/actionLogin.php">
 			<table>
 				<?php

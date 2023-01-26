@@ -16,10 +16,11 @@
 <body>
     <?php
         menu();
-        echo "<div class =\" content-title \">
-                Produtos em Destaque
-              </div>";
-        echo "<div class =\"content-body\">";
+
+        echo "<div class =\"content-body\">
+                <div class =\" content-title \">
+                    Produtos em Destaque
+                </div>";
         echo "  <div class = \"homepage-grid\">";
     
         while ($row = pg_fetch_row($highlights)) {
@@ -53,7 +54,7 @@
         
         echo "  </div>";  # end homepage grid      
 
-        echo "<div class =\" content-title \" style = \" margin-left:0px;padding-left:0px; padding-bottom:20px;\">
+        echo "<div class =\" content-title \" style = \" margin-left:0px;padding-left:0px;\">
                 Produtos em Desconto
               </div>";
         

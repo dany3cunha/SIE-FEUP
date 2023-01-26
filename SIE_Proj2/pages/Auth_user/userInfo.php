@@ -33,8 +33,9 @@
 ?>
 
 <body>
-	<div class="content-title">Dados Pessoais </div>
+	
 	<div class="content-body">
+		<div class="content-title">Dados Pessoais </div>
 		<div class="user-info-page-grid">
 			<div>
 				<form method="POST" action="../../action/Auth_user/actionUpdateUser.php">
