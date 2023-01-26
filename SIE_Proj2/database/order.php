@@ -1,5 +1,10 @@
 <?php
-
+    /**
+     * @param int $order_id order identification
+     * @param int $user_id user identification
+     * @param string $pagamento order's payment method
+     * @return boolean TRUE if the order was sucessfully created, FALSE otherwise
+     */
     function createOrder($order_id,$user_id,$pagamento){
 
         global $conn;
@@ -26,6 +31,12 @@
         return true;
     }
 
+    /**
+     * @param int $order_qty order quantity 
+     * @param int $order_id order identification
+     * @param int $product_ref product identification/reference
+     * @return boolean TRUE if the product was sucessfully linked to the order by quantity, FALSE otherwise
+     */
     function associateProductToOrder($order_qty,$order_id,$product_ref){
 
         global $conn;
@@ -46,7 +57,9 @@
 
 
     }
-
+    /**
+     * @return int last order created ($order_id)
+     */
     function getLastOrderId(){
         
         global $conn;
@@ -69,7 +82,10 @@
         return $id[0];
 
     }
-
+    /**
+     * @param int $order_id order identification
+     * @return Result search by order identification ($order_id)
+     */
     function getOrderById($order_id){
         global $conn;
         $query = "select  TO_CHAR(encomenda.data, 'dd-mm-yyyy HH24:MI') as date,
@@ -92,7 +108,10 @@
         return $result;
     }
 
-
+    /**
+     * @param int $user_id user identification
+     * @return Result all orders made by the user ($user_id)
+     */
     function getAllOrdersByUser($user_id){
         global $conn;
         $query = "select  encomenda.id                                  as order_id,
@@ -116,7 +135,10 @@
         return $result;
     }
 
-
+    /**
+     * @param string $category category
+     * @return Result all orders related to $category or -1 if none
+     */    
     function getOrdersByCategory($category){
         global $conn;
         $query = "  SELECT  encomenda.id         AS order_id,
@@ -138,8 +160,58 @@
         $result = pg_exec($conn, $query);
 
 
-        if (!$result) {
-            echo "Error\n";
+        if (!$result or pg_num_rows($result)) {
+            echo "Error on getOrdersByCategory()\n";
+            return -1;
+        }
+        
+        return $result;
+    }
+    /**
+     * @param string $subcategory subcategory
+     * @return Result all orders related to $subcategory or -1 if none
+     */  
+    function getOrdersBySubCategory($subcategory){
+        global $conn;
+        $query = "  SELECT  encomenda.id         AS order_id,
+                            encomenda.pagamento AS pay_method,
+                            encomenda.fk_status AS order_status,
+                            enc_prod.quantidade AS quantity,
+                            produto.nome        AS product_name 
+                    FROM encomenda 
+                    JOIN enc_prod   ON encomenda.id = enc_prod.fk_encomenda 
+                    JOIN produto    ON produto.ref  = enc_prod.fk_produto ";
+
+
+        if($subcategory!="*"){
+            // If subcategory selected was not "All"
+            $query = $query . "WHERE produto.fk_subcategoria = '" . $subcategory . "'";
+        }
+
+        $result = pg_exec($conn, $query);
+
+
+        if (!$result or pg_num_rows($result)) {
+            echo "Error on getOrdersBySubCategory()\n";
+            return -1;
+        }
+        
+        return $result;
+    }
+    
+    /**
+     * @return Result all possible status, -1 if error 
+     */  
+    function getOrdersPossibleStatus(){
+        global $conn;
+
+        $query = "  SELECT  descricao    AS description 
+                    FROM    status";
+
+        $result = pg_exec($conn, $query);
+        
+        if (!$result or pg_num_rows($result)) {
+            echo "Error on getOrdersPossibleStatus()\n";
             return -1;
         }
         

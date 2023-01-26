@@ -12,7 +12,6 @@
         exit();
     }
     session_start();
-
 ?>
 
 <html>
