@@ -53,13 +53,13 @@
         
         echo "  </div>";  # end homepage grid      
 
-        echo "<div class =\" content-title \" style = \" padding-left:0px; padding-bottom:20px;\">
+        echo "<div class =\" content-title \" style = \" margin-left:0px;padding-left:0px; padding-bottom:20px;\">
                 Produtos em Desconto
               </div>";
         
         $row_cnt = pg_num_rows($discounts);
         $cols_cnt = 0;
-        #echo "          <div class = \"homepage-grid\">";
+
         while ($row_cnt > 0){
             
             if($cols_cnt == 0)

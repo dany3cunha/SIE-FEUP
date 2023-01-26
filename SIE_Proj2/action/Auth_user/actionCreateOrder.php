@@ -19,6 +19,7 @@
         # always set the cookie - or it is the 1st time or it is updated
         setcookie('cProduct_ref',$_POST['product_ref'],0,'/');
         $product_ref = $_POST['product_ref'];
+
     }else if(isset($_COOKIE['cProduct_ref'])){
         $product_ref = $_COOKIE['cProduct_ref'];
     }
@@ -28,6 +29,7 @@
         # always set the cookie - or it is the 1st time or it is updated
         setcookie('cOrder_qty',$_POST['order_qty'],0,'/');
         $order_qty = $_POST['order_qty'];
+
     }else if(isset($_COOKIE['cOrder_qty'])){
         $order_qty = $_COOKIE['cOrder_qty'];
     }
@@ -35,6 +37,7 @@
     if(isset($_POST['pay_method'])){
         setcookie('cPay_method',$_POST['pay_method'],0,'/');
         $pay_method = $_POST['pay_method'];
+
     }else if(isset($_COOKIE['cPay_method'])){
         $pay_method = $_COOKIE['cPay_method'];
     }
@@ -71,6 +74,7 @@
         }
     }
 
+    # Verify that all the fields are present to 
     if(isset($user_id) and isset($product_ref) and isset($order_qty) and isset($pay_method)){
         
         $order_id = getLastOrderId() + 1;
@@ -88,18 +92,9 @@
                                 $product['product_subcategory'])){
                     # All went well, so
                     # Delete the cookies related to this page
-                    if(isset($_COOKIE['cProduct_ref'])){
-                        unset($_COOKIE['cProduct_ref']);
-                        setcookie('cProduct_ref',null,-1,"/");
-                    }
-                    if(isset($_COOKIE['cOrder_qty'])){
-                        unset($_COOKIE['cOrder_qty']);
-                        setcookie('cOrder_qty',null,-1,"/");
-                    }
-                    if(isset($_COOKIE['cPay_method'])){
-                        unset($_COOKIE['cPay_method']);
-                        setcookie('cPay_method',null,-1,"/");
-                    }
+                    deleteCookie('cProduct_ref');
+                    deleteCookie('cOrder_qty');
+                    deleteCookie('cPay_method');
 
                     # Set cookie for the page of info order created
                     setcookie('cOrderCreated',$order_id,0,"/");

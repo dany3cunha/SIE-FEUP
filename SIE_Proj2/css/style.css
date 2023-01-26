@@ -6,6 +6,11 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #DBDBDB;
+  
+  /* To disable horizontal scroll */
+  overflow-x: hidden;
+  max-width: 100%;
+  /* <---> */
 }
 
 /* Login, Register and Form buttons*/

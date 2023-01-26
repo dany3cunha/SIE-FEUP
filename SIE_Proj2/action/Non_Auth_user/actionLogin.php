@@ -19,6 +19,8 @@
     $current_userID = verifyLogin($email, $password_md5);
     if($current_userID == -1){
         $_SESSION['sErrorMsg'] = "As credenciais estão incorretas";    
+    }else if($current_userID == -2){
+        $_SESSION['sErrorMsg'] = "O utilizador não existe";   
     }
 
     //If fields where wrong, save them and exit

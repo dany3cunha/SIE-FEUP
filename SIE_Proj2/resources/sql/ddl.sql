@@ -69,22 +69,22 @@ CREATE TABLE categoria (
 
 /*      utilizador(1) -- (*)encomenda      */
 ALTER TABLE encomenda ADD CONSTRAINT FK_encomenda_id_utilizador
-    FOREIGN KEY (FK_utilizador) REFERENCES utilizador (id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+    FOREIGN KEY (FK_utilizador) REFERENCES utilizador (id) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 /*      encomenda(*) -- (1)status          */
 ALTER TABLE encomenda ADD CONSTRAINT FK_encomenda_desc_status
-    FOREIGN KEY (FK_status) REFERENCES status (descricao) ON DELETE NO ACTION ON UPDATE NO ACTION;
+    FOREIGN KEY (FK_status) REFERENCES status (descricao) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 /*      enc_prod                           */
 ALTER TABLE enc_prod ADD CONSTRAINT FK_enc_prod_id_encomenda
-    FOREIGN KEY (FK_encomenda) REFERENCES encomenda (id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+    FOREIGN KEY (FK_encomenda) REFERENCES encomenda (id) ON DELETE CASCADE ON UPDATE NO ACTION;
 ALTER TABLE enc_prod ADD CONSTRAINT FK_enc_prod_ref_produto
-    FOREIGN KEY (FK_produto) REFERENCES produto (ref) ON DELETE NO ACTION ON UPDATE NO ACTION;
+    FOREIGN KEY (FK_produto) REFERENCES produto (ref) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 /*      produto(*) -- (1)subcategoria      */
 ALTER TABLE produto ADD CONSTRAINT FK_produto_nome_subcategoria
-    FOREIGN KEY (FK_subcategoria) REFERENCES subcategoria (nome) ON DELETE NO ACTION ON UPDATE NO ACTION;
+    FOREIGN KEY (FK_subcategoria) REFERENCES subcategoria (nome) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 /*      subcategoria(*) -- (1)categoria    */
 ALTER TABLE subcategoria ADD CONSTRAINT FK_subcategoria_nome_categoria
-    FOREIGN KEY (FK_categoria) REFERENCES categoria (nome) ON DELETE NO ACTION ON UPDATE NO ACTION;
+    FOREIGN KEY (FK_categoria) REFERENCES categoria (nome) ON DELETE CASCADE ON UPDATE NO ACTION;

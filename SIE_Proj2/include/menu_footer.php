@@ -26,12 +26,12 @@
         }
         else if(    isset($_SESSION['sAuthenticated'])  and !isset($_SESSION['sEmployeePerm'])  ){
             //Authenticated client
-            ProfileAndLogOutButtons();
+            ProfileAndLogOutButtons(false);
             ProductNavBar();
         }
         else if(    isset($_SESSION['sAuthenticated'])  and isset($_SESSION['sEmployeePerm'])  ){
             //Authenticated employee
-            ProfileAndLogOutButtons();
+            ProfileAndLogOutButtons(true);
             EmployeeNavBar();
         }
 
@@ -66,7 +66,7 @@
             </div>"; 
     }
 
-    function ProfileAndLogOutButtons(){
+    function ProfileAndLogOutButtons($isEmployee){
         //Show user registered Name
         $userInfo       = getUserInfo($_SESSION['sCurrentUserID']);
         $current_Name   = $userInfo['nome'];
@@ -79,7 +79,7 @@
                     </button>
                     <div class=\"dropdown-content\">
                         <a href=\"../../pages/Auth_user/userInfo.php\">Dados pessoais</a>
-                        <a href=\"../../pages/Auth_user/listOrdersHistory.php\">Encomendas</a>
+                        ".($isEmployee ? "": "<a href=\"../../pages/Auth_user/listOrdersHistory.php\">Encomendas</a>")."
                     </div>
                 </div>";
 
