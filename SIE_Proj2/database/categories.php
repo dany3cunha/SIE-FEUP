@@ -1,5 +1,7 @@
 <?php
-    
+    /**
+     * @return $result from selection of all categories 
+     */
     function getAllCategories(){
         global $conn;
 
@@ -19,6 +21,10 @@
         //exit();		  
     }
 
+    /**
+     * @param string $category to search
+     * @return $result from selection of all subcategories of $category 
+     */
     function getAllSubCategories($category){
         global $conn;
 
@@ -39,6 +45,10 @@
         //exit();		  
     }
     
+    /**
+     * @param string $subcategory to search
+     * @return string category of the $subcategory or NULL if the subcategory do no exist
+     */
     function getCatBySubcat($subcategory){
         global $conn;
 
@@ -59,9 +69,13 @@
             return $result['category'];
         }else
             return null;
-		//exit();		    
+    
     }
 
+    /**
+     * @param string $category to search
+     * @return boolean TRUE if the category exists, FALSE otherwise
+     */
     function searchCat($category){
         global $conn;
 
@@ -80,7 +94,6 @@
         if(pg_num_rows($result) == 1)
 		    return true;
         else
-            return false;
-		//exit();		    
+            return false;	    
     }
 ?>

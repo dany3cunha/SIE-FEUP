@@ -57,7 +57,6 @@
     }
 
 
-
     function LoginAndRegisterButtons(){
         //If not authenticated, enable login and register buttons
         echo "  <a href=\"../../pages/Non_Auth_user/login.php\"> <button class=\"btn\">Login</button></a>
