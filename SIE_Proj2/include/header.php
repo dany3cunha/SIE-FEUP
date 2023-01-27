@@ -7,11 +7,6 @@
 ?>
 
 <?php
-    # To prevent direct access into other pages than index.php
-    if(!isset($_COOKIE['cSession'])){
-        header("Location: ../../index.php");
-        exit();
-    }
     session_start();
 ?>
 
