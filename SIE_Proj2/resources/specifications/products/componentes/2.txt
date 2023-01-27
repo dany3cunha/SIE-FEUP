@@ -1,11 +1,11 @@
-Número de núcleos: 10;
-Número de núcleos de performance: 6;
-Número de núcleos eficientes: 4;
-Número de threads: 16;
-Frequência turbo máxima: 4.60 GHz;
-Frequência turbo máxima de núcleo de performance: 4.60 GHz;
-Frequência base do núcleo de performance: 2.50 GHz;
-Cache: 20 MB Intel® Smart Cache;
-Cache Total L2: 9.5 MB;
-TDP Base: 65 W;
+Número de núcleos: 10
+Número de núcleos de performance: 6
+Número de núcleos eficientes: 4
+Número de threads: 16
+Frequência turbo máxima: 4.60 GHz
+Frequência turbo máxima de núcleo de performance: 4.60 GHz
+Frequência base do núcleo de performance: 2.50 GHz
+Cache: 20 MB Intel® Smart Cache
+Cache Total L2: 9.5 MB
+TDP Base: 65 W
 TDP Turbo: 148 W

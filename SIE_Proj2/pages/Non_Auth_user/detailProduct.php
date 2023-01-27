@@ -29,10 +29,13 @@
     $product_category      = getCatBySubcat($product_subcategory);
 
     # Divide the description of each product, delimited by ';'
+    /*
     $product_desc = explode(";",$product_desc);
     $n_product_desc = count($product_desc);
     #echo "DBG:".$n_product_desc;
-    
+    */
+    $product_desc = str_replace("\n","<br>",$product_desc);
+
     # Access local description of the product
     $product_specs_file_path = '../../resources/specifications/products/'.$product_category.'/'.$product_ref.'.txt';
     $product_specs_file = fopen($product_specs_file_path,"r") or die("Unable to open specs file!");
@@ -40,7 +43,7 @@
     fclose($product_specs_file);
 
     # Divide the specs of each product, delimited by ';'
-    $product_specs = explode(";",$product_specs);
+    $product_specs = explode("\n",$product_specs); 
     #$n_product_specs = count($product_specs);
     #echo "DBG:".$n_product_specs;
 
@@ -143,18 +146,22 @@
         # For the product description
         echo "      <div>
                         <div class = \"product-page-product-text \">";
+        /*                
         foreach ($product_desc as $desc){
         echo               $desc."<br><br>";
-        }
+        }*/
+        echo $product_desc;
         echo "          </div>
                         <div class = \"product-page-text-title\">
                             Especificações
                         </div>
                         <div class = \"product-page-product-text \">
                             <ul>";
+                            
         foreach ($product_specs as $spec){
             echo "          <li>".$spec."</li>";
         }
+        
 
         echo"               </ul>
                         </div>

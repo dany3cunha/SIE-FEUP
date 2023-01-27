@@ -1,0 +1,14 @@
+Motor Gráfico: NVIDIA® GeForce® RTX 3070
+Bus: PCI Express 4.0 16x
+Clore Clock: Base: 1500 MHz, Boost: 1845 MHz
+Clock de Memória: 14 Gbps
+Núcleos CUDA: 5888
+Memória: 8GB GDDR6
+Interface de Memória: 256 Bits
+Interface I/O:
+3 x DisplayPort 1.4a (até 7680x4320@60Hz)
+2 x HDMI 2.1 (até 7680x4320@60Hz)
+Suporte HDCP 2.3
+Versão DirectX: 12
+Versão OpenGL: 4.6
+Dimensões do produto: 299.9 x 140 x 53.4 mm
