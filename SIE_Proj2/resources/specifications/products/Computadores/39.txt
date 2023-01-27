@@ -1,0 +1,75 @@
+Processador:
+Modelo de processador: E-2314
+Frequência do processador: 2.8 GHz
+Frequência turbo (max) do processador: 4.5 GHz
+Família de processador: Intel Xeon E
+Número de cores de processador: 4
+Cache do processador: 8 MB
+Número de processadores: 1
+Memória:
+Capacidade da memória incorporada: 8 GB
+Tipo de memória armazenada: Unregistered (unbuffered)
+Tipo de memória interna: DDR4-SDRAM
+Slots de memória: 4 x DIMM
+ECC: Sim
+Velocidade do clock de memória: 3200 MHz
+Disposição da memória (ranhuras x capacidade): 1 x 16 GB
+Memória interna máxima: 128 GB
+Armazenamento:
+Interface do host: SATA
+Capacidade total de armazenamento: 1 TB
+Capacidade do Disco Rígido: 1 TB
+Número de hard drives instaladas: 1
+Velocidade do disco rígido: 7200 RPM
+Número de unidades de disco rígido suportadas: 4
+Tamanho do disco rígido: 3.5"
+Tamanhos de drives de discos rígidos compatíveis: 3.5"
+Compatível com RAID: PERC H355
+Interfaces suportadas de armazenamento: SAS, SATA
+Gráficos:
+Placa gráfica on-board: Não
+Rede:
+Ethernet LAN: Sim
+Tipo de interface ethernet: Gigabit Ethernet
+Conectividade:
+Quantidade de portas Ethernet LAN (RJ-45): 1 (iDRAC)
+Quantidade de portas USB 2.0: 5
+Quantidade de portas USB 3.0: 2
+Quantidade de portas VGA: 1
+Portas série de comunicações: 1
+Slot de expansão:
+Slots PCI Express x1 (Gen 3.x): 1
+Slots PCI Express x4 (Gen 3.x): 1
+Slots PCI Express x4 (Gen 4.x): 1
+Slots PCI Express x16 (Gen 4.x): 1
+Design:
+Tipo de chassis: Tower
+Cor do produto: Preto
+Rack: Sim (4U)
+Desempenho:
+Administração remota: iDRAC9 Basic 15G
+Software:
+Sistema operativo instalado: Não
+Sistemas operativos compatíveis:
+Canonical Ubuntu Server LTS
+Citrix Hypervisor
+Microsoft Windows Server com Hyper-V
+Red Hat Enterprise Linux
+SUSE Linux Enterprise Server
+VMware ESXi (support only from Dec’21)
+Gestão de energia:
+Alimentação: 300 W
+Fonte de Alimentação Redundante: Não
+Frequência: 50 - 60 Hz
+Condições ambientais:
+Temperatura de funcionamento: 10 - 35 °C
+Limite de temperaturas (armazenamento): -40 - 65 °C
+Gama de humidade relativa de operação: 10 - 80%
+Humidade de não funcionamento: 5 - 95%
+Altitude operacional: 0 - 3048 m
+Altitude não operacional: 0 - 12000 m
+Pesos e dimensões:
+Comprimento: 175 mm
+Largura: 453.7 mm
+Altura: 360 mm
+Peso: 11.7 Kg

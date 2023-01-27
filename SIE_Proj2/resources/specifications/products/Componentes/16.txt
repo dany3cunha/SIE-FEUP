@@ -1,0 +1,14 @@
+Tipo: Intel ATX 12 V
+Potência Máxima: 650W
+OEM: Seasonic
+Eficiência: 80 Plus Gold
+Refrigeração: 1 x Ventoinha 120mm | Fluid Dynamic
+Output: +3.3V@20A +5V@20A +12V@54A -12V@0.3A +5VSB@3A
+Conectores:
+1 x M/B 24/20 Pinos @ 610mm
+1 x CPU 8/4 Pinos @ 650mm
+4 x PCI-E 8/6 Pinos
+3 x Periféricos 4 Pinos
+8 x SATA
+1 x FDD
+Dimensões do Produto: 150 mm (W) x 140 mm (L) x 86 mm (H)

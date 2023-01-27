@@ -1,0 +1,50 @@
+Processador:
+Suporta processadores AMD Ryzen™ série 7000
+Suporta socket AM5
+Chipset: AMD B650
+Memória RAM: 
+4x Slots de memória DDR5, suportando até 128GB
+Velocidades até 6400+MHz
+OptiMem II
+Suporta perfis AMD EXTended para Overclocking (EXPO™)
+Slots de Expansão:
+1x PCI-E 4.0/3.0 x16 slot
+1x PCI-E 4.0/3.0 x16 slot
+Suporta modo x4
+2x PCI-E 4.0/3.0 x1 slot
+Gráficos Onboard:
+1x HDMI
+Suporta máximo 4K 60Hz
+1x DisplayPort 1.4
+Suporta máximo 8K 60Hz
+Armazenamento:
+4x SATA 6Gb/s
+3x M.2 slots (Key M):
+Slot M.2_1 (Chave M), tipo 2242/2260/2280(suporta o modo PCIe 5.0 x4)
+Slot M.2_2 (chave M), tipo 2242/2260/2280/22110 (suporta o modo PCIe 4.0 x4)
+Slot M.2_3 (chave M), tipo 2242/2260/2280 (suporta o modo PCIe 4.0 x4)
+USB: 
+USB traseiro (Total 8 portas):
+1x porta(s) USB 3.2 Gen 2x2 (1 x USB Type-C®)
+3x porta(s) USB 3.2 Gen 2 (2 x Tipo A + 1 x USB Tipo C®)
+4x porta(s) USB 2.0 (4 x Tipo A)
+USB frontal (Total 7 portas):
+1x conector USB 3.2Gen 1 (suporta USB Type-C®)
+1x suporte(s) de conector USB 3.2 Gen 1 adicional 2 portas USB 3.2 Gen 1
+2x suporte(s) de conector USB 2.0 4 portas USB 2.0 adicionais
+Portas I/O:
+1x HDMI 2.1
+1x DisplayPort 1.4
+1x RJ45 2.5GbE
+1x USB 3.2 Gen2x2 (USB Type-C)
+3x USB 3.2 Gen2 (2x Type-A + 1x USB Type-C)
+4x USB 2.0
+5x Áudio Jacks
+1x Botão BIOS Flashback
+Áudio:
+Realtek® 7.1 Surround Sound
+7.1-Channel High Definition Audio
+LAN:
+1x Realtek 2.5GbE
+TUF LANGuard
+Dimensões: Formato ATX, 30.5 x 24.4 cm

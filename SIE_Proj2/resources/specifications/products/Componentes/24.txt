@@ -1,0 +1,52 @@
+Processador:
+Suporta processadores AMD Ryzen™ série 7000
+Suporta socket AM5
+Chipset: AMD B650
+Memória RAM: 
+4x Slots de memória DDR5, suportando até 128GB
+Velocidades até 6400MHz
+Slots de Expansão:
+2x PCI-E 4.0 x16 slot
+Suporta x16/x4
+1x PCI-E 3.0 x1 slot
+Gráficos Onboard:
+1x HDMI
+Suporta HDMI 2.1 com HDR, máximo 4K 120Hz
+1x DisplayPort
+Suporte DP 1.4, máximo 8K 60Hz
+Armazenamento:
+6x SATA 6Gb/s
+3x M.2 slots (Key M)
+M.2_1 (Do CPU) suporta até PCIe 4.0 x4, suporta dispositivos  2280/2260
+M.2_2 (Do CPU) suporta até PCIe 4.0 x4, suporta dispositivos 2280/2260
+M.2_3 (Do Chipset) suporta até PCIe 4.0 x4, suporta dispositivos 2280/2260
+USB:
+2x portas USB 2.0 (Atrás)
+4x portas USB 2.0 (Frente)
+4x portas USB 3.2 Gen1 Tipo A (Atrás)
+2x Portas USB 3.2 Gen1 Tipo A (Frente)
+3x Portas USB 3.2 Gen2 Tipo A (Atrás)
+1x portas USB 3.2 Gen2 Tipo C (Frente)
+1x portas USB 3.2 Gen2x2 Tipo C (Atrás)
+Portas I/O:
+1x HDMI
+1x DisplayPort
+1x RJ45 2.5GbE
+3x USB 3.2 Gen2
+1x USB 3.2 Gen2x2 Type-C
+4x USB 3.2 Gen 1
+2x USB 2.0
+5x Áudio Jacks
+1x Saída S/PDIF ótica
+1x Módulo Antena WiFi
+Áudio:
+Realtek® ALC4080 Codec
+7.1-Channel High Definition Audio
+Suporta saída S/PDIF
+Suporta até 32-Bit/384kHz no painel frontal
+LAN: 1x Realtek® RTL8125BG 2.5 Gbps LAN controller
+Wi-Fi e Bluetooth: 
+Intel® Wi-Fi 6E
+Suporte MU-MIMO TX/RX
+Bluetooth 5.2
+Dimensões: Formato ATX, 24.3 x 30.4 cm

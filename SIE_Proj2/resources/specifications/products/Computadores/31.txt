@@ -1,0 +1,28 @@
+Processador: AMD Ryzen™ 5 5500U Hexa-Core, 2.10 GHz com Turbo até 4.00 GHz, 11 MB Cache
+Sistema Operativo: 
+Sistema Operativo não incluído
+Poderá adquirir aqui o seu Sistema Operativo
+Memória RAM:
+8GB (1x8GB) DDR4-3200 MHz
+2 x Slots SO-DIMM (1 x livre / 1 x ocupado) p/ expansibilidade total até 32GB
+Ecrã: FHD (1920 x 1080), de 39,6 cm (15,6 pol.) na diagonal, moldura fina, antirreflexo, 250 nits, NTSC a 45%
+Placa Gráfica: AMD Radeon™ Graphics
+Armazenamento: SSD M.2 PCIe® NVMe™ TLC de 256 GB
+WebCam: Câmara HP TrueVision 720p HD com dois conjuntos de microfones digitais integrados
+Comunicações:
+Realtek Wi-Fi 6 (1x2) + Bluetooth® 5.2 (suporta velocidades de transferência de dados na ordem dos gigabits)
+Suporte MU-MIMO; Compatibilidade com Miracast
+Interfaces:
+1 x Porta SuperSpeed USB Type-C® (débito binário de 5 Gbps)
+2 x Portas SuperSpeed USB Type-A (débito binário de 5 Gbps)
+1 x Porta HDMI 1.4b
+1 x Porta de CA (conector Smart Pin)
+1 x Tomada combinada para auscultadores/microfone
+1 x Leitor de cartões multimédia SD multi-formato
+Áudio: Dois altifalantes
+Teclado: Layout PT-PT, Numérico
+Bateria: 
+Iões de lítio de 3 células, 41 Wh
+Suporta tecnologia de carregamento rápido da bateria: aproximadamente 50% em 45 minutos
+Dimensões: 35,85 x 24,2 x 1,79 cm
+Peso: 1,69 kg

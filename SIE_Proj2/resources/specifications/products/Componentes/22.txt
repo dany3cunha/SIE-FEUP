@@ -1,0 +1,82 @@
+Processador:
+
+Suporta AM4 socket 3rd Gen AMD Ryzen™ e o futuro AMD Ryzen™ com update BIOS 
+Chipset:
+
+AMD B550
+Memória RAM:
+
+4 x DIMM socket suporta até 128 GB
+Suporta DDR4 1866/ 2133/ 2400/ 2667/ 2800/ 2933/ 3000/ 3066/ 3200 MHz by JEDEC
+Suporta DDR4 2667/ 2800/ 2933/ 3000/ 3066/ 3200/ 3466/ 3600/ 3733/ 3866/ 4000/ 4133/ 4266/ 4400/ 4533/ 4600/ 4733/ 4800/ 4866/ 5000/ 5100+ MHz by A-XMP OC MODE
+Arquitetura de memória Dual Channel
+Suporta non-ECC UDIMM memory
+Suporta ECC UDIMM memory (non-ECC mode)
+Suporta un-buffered memory
+Slots de Expansão:
+
+1 x PCIe 4.0/ 3.0 x16 slot (PCI_E1) 
+1 x PCIe 3.0 x16 slot (PCI_E3), supports x4 speed  
+2 x PCIe 3.0 x1 slots
+Armazenamento:
+
+6 x SATA 6Gb/s ports
+2 x M.2 slots (Key M)
+M2_1 slot (from AMD Processor) 
+Suporta PCIe 4.0/ 3.0 x4 
+Suporta SATA 6Gb/s 
+Suporta 2242/ 2260/ 2280/ 22110 storage devices 
+M2_2 slot (from AMD B550 chipset) 
+Supports PCIe 3.0x4
+Supports PCIe 3.0x4 Supports 2242/ 2260/ 2280 storage devices
+LAN:
+
+1 x Realtek® RTL8125B 2.5Gbps LAN controller 
+1 x Realtek® RTL8111H 1Gbps LAN controller
+Áudio:
+
+Realtek® ALC1200 Codec 
+7.1-Channel High Definition Audio
+Suporta S/PDIF output
+Portas USB:
+
+AMD B550 Chipset 
+3 x USB 3.2 Gen 1 5Gbps ports (1 Type-C internal connector, and 2 ports are available through the internal USB 3.2 Gen 1 5Gbps connector) 
+6 x USB 2.0 ports (2 Type-A ports on the back panel, 4 ports through the internal USB 2.0 connectors) 
+AMD Processor 
+2 x USB 3.2 Gen 2 10Gbps ports (1 Type-C port and 1 Type-A port on the back panel)
+2 x USB 3.2 Gen 1 5Gbps Type-A ports on the back panel
+Conectores I/O:
+
+1 x 24-pin ATX main power connector 
+1 x 8-pin ATX 12V power connector 
+6 x SATA 6Gb/s connectors 
+2 x M.2 slots (M-Key) 
+1 x USB 3.2 Gen 1 5Gbps Type-C port 
+1 x USB 3.2 Gen 1 5Gbps connector (supports additional 2 USB 3.2 Gen 1 5Gbps ports) 
+2 x USB 2.0 connectors (supports additional 4 USB 2.0 ports) 
+1 x 4-pin CPU fan connector 
+1 x 4-pin water-pump fan connector 
+6 x 4-pin system fan connectors 
+1 x Front panel audio connector
+2 x System panel connectors 
+1 x Chassis Intrusion connector 
+2 x 4-pin RGB LED connectors 
+2 x 3-pin RAINBOW LED connectors 
+1 x TPM module connector 
+1 x Clear CMOS jumper
+Portas Painel Traseiro:
+
+PS/2 Combo Port 
+DisplayPort 
+2.5G LAN Port 
+1G LAN Port 
+HD Audio Connectors 
+Flash BIOS Button 
+USB 2.0 Port 
+HDMI Port USB 3.2 Gen 1 5Gbps (Type-A) 
+USB 3.2 Gen 2 10Gbps (Type-A + Type-C) 
+Optical S/PDIF OUT
+Dimensões:
+
+Formato ATX , 30.5 cm x 24.4 cm

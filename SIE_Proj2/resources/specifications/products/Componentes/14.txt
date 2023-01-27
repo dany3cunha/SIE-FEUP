@@ -1,0 +1,7 @@
+Refrigeração: 1 x ventoinha 92mm, 300 - 2.000 RPM (Controlado via PWM)
+Rolamento: Fluid Dynamic Bearing
+Nível de ruído ventoinha: 0.3 Sone
+Heatsink: Direct Touch Ø 6 mm x 3
+Compatibilidade: Socket LGA 1151, 1150, 1155, 1156
+Dimensões do produto: 109mm x 137mm x 86mm
+Peso do produto: 443 g

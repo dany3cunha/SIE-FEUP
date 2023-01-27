@@ -1,0 +1,13 @@
+Dimensões: 140mm x 25mm
+Rolamento: Hidráulico
+Cor LED: Vermelho
+Tensão: 7V - 12V
+Controlo PWM: Não
+Fluxo de Ar: 62 CFM
+Pressão Estática: 1.43 mm-H2O
+Nível de Ruído: 26 dBA
+Peso: 0.18
+Rotações: 1150 ±10% RPM
+Conteúdo da Embalagem:
+x2 Air Series AF140 LED
+Parafusos de montagem

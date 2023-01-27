@@ -1,0 +1,6 @@
+Capacidade: 32GB (2x16GB)
+Tipo: DIMM DDR5
+Velocidade: 5200 MHz
+Tensão: 1.25V
+Latência: CL40
+Dimensões do produto: 133.3mm x 6.6mm x 34.9mm

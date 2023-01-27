@@ -1,0 +1,21 @@
+Material de construção: Aço, Vidro Temperado, Plástico ABS
+Motherboards compatíveis: ATX/micro ATX/Mini ITX
+Slots de Expansão: 7
+Baías:
+4 x Internas x 2.5”
+2 x Internas x 2.5”/3.5” Combo Bay
+Sistema de Refrigeração:
+Frontal: Suporta 2 x ventoinhas 140mm ou 3 x 120mm
+Superior: Suporta 2 x ventoinhas 120mm
+Traseira: Suporta 1 x ventoinha 120mm
+Ventoinhas pré-instaladas:
+Frontal: 3 x ventoinhas 120mm Addressable RGB, AURA Sync
+Traseira: 1 x ventoinha 120mm
+Portas I/O Painel Frontal:
+2 x USB 3.2 Gen 1 (USB 3.0)
+1 x Headphone
+Microphone
+Comprimento Máx. VGA: Até 320mm
+Altura Máx. Cooler CPU: Até 160mm
+Dimensões do produto: 426 x 214 x 482 mm (LxWxH)
+Peso do produto: 7.2 kg

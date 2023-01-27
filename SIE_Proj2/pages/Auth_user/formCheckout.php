@@ -8,7 +8,6 @@
 
 <?php
 
-    verifyAuthenticatedPermission();
 
     # Validate the user login
     if (isset($_SESSION['sAuthenticated'])) {

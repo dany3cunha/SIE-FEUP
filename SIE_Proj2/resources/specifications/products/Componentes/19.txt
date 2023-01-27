@@ -1,0 +1,7 @@
+Capacidade: 32 GB (2 x 16 GB)
+Tipo de memória: DDR4
+Velocidade de frequência: 3200 MHz
+Latência: 16-20-20-38
+Tensão: 1.35V
+ECC: NON-ECC
+Tipo DIMM: Unbuffered

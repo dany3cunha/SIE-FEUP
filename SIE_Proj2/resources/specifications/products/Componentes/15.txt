@@ -1,0 +1,18 @@
+Ventoinhas:
+Rolamento: Hidráulico
+Velocidade da ventoinha: 700 ~ 1500 RPM
+Fluxo de ar: 62 CFM (máximo)
+Pressão estática: 2,19 mm H2O (máximo)
+Nível de som: 18 ~ 26,4 dBA (máximo)
+Tensão: 12V
+MTBF:> 50.000 h
+Conector: 4 pinos PWM / 5V 3 pinos ARGB
+Dimensões: 120 (L) x 120 (A) x 25 (P) mm
+
+Radiador:
+Dimensões: 277 (A) x 120 (L) x 27 (P) mm
+Material: Alumínio
+
+Compatibilidade:
+Socket Intel Intel LGA2066 / 2011 / 1151 / 1150 / 1155 / 1156
+Socket AMD TR4 / AM4 / FM2+ / FM2 / FM1 / AM3+ / AM3 / AM2+ / AM2

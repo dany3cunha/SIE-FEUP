@@ -1,0 +1,30 @@
+Processador: Intel® Core™ i5-12400F Hexa-Core, 2.50 GHz com turbo até 4.40 GHz, 18 MB Cache
+Sistema Operativo: 
+Sistema Operativo não incluído
+Poderá adquirir aqui o seu Sistema Operativo
+Chipset: Intel B660
+Memória RAM:
+8GB (1x8GB) UDIMM DDR4-3200MHz
+2 x Slots UDIMM (1 x livre / 1 x ocupado) p/ expansibilidade total até 32GB
+Armazenamento: SSD 512GB M.2 2280 PCIe 4.0x4 NVMe
+Placa Gráfica: NVIDIA GeForce RTX 3060 12GB GDDR6
+Portas I/O Frontais:
+1 x USB 3.2 Gen 1
+1 x USB 3.2 Gen 2
+1 x USB-C 3.2 Gen 1 (suporta transferência de dados e carregamento 5V@3A)
+1 x Headphone / microphone combo jack (3.5mm)
+Portas I/O Traseiras:
+4 x USB 2.0
+1 x VGA
+1 x HDMI 2.0b
+1 x Ethernet (RJ-45)
+1 x Headphone (3.5mm)
+1 x Power connector
+Comunicações:
+Wi-Fi 11ax, 2x2 + Bluetooth 5.1
+LAN GbE 10/100/1000 Integrada
+Sistema de Refrigeração: 1 x Ventoinha Frontal + 1 x Ventoinha Traseira
+Fonte de alimentação: 380W 92%
+Dimensões do produto: 170 x 304 x 376 mm
+Peso do produto: 8.4 kg
+Acessórios: Inclui teclado + rato com fio USB

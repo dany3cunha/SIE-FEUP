@@ -1,0 +1,6 @@
+Dimensões: 120 X 25MM
+Conectividade: 4 Pinos PWM
+Pressão estática: 1,46MM-H20
+Fluxo de ar máximo: 47,3 CFM
+Faixa RPM: 1500RPM
+Nível de ruído mínimo: 36 DBA

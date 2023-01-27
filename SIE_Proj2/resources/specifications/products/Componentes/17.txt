@@ -1,0 +1,16 @@
+Especificações:
+Capacidade máxima: 650 W
+Eficiência: Até 85% (80 Plus Bronze)
+DC Output: +5V@20A | +3.3V@20A | +12V@54A | -12V@0.3A | +5Vsb@2.5A
+Refrigeração: 1 x Ventoinha 120mm
+Proteções: OCP / OVP / OPP / OTP / SCP
+Dimensões do produto: 150mm x 140mm x 86mm
+ 
+
+Conectores:
+1 x ATX(20+4 PIN)
+1 x EPS(4+4 PIN)
+2 x PCI-E(6+2 PIN)
+5 x SATA
+2 x MOLEX(PERIPHERAL)
+1 x FDD

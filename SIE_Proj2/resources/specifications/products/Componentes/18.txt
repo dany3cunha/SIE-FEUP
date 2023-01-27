@@ -1,0 +1,28 @@
+Capacidade: 1600W
+Eficiência: Até 94 %
+Certificação: 80 PLUS TITANIUM
+OEM: Flextronics
+Output: +3.3V@30A +5V@30A +12V@133.3A -12V@0.8A +5VSB@3.5A
+MTBF: 100000 horas
+Ventoinha: 140mm ultra-silenciosa com RPM de acordo com a temperatura
+Dimensões: 200mm x 150mm x 86mm
+Conectores:
+1 x Conector ATX
+2 x Conector EPS
+8 x Conectores PCI
+3 x Conectores 4 Pin Periféricos
+5 x Conectores SATA
+2 x Conectores Floppy
+ 
+
+Conteúdo da Embalagem:
+Fonte de alimentação AX1600i Digital ATX
+Conjunto de cabos modulares na bolsa para cabos
+Manual do utilizador
+Cabo de alimentação CA
+Braçadeiras para cabos
+Tiras de velcro para organizar cabos
+Parafusos de montagem
+Placa de identificação do gabinete CORSAIR
+Cabo USB do CORSAIR LINK
+Etiquetas magnéticas laterais de substituição

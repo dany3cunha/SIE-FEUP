@@ -1,0 +1,13 @@
+Aplicação: portátil de 30,48 cm (12 ") - 43,30 cm (17")
+Tipo de ventoinha: 1 ventoinha silenciosa
+Dimensão da ventoinha: 125x125x15mm
+Cor da ventoinha: azul
+Velocidade da ventoinha: 1000RPM
+Ruído: 17dBA
+Fluxo de ar: 70 CFM
+Fontes de alimentação: via USB (5V DC)
+Comprimento do cabo de alimentação USB: 50cm
+Peso: 1005g
+Dimensão: 370x265x33-58mm
+Cor: preto
+Material: ABS e liga de alumínio

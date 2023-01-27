@@ -1,0 +1,34 @@
+Processador: Suporta os processadores de secretária AMD Ryzen™ 5000 & 3000 Series (não compatível com AMD Ryzen™ 5 3400G & Ryzen™ 3 3200G) e AMD Ryzen™ 4000 Série G
+Chipset: AMD B550
+Memória RAM:
+4 x DIMM, Max. 128GB, DDR4 4400(O.C) a 1866 MHz Un-buffered
+Arquitetura de Memória Dual Channel
+Suporta memória non-ECC UDIMM 
+Suporta memória ECC UDIMM (modo non-ECC)
+Suporta memória un-buffered
+Gráficos:
+1 x DVI-D
+1 x VGA
+1 x HDMI 2.0b (4K@30HZ)
+Slots de expansão:
+1x PCIe 3.0 x16 slot
+2x PCIe 3.0 x1 slots
+Armazenamento:
+1 x M.2 slot
+Suporta M.2 2242/2260/2280
+4 x SATA 6Gb/s 
+Suporta Raid 0, 1, 10
+LAN: Realtek® RTL8111H LAN controller
+Áudio: Realtek ALC897 Codec
+Portas I/O Painel Traseiro:
+2x USB 3.2 Gen 2 (10Gbps)
+2x USB 3.2 Gen 1 (5Gbps)
+2x USB 2.0
+1x Porta PS/2 Combo
+1x RJ45
+1x HDMI
+1x DVI-D
+1x VGA
+Botão Flash BIOS
+3x Conectores Áudio
+Dimensões: Micro-ATX, 24.4 cm x 24.4 cm

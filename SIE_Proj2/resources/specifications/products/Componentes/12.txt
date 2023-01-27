@@ -1,0 +1,24 @@
+Motherboards Compatíveis: ATX / mATX / Mini-ITX
+Slots de Expansão: 7
+Baías:
+Baías 3.5"/2.5": 2
+Baías dedicadas 2.5": 4 (2 incluídas)
+Sistema de Refrigeração:
+Frontal: Suporta 3 x ventoinhas 120mm ou 2 x 140mm (2 x Dynamic X2 GP-14 incluídas)
+Superior: Suporta 2 x ventoinhas 120mm ou 2 x 140mm (opcionais/não incluídas)
+Traseira: Suporta 1 x ventoinha 120mm (1 x Dynamic X2 GP-12 incluída)
+Inferior: Suporta 1 x ventoinha 120mm (opcional/não incluída) (exige remoção de cage HDD)
+Radiadores Suportados:
+Frontal: 360/280mm
+Superior: Até 240mm
+Traseira: 120mm
+Inferior: 120mm (exige remoção de cage HDD)
+Portas I/O Painel Frontal:
+1 x USB 3.1 Gen 2 Type-C
+2 x USB 3.0
+Audio I/O
+Botão Power
+Botão Reset
+Altura Máxima Cooler CPU: Até 169 mm
+Comprimento Máxima VGA: Até 341 mm (até 360 mm sem ventoinhas frontais)
+Dimensões do produto: 424 x 210 x 475 mm

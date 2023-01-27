@@ -1,0 +1,23 @@
+Processador: AMD Ryzen™ 5 5600H Hexa-Core, 3.30 GHz com Turbo até 4.20 GHz, 19 MB Cache
+Sistema Operativo: Windows 11 Home
+Memória RAM: 8GB (2x4GB) DDR4 3200 MHz
+Ecrã: FHD (1920 x 1080) de 40,9 cm (16,1 pol.) na diagonal, 144 Hz, IPS, moldura fina, antirreflexo, 250 nits, NTSC a 45%
+Placa Gráfica: AMD Radeon Graphics + NVIDIA® GeForce RTX™ 3060 6GB GDDR6
+Armazenamento: SSD M.2 PCIe® NVMe™ TLC de 512 GB
+WebCam: Câmara HP Wide Vision 720p HD com dois conjuntos de microfones digitais integrados
+Comunicações:
+Realtek Wi-Fi 6 (2x2) + Bluetooth® 5.2 (suporta velocidades de transferência de dados na ordem dos gigabits)
+LAN 10/100/1000M Gigabit Ethernet
+Interfaces:
+1 x Porta SuperSpeed USB Type-C® (débito binário de 5 Gbps) (DisplayPort™ 1.4, Tecnologia HP Sleep and Charge)
+1 x Porta SuperSpeed USB Type-A (débito binário de 5 Gbps) (Tecnologia HP Sleep and Charge)
+2 x Portas SuperSpeed USB Type-A (débito binário de 5 Gbps)
+1 x Porta HDMI 2.1
+1 x Porta RJ-45
+1 x Porta de CA (conector Smart Pin)
+1 x Tomada combinada para auscultadores/microfone
+Áudio: Áudio B&O; Dois altifalantes; HP Audio Boost
+Teclado: Retroiluminado
+Bateria: Bateria de 4 células de polímero de lítio (70 Wh)
+Dimensões: 37 x 26 x 2,35 cm
+Peso: Apróx. 2.46 kg

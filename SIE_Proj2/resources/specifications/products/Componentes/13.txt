@@ -1,0 +1,11 @@
+Compatibilidade: Motherboards Micro-ATX, Mini-ITX
+Baías internas: 2x 2.5″, 2x 3.5″
+Baías externas: 2x 5.25″, 2x 3.5″
+Ventoinhas:
+Lateral: 1x 120mm (não incluída)
+Traseiro: 1x 80 mm (incluída)
+Slots de expansão: 4
+Conexões: 2x USB 2.0, 1x Audio, 1x Mic
+Materiais: Aço A 0.4 mm
+Dimensões: (P x L x A) 380 x 170 x 355 mm
+Peso: 2.7 kg

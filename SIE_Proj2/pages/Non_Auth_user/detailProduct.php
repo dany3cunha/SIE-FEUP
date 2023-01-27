@@ -58,7 +58,6 @@
         $qtyStyle = "product-in-stock ";
         $qtyMsg   = "Disponível";
     }
-
     
 
 ?>

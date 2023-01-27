@@ -1,0 +1,26 @@
+Processador: Intel® Core™ i7-12700H 14-Core, 3.50 GHz com Turbo até 4.70 GHz, 24 MB Cache
+Sistema Operativo: 
+Sistema Operativo não incluído
+Poderá adquirir aqui o seu Sistema Operativo
+Memória RAM: 
+16GB (2x8GB) DDR4-3200MHz
+2 x Slots SO-DIMM (ocupados) p/ expansibilidade até 64GB
+Ecrã: 17.3" FHD (1920x1080), 144Hz, 72% NTSC, Nível IPS, perto de 100% sRGB
+Placa Gráfica: Intel® Iris® Xe Graphics + NVIDIA GeForce® RTX 3060 6GB GDDR6
+Armazenamento: SSD 512GB NVMe PCIe Gen4x4
+Webcam: HD (30fps@720p)
+Comunicações: Intel Wi-Fi 6 AX201 (2x2 ax) + Bluetooth 5.2
+Interface:
+1 x USB 3.2 Gen1 Type-C
+2 x USB 3.2 Gen1 Type-A
+1 x USB 2.0 Type-A
+1 x HDMI (4K@60Hz)
+1 x RJ45
+1 x Audio Combo Jack
+Áudio: 
+2 x Colunas de 2W
+Nahimic 3 Audio Enhance
+Teclado: Layout PT-PT, Retroiluminado (Vermelho), Numérico
+Bateria: 3 Células 53.5Whr
+Dimensões: 398 (W) x 273 (D) x 25.2 (H) mm
+Peso: 2.6 kg

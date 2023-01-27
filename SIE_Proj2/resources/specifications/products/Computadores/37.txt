@@ -1,0 +1,2 @@
+Output: 65W
+Tipo de corrente de alimentação: AC para DC
