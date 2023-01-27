@@ -1,0 +1,11 @@
+Capacidade: 500 GB
+Formato: M.2 2280
+Interface: PCIe Gen3 x4, NVMe 1.3
+Controlador: Phison E13T
+Memória Flash: 3D NAND
+Velocidade máxima leitura sequencial: Até 1.900 MB/s de leitura
+Velocidade máxima gravação sequencial: Até 1.000 MB/s de gravação
+Leitura aleatória: Até 60.000 IOPS de leitura
+Gravação aleatória: Até 200.000 IOPS de gravação
+Dimensões do produto: 80 x 22 x 2.15 mm
+TBW: 100 TBW
