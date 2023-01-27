@@ -186,12 +186,23 @@
      * Params: category filter
      * Returns the most expensive product from a specific category
      */ 
-    function getMostExpensiveProduct($category){
+    function getMostExpensiveProduct($cat_or_subcat){
         global $conn;
 
-        $query = "select produto.preco             
-                    from produto
-                    order by produto.preco desc";
+        $is_category = searchCat($cat_or_subcat);
+        if(!$is_category){
+            $query = "select produto.preco             
+                        from produto
+                        where produto.fk_subcategoria = '" .$cat_or_subcat. "'
+                        order by produto.preco desc";
+        }else{
+            $query = "select  produto.preco                         
+                        from produto 
+                        join subcategoria on produto.fk_subcategoria=subcategoria.nome
+                            where subcategoria.fk_categoria = '" . $cat_or_subcat . "'
+                        order by produto.preco desc";
+        }
+
 
         //echo "DEBUG query: " . $query;
 
@@ -205,8 +216,10 @@
         }
 
         $row = pg_fetch_row($result);
-
-        return $row[0];
+        if (pg_num_rows($result) == 0)
+            return 0;
+        else
+            return $row[0];
     }
 
     /**

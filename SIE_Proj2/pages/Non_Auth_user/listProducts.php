@@ -44,7 +44,8 @@
 
 
     $availability = "";
-    $price_max = ceil(getMostExpensiveProduct($products_category));
+    $filter_cat = (isset($products_subcategory)? $filter_cat = $products_subcategory : $filter_cat = $products_category);
+    $price_max = ceil(getMostExpensiveProduct($filter_cat));
     $price_min = 0;
     
     # Related to the filters option
