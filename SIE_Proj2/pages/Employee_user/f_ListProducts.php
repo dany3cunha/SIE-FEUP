@@ -69,7 +69,7 @@
             
             echo"
                 <tr>
-                    <td> ".$product['product_ref']."                                                </td>
+                    <td> #".$product['product_ref']."                                                </td>
                     <td> ".$product['product_name']."                                               </td>
                     <td> ".$product['product_price']."                                              </td>
                     <td> ".($product['product_discount']>0 ? $product['product_discount'] : "--")." </td>

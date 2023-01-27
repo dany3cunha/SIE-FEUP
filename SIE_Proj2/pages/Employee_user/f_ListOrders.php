@@ -74,7 +74,7 @@
             $disable = ($order['order_status']=="Entregue" ? "disabled" : "");
             echo"
                 <tr>
-                    <td> ".$order['order_id']."         </td>
+                    <td> #".$order['order_id']."         </td>
                     <td> ".$order['product_name']."     </td>
                     <td> ".$order['quantity']."         </td>
                     <td> ".$order['pay_method']."       </td>
