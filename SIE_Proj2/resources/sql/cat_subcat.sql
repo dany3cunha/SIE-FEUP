@@ -201,7 +201,65 @@ insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_su
 
                 DIRECTX 12 ULTIMATE
                 Os programadores podem agora acrescentar ainda mais efeitos gráficos espetaculares aos jogos para PC executáveis no Microsoft Windows. As placas gráficas GeForce RTX oferecem funcionalidades DX12 avançadas, como o ray tracing e o sombreamento de frequência variável, criando jogos dotados de efeitos visuais ultrarrealistas e velocidades de fotogramas ainda mais rápidas.',
-                76.90,
-                5,
+                669.0,
+                0,
                 FALSE,
-                'Caixas');
+                'Placas Gráficas');
+
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
+        values (9,
+                'Placa Gráfica MSI Geforce RTX 4070 Ti Gaming X Trio 12G',
+                0,
+                'BEYOND FAST
+                A NVIDIA® GeForce RTX® 4070 Ti oferece o ultra desempenho e as características que os jogadores e criadores entusiastas exigem. Dê vida aos seus jogos e projetos criativos com Ray Tracing e gráficos alimentados por IA. É alimentado pela arquitectura ultra-eficiente NVIDIA Ada Lovelace e 12GB de memória G6X super-rápida.
+
+                RAY TRACING - HIPERREALISTA. HIPERRÁPIDO.
+                A arquitetura Ada liberta toda a glória do ray tracing, que simula como a luz se comporta no mundo real. Com o poder da série RTX 40 e RT Cores de terceira geração, podes usufruir de mundos virtuais incrivelmente detalhados como nunca antes.
+
+                NVIDIA DLSS 3 - O MULTIPLICADOR DE DESEMPENHO, ALIMENTADO POR AI.
+                O DLSS é um avanço revolucionário em gráficos com tecnologia de AI que aumenta enormemente o desempenho. Alimentado pelos novos Tensor Cores de quarta geração e Optical Flow Accelerator nas GPUs GeForce RTX 40 Series, o DLSS 3 usa AI para criar frames adicionais de alta qualidade.
+
+                NVIDIA REFLEX - VITÓRIA MEDIDA EM MILISSEGUNDOS
+                Reflex e os GPUs GeForce RTX 40 Series oferecem a menor latência e a melhor capacidade de resposta para obter a melhor vantagem competitiva. Construído para otimizar e medir a latência do sistema, o Reflex fornece aquisição de alvos mais rápida, tempos de reação mais rápidos e a melhor precisão de mira para jogos competitivos.
+
+                NVIDIA STUDIO - A TUA CRIATIVIDADE
+                Leva os teus projetos criativos para o próximo nível com o NVIDIA Studio. Alimentado por um novo hardware dedicado, a série RTX 40 oferece desempenho inigualável em renderização 3D, edição de vídeo e design gráfico. Usufrui de acelerações RTX ricas em recursos nos principais aplicativos criativos, drivers NVIDIA Studio de classe mundial projetados para fornecer estabilidade máxima num conjunto de ferramentas exclusivas que aproveitam o poder da RTX para fluxos de trabalho criativos assistidos por AI.
+
+                NVIDIA ENCODER - STREAMING DE ALTA QUALIDADE
+                Rouba a show com gráficos incríveis e transmissão ao vivo de alta qualidade e sem interrupções. Equipada com o codificador NVIDIA de 8ª geração (NVENC), a série GeForce RTX 40 inaugura uma nova era de transmissão de alta qualidade com suporte a codificação AV1 de última geração, projetada para oferecer maior eficiência do que H.264, desbloqueando fluxos gloriosos em resoluções mais altas. Além disso, otimizações exclusivas nos teus aplicativos favoritos de transmissão ao vivo oferecem o melhor ao teu público, sempre.',
+                999.90,                
+                0,
+                FALSE,
+                'Placas Gráficas');
+
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
+        values (10,
+                'Placa Gráfica Sapphire Pulse Radeon RX 6800 XT 16GB GDDR6',
+                0,
+                'A placa gráfica AMD Radeon™ RX 6800 XT, alimentada pela arquitetura AMD RDNA™ 2, oferece 72 unidades avançadas de computação poderosas, 128 MB do mais recente AMD Infinity Cache e 16GB de memória GDDR6 dedicada. Criada para oferecer taxas de frames ultra elevadas e jogos em resolução 4K de alto nível.
+
+                MODERNA. ACESSÍVEL. PODEROSA.
+                Eleve a sua experiência de jogos com o software Radeon™. Aproveite recursos que oferecem uma experiência verdadeiramente imersiva nos jogos, com visuais deslumbrantes, sem tremulação e sem falhas, latência de entrada reduzida e drives otimizados para o dia 0.
+
+                VISUAIS VÍVIDOS
+                As placas gráficas AMD Radeon™ RX 6800 Series colocam você em ação com tecnologias de jogo envolventes e suporte para DirectX® 12 Ultimate. Usufrua de jogos com iluminação, sombras e reflexos realistas, juntamente com ricos detalhes graças ao DirectX® Raytracing (DXR), sombreamento de taxa variável (VRS) e recursos AMD FidelityFX, otimizados para a arquitetura AMD RDNA™ 2.
+
+                JOGABILIDADE ELEVADA A NOVOS NÍVEIS
+                A capacidade de resposta definitiva e jogos suaves são aprimorados com a tecnologia de jogos de baixa latência da AMD Radeon Anti-Lag e AMD Radeon Boost.
+
+                O MESMO ADN DE JOGO PARA PCS E CONSOLAS
+                A arquitetura AMD RDNA™ 2 é a base dos PCs e consolas de jogos da próxima geração. É a base da revolução que se aproxima em gráficos de jogos para PC e jogos em nuvem. O AMD RDNA™ 2 eleva e unifica os efeitos visuais e a jogabilidade em plataformas de vários jogos, como nenhuma outra arquitetura gráfica antes.',
+                719.90,
+                16,
+                FALSE,
+                'Placas Gráficas');
+
+insert into produto (ref,nome,quantidade,descricao,preco,desconto,destaque,fk_subcategoria) 
+        values (11,
+                'Placa Gráfica Sapphire Pulse Radeon RX 6800 XT 16GB GDDR6',
+                0,
+                '',
+                79.90,
+                16,
+                FALSE,
+                '');

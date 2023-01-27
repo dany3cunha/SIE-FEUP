@@ -1,0 +1,14 @@
+Motor Gráfico: AMD Radeon RX 6800 XT
+Bus: PCI Express 4.0
+Memória: 16GB GDDR6
+Clock GPU: Boost: Até 2310MHz
+Stream Processors: 4608
+Clock de Memória: 16.0 Gbps
+Interface de Memória: 256 Bits
+Interface:
+1 x HDMI 2.1
+3 x DisplayPort 1.4
+Suporte HDCP: Sim
+OpenGL: 4.6
+DirectX®: 12
+Dimensões do Produto: 313(L)X 134.8(W)X 53.4 (H)mm

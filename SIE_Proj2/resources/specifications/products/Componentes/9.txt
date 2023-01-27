@@ -1,0 +1,17 @@
+Motor Gráfico: NVIDIA GeForce RTX 4070 Ti
+Arquitetura: NVIDIA Ada Lovelace
+Núcleos Ray Tracing: 3ª Geração
+Núcleos Tensor: 4ª Geração
+Interface Bus: PCI Express® Gen 4
+Clock GPU: Clock Base: 2310 MHz / Clock Boost: 2760 MHz
+Núcleos CUDA: 7680
+Memória: 12GB GDDR6X
+Clock de Memória: 21 Gbps
+Interface de Memória: 192 Bits
+Interface I/O:
+3 x DisplayPort v1.4a
+1 x HDMI 2.1
+Suporte HDCP 2.3
+Versão DirectX: 12 Ultimate
+Versão OpenGL: 4.6
+Dimensões do produto: 337 x 140 x 62 mm
