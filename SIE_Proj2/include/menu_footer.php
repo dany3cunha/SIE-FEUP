@@ -11,7 +11,9 @@
         //Show navbox common elements
         echo "  <div class = \"box\">
                     <div >
-                        <img src =\"../../resources/logos/shop-logo.png\" class = \"logo-img\">
+                        <a href=\"../../index.php\">
+                            <img src =\"../../resources/logos/shop-logo.png\" class = \"logo-img\">
+                        </a>
                     </div>
                     <div class = \"push-to-right\"></div>
                         <button class = \"btn-default\"> 
