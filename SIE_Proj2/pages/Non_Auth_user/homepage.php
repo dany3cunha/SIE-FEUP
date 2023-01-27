@@ -59,13 +59,9 @@
               </div>";
         
         $row_cnt = pg_num_rows($discounts);
-        $cnt = 0;
-
-        while ($cnt < $row_cnt){
-            
-            if($cnt % 3 == 0){
-                echo "  <div class = \"homepage-grid\">";
-            }
+        
+        echo "  <div class = \"homepage-grid\">";
+        for($cnt = 0; $cnt < $row_cnt; $cnt++){
                 
             $row = pg_fetch_row($discounts); 
             $product_ref = $row[0];
@@ -97,15 +93,8 @@
                                     </div>
                                 </div>";   
             echo "          </div>";
-            
-            $cnt = $cnt + 1;
-            
-            if($cnt % 3 == 0 or $cnt == $row_cnt){
-                echo "  </div";
-            }
          
         }
-        echo " sfsdfds".$cnt;
         
         echo " </div>";
         echo"</div>"; #end content-body
