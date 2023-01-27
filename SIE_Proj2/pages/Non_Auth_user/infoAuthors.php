@@ -33,12 +33,12 @@
                 <table class="author-page-downloads">
                     <tr>
                         <td>
-                            <a href="relatorioFinal.pptx" download>
+                            <a href="../../downloads/relatorioFinal.pptx" download>
                                 <i class="fa-solid fa-file-powerpoint fa-5x" title="Download PowerPoint"></i>
                             </a>
                         </td>                
                         <td>
-                            <a href="project2.zip" download>
+                            <a href="../../downloads/project2.zip" download>
                                 <i class="fa-solid fa-file-zipper fa-5x" title="Download zip"></i>
                             </a>
                         </td>
