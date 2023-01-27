@@ -348,6 +348,7 @@ a .btn {
   white-space: normal;
   text-align: left;
   cursor: pointer;
+  height: 50px;
 }
 
 .grid-product-price {
