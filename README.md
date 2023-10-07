@@ -5,8 +5,8 @@
  * Joaquim Cunha    (up201806651@edu.fe.up.pt) 
  * Pedro Silva    (up201806526@edu.fe.up.pt)
 
-### Project Grades
- * 
+### Project Grade
+ * 17.0/20.0
 
 
 ### Final Project: PHP & PostgreSQL & HTML/CSS Application
